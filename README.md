@@ -1,3 +1,3 @@
-# So Simple Theme 커스터마이징
+So Simple Theme 커스터마이징
 
 
