@@ -3,11 +3,11 @@
 - title: About
   url: /about/
 
-- title:MachineLearning
+- title: Machine Learning
   url: /tags/
 
 - title: Mathematical Statistics
-  url: ./
+  url: /blog/
   
 - title: Search
   url: /search/

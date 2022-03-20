@@ -1,0 +1,77 @@
+[
+
+  
+    {
+      "title"			: "[CS229] LECTURE 01",
+      "link"			: "http://localhost:4000/articles/CS229-LECTURE-01/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
+      "title"			: "베타 분포",
+      "link"			: "http://localhost:4000/blog/PRML-1.1-Polynomial-Curve-Fitting/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
+      "title"			: "[PRML]1.1 Polynomial Curve Fitting",
+      "link"			: "http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "Theme Setup",
+      "link"			: "http://localhost:4000/theme-setup/",
+      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
+    }
+  
+
+  
+    ,{
+      "title"			: "Our Bytes Served HOT!!!",
+      "link"			: "http://localhost:4000/articles/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "About ME",
+      "link"			: "http://localhost:4000/about/",
+      "excerpt"		: "So Simple is a responsive Jekyll theme for your words and images."
+    }
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+]
