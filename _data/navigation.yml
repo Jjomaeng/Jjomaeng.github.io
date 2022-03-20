@@ -3,14 +3,11 @@
 - title: About
   url: /about/
 
-- title: Category
+- title:MachineLearning
   url: /tags/
 
-- title: Home
+- title: Mathematical Statistics
   url: ./
-
-- title: Theme Setup
-  url: /theme-setup/
-
+  
 - title: Search
   url: /search/
