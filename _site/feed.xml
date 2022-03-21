@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-21T11:59:20+09:00</updated>
+<updated>2022-03-21T16:28:54+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho min Hee</name>
@@ -28,9 +28,82 @@
     &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
+&lt;p&gt;이 장에서 논의할 분포의 역할들 중 하나는 한정된 수의 관찰 집합 x1,….,xn이 주어졌을 때 확률 변수 x의 확률 분포 p(x)를 모델링하는 것이다. 이를 &lt;b&gt;밀도 추정 문제 &lt;/b&gt; 라고 한다.
+이 장의 목표를 위해서 데이터 포인트들은 독립적이며, 동일하게 분포되어 있다고 가정할 것이다.&lt;/p&gt;
+
+&lt;p&gt;우선, 이산 확률 변수의 이항 분포와 다항 분포를 살펴보고 그 다음으로 연속 확률 변수의 가우시안 분포에 대해 논의할 것이다. 이 분포들은 매개변수 분포의 예다. 
+이러한 모델을 밀도 추정 문제에 적용하기 위해서는 관찰된 데이터 집합을 바탕으로 적절한 매개변숫값을 구하는 과정이 필요하다.&lt;br /&gt;
+두 가지 관점에서 살펴보자&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;빈도적 관점 : 어떤 특정 기준을 최적화하는 방법으로 매개변수를 찾는다. 최적화 기준의 예로 가능도 함수가 있다.&lt;/li&gt;
+  &lt;li&gt;베이지안 관점 : 매개변수에 대한 사전 분포를 바탕으로 관측된 데이터 집합이 주어졌을 때의 해당 사후분포를 계산한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;켤레 사전 확률이 중요한 역할을 한다는 것도 살펴볼 것이다. 켤레 사전 확률은 사후 확률이 사전 확률과 같은 함수적 형태를 띠도록 만들어준다. 그 결과 , 베이지안 분석이 매우 단순해진다.&lt;/p&gt;
+
+&lt;p&gt;매개변수적인 접근법의 한계점도 존재한다. 분포가 특정한 함수 형태를 띠고있다고 가정하지만 몇몇 적용 사례의 경우에는 이 가정이 적절하지 않다. 이런 경우, 비매개변수적 밀도 추정 방식을 대안으로 활용할 수 있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;이산-확률-변수&quot;&gt;이산 확률 변수&lt;/h4&gt;
+
+&lt;p&gt;하나의 이진 확률 변수 \( x \in (0,1) \)을 고려해 보자. 0과 1이 나올 확률이 동일하지 않다고 가정하면 이때 x = 1일 확률은 매개변수 \( \mu \)를 통해 다음과 같이 표현할 수 있다.
+\[ p(x = 1 \mid \mu) = \mu (0 \leq \mu \leq 1)\]
+\[ p(x = 0 \mid \mu ) = 1 - \mu \]&lt;/p&gt;
+
+&lt;p&gt;따라서 x에 대한 확률은 다음의 형태로 적을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ Bern(x \mid \mu ) = \mu^{x}(1 - \mu)^{1-x} \]&lt;/p&gt;
+
+&lt;p&gt;이것을 &lt;b&gt; 베르누이 분포 &lt;/b&gt;라고 한다. 베르누이 분포는 정규화되어 있으며, 그 평균과 분산이 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(x) = \mu \]
+\[ var(x) = \mu(1-\mu) \]&lt;/p&gt;
+
+&lt;p&gt;x의 관극값이 데이터 집합 \( D = (x_{1},…..x_{N})\)이 주어졌다고 하자. 관측값들이 \( p(x \mid \mu)\)에서 독립적으로 추출되었다는 가정하에 \( \mu \)함수로써 가능도 함수를 구성할 수 있다.
+\[ p(D \mid \mu ) = \prod_{n=1}^{N}p(x_{n} | \mu) = \prod_{n=1}^{N}\mu^{x_{n}}(1-\mu)^{1 - x_{n}} \]&lt;/p&gt;
+
+&lt;p&gt;빈도적 관점에서는 가능도 함수를 최대화하는 \( \mu \)를 찾아서 \( \mu \)값을 추정할 수 있다. 베르누이 분포의 경우 로그 가능도 함수는 다음으로 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ lnp(D \mid \mu ) = \sum_{n=1}^{N}lnp(x_{n} \mid \mu) = \sum_{n=1}^{N}(x_{n}ln\mu + (1-x_{n})ln(1-\mu)) \]&lt;/p&gt;
+
+&lt;p&gt;로그 가능도함수는 오직 관측값들의 합인 \(\sum_{n}x_{n}\)을 통해서만 N개의 관측값 \(x_{n} \)과 연관된다는 점에 주목할 필요가 있다. 이 합은 &lt;b&gt; 충분 통계량 &lt;/b&gt;의 예시 중 하나다.&lt;/p&gt;
+
+&lt;p&gt;\( lnp(D \mid \mu )\)을 \(\mu \)에 대해 미분하고 이를 0과 같다고 놓으면 다음과 같은 최대 가능도 추정값을 구할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \mu_{ML} = \frac{1}{N}\sum_{n=1}^{N}x_{n}\]&lt;/p&gt;
+
+&lt;p&gt;이는 &lt;b&gt; 표본 평균 &lt;/b&gt;이라고도 불린다. 데이터에서 x = 1인 관찰값의 수를 m이라고 하면 다음의 형태로 다시 적을 수 있다. 
+\[ \mu_{ML} = \frac{m}{N} \]&lt;/p&gt;
+
+&lt;p&gt;즉, 최대가능도 체계하에에서 동전으로 예시를 들면, 동전의 앞면이 나올 확률은 데이터 집합에서 앞면이 나온 비율로 주어지게 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;하지만 최대가능도를 사용할 경우 과적합이 발생할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;동전을 세 번 던졌는데 세 번 다 앞면이 나온 경우를 생각해보자. 그러면 N = m = 3이고 따라서 \( \mu_{ML} = 1 \)이 된다( 이 경우 앞으로 던지는 모든 동전이 앞면으로 나올 것이라고 예측하는 것이다! ) 이것이 실제로 최대 가능도를 사용했을 경우 발생할 수 있는 극단적인 사례다.( 이후에 사전 분포를 바탕으로 나은 결과를 도출할 수 있다.)&lt;/p&gt;
+
+&lt;p&gt;크기 N의 데이터가 주어졌을 때 x = 1인 관측값의 수 m에 대해서도 분포를 생각할 수 있다. 이를 &lt;b&gt; 이항 분포 &lt;/b&gt;라 한다. 위에서 구한 가능도 함수로부터 이항 분포는 \( \mu^{m}(1 - \mu)^{N - M}\)에 비례한다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;정규화 계수를 구하기 위해서 동전 던지기로 예시를 들면, 동전 던지기를 N번 했을 때 앞면이 m번 나올 수 있는 가능한 모든 가짓수를 구해야 한다. 따라서 이항 분포를 다음과 같이 적을 수 있다.
+\[Bin(m \mid N,\mu) = \binom{N}{m}\mu^{m}(1-\mu)^{N-m} \]&lt;/p&gt;
+
+&lt;p&gt;여기서 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ \binom{N}{m} \equiv \frac{N!}{(N-m)!m!} \]&lt;/p&gt;
+
+&lt;p&gt;\( \binom{N}{m} \)은 N개의 물체들 중 m개의 물체를 선별하는 가짓수를 구한 것이다. 이해를 위해 N = 10이고 \(\mu \)= 0.25일 때의 이항 분포의 히스토그램은 다음과 같다.&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/5.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;h4 id=&quot;베타-분포&quot;&gt;베타 분포&lt;/h4&gt;
+
+&lt;p&gt;이미 살펴본 방법들은 데이터 수가 적을 때 심각한 과적합이 일어나기 쉽다(동전 던지기 예시를 생각해보자!)&lt;/p&gt;
+
+&lt;p&gt;이 문제에 베이지안적으로 접근하기 위해서는 매개변수 \( \mu \)에 대한 사전 분포 \( p(\mu) \)를 도입하는 것이 필요하다.&lt;/p&gt;
+
+&lt;p&gt;가능도 함수가 \( \mu^{x}(1-x)^{1-x}\)의 형태를 가지는 인자들의 곱의 형태를 띠고 있다는 것에 주목해보면, 만약 \(\mu \)dhk \( (1 - \mu) \)의 거듭제곱에 비례하는 형태를 사전 분포에 선택한다면, 사전 확률과 가능도 함수의 곱에 비례하는 사후 분포 역시 사전 분포와 같은 함수적 형태를 가지게 될 것이다. 이러한 성질을 &lt;b&gt; 켤레성&lt;/b&gt;이라고 한다. ( 켤레성에 대한 이해를 돕고자 켤레의 수학적 의미를 설명하면, 두 개의 점,선,도형,수 등이 서로 대칭이거나 보완적인 관계에 있는 경우 켤레라고 한다.)&lt;/p&gt;
+
+&lt;p&gt;지금까지의 논의를 바탕삼아 사전 분포로 베타 분포를 사용할 것이다.( &lt;a href=&quot;&quot;&gt;왜 베타 분포를 사용하는 지에 대한 자세한 설명은 여기를 참고&lt;/a&gt;)&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.1-Binary-Variables/&quot;&gt;2.1 Binary Variables&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
@@ -270,9 +343,46 @@
     &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
+&lt;p&gt;이번에는 곡선 피팅 문제를 확률적 측면에서 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;곡선 피팅 문제의 목표는 N개의 입력값 \( X = (x1,….xn)^{T} \) 과 해당 표적값 \( t = (t1,…tn)^{T} \)가 주어진 상황에서 새로운 입력 변수 x가 
+주어졌을 때 그에 대한 타깃 변수 t를 예측해 내는 것이다.
+확률 분포를 이용해서 타깃 변수의 값에 대한 불확실성을 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;먼저, 주어진 x값에 대한 t값이 y(x,w)를 평균으로 가지는 가우시안 분포를 가진다고 가정한다(y(x,w)에 대한 설명은 1.1 참고 )
+이를 바탕으로 다음의 조건부 분포를 적을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ “p(t \mid x,\textbf{w},b) = N(t \mid y(x,\textbf{w}),\beta ^{-1}) \]&lt;/p&gt;
+
+&lt;p&gt;여기서 β는 정밀도 매개변수로써 분포의 표본의 역수에 해당한다.
+이 식을 도식화해 확인해보면 다음과 같다.&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/7.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;p&gt;이제 훈련 집합 {X,t}를 바탕으로 최대 가능도 방법을 이용해서 알려지지 않은 매개변수 w와 β를 구해보도록 하자.
+데이터는 위의 식에서 독립적으로 추출했다고 가정하면(i.i.d), 가능도 함수는 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(\textbf{t} \mid \textbf{x},\textbf{w},b) = \prod_{n=1}^{N}N(t \mid y(x,\textbf{w}),\beta ^{-1}) \]&lt;/p&gt;
+
+&lt;p&gt;계산의 편의를 위해 로그를 취해 로그 가능도 함수를 얻으면 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ ln p(\textbf{t} \mid \textbf{x},\textbf{w},b) = -\frac{\beta }{2}\sum_{n= 1}^{N}{(y(x_{n},\textbf{w})-t_{n})}^{2} + \frac{N}{2}ln\beta - \frac{N}{2}ln(2\pi) \]&lt;/p&gt;
+
+&lt;p&gt;다항식 계수(w)의 최대 가능도 해를 구해보면 w와 관련된 것은 오른쪽 식의 맨 왼쪽만 해당한다. 따라서 음의 로그이기 때문에 이를 최소화하는 것이다. 즉 가능도 함수를 최대화하려는 시도의 결과로 제곱합 오차 함수를 유도할 수 있는 것이다.&lt;/p&gt;
+
+&lt;p&gt;마찬가지로 가우시안 조건부 분포의 정밀도 매개변수 β를 결정하는 데도 최대 가능도 방법을 사용할 수 있다. 로그 가능도를 β에 대해 최대화하면 다음의 식이 도출된다.&lt;/p&gt;
+
+&lt;p&gt;\[ \frac{1}{B_{ML}} = \frac{1}{N}\sum_{n = 1}^{N}(y(x_{n},w_{ML})-t_{n})^{2} \]&lt;/p&gt;
+
+&lt;p&gt;매개변수 w와  β를 구했으니, 이제 이를 바탕으로 새로운 변수 x에 대해 예측값을 구할 수 있다.
+확률모델을 사용하고 있으므로 예측값은 t에 대한 예측 분포로 표현될 것이다(점 X)
+최대 가능도 매개변수들을 식(1)에 대입하면 다음을 얻을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \[ p(t \mid x,\textbf{w}&lt;em&gt;{ML},\beta&lt;/em&gt;{ML}) = (t \mid y(x,w_{ML})) \]&lt;/p&gt;
+
+&lt;p&gt;이제 다항 계수 w에 대한 사전 분포를 도입할 것이다. 문제의 단순화를 위해서 다음 형태를 지닌 가우시안 분포를 사용할 것이다.&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory(3)/&quot;&gt;1.2 Probability theory(3)&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
@@ -604,8 +714,8 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 
 <entry>
   <title type="html"><![CDATA[베타 분포]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/PRML-1.1-Polynomial-Curve-Fitting/" />
-  <id>http://localhost:4000/blog/[PRML]1.1 Polynomial Curve Fitting</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/베타 분포</id>
   <published>2022-02-22T07:08:50+09:00</published>
   <updated>2022-02-22T07:08:50+09:00</updated>
   <author>
@@ -682,7 +792,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 &lt;p&gt;그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
 여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/PRML-1.1-Polynomial-Curve-Fitting/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
   </content>
 </entry>
 
