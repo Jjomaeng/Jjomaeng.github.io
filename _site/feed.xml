@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-21T16:28:54+09:00</updated>
+<updated>2022-03-21T17:00:17+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho min Hee</name>
@@ -103,7 +103,40 @@
 
 &lt;p&gt;가능도 함수가 \( \mu^{x}(1-x)^{1-x}\)의 형태를 가지는 인자들의 곱의 형태를 띠고 있다는 것에 주목해보면, 만약 \(\mu \)dhk \( (1 - \mu) \)의 거듭제곱에 비례하는 형태를 사전 분포에 선택한다면, 사전 확률과 가능도 함수의 곱에 비례하는 사후 분포 역시 사전 분포와 같은 함수적 형태를 가지게 될 것이다. 이러한 성질을 &lt;b&gt; 켤레성&lt;/b&gt;이라고 한다. ( 켤레성에 대한 이해를 돕고자 켤레의 수학적 의미를 설명하면, 두 개의 점,선,도형,수 등이 서로 대칭이거나 보완적인 관계에 있는 경우 켤레라고 한다.)&lt;/p&gt;
 
-&lt;p&gt;지금까지의 논의를 바탕삼아 사전 분포로 베타 분포를 사용할 것이다.( &lt;a href=&quot;&quot;&gt;왜 베타 분포를 사용하는 지에 대한 자세한 설명은 여기를 참고&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;지금까지의 논의를 바탕삼아 사전 분포로 베타 분포를 사용할 것이다.( &lt;a href=&quot;https://jjomaeng.github.io/blog/베타-분포/&quot;&gt;왜 베타 분포를 사용하는 지에 대한 자세한 설명은 여기에 작성하였습니다!&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;베타 분포는 다음의 형태를 가진다.
+\[ Beta(\mu \mid a,b) = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}\]&lt;/p&gt;
+
+&lt;p&gt;\( \Gamma(x) \)는 다음과 같이 정의된다. (&lt;a href=&quot;https://jjomaeng.github.io/blog/감마-분포/&quot;&gt;감마 함수에 대한 자세한 내용은 여기에 작성하였습니다!&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;\[ \Gamma(x) = \int_{0}^{\infty } u^{x-1} e^{-1} du \]&lt;/p&gt;
+
+&lt;p&gt;베타 분포의 계수들은 베타 분포가 정규화되도록 한다.&lt;/p&gt;
+
+&lt;p&gt;\[ \int_{0}^{1}Beta(\mu \mid a,b) d\mu = 1 \]&lt;/p&gt;
+
+&lt;p&gt;베타 분포의 평균과 분산은 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(\mu) = \frac{a}{a+b} \]
+\[ var(\mu) = \frac{ab}{(a+b)^{2}(a+b+1)} \]&lt;/p&gt;
+
+&lt;p&gt;매개변수 a와 b는 이들이 매개변수 \( \mu \)의 분포를 조절하기 때문에 &lt;b&gt;초매개변수&lt;/b&gt;라고 불린다.&lt;/p&gt;
+
+&lt;p&gt;이제 베타 사전 분포와 이항 가능도 함수를 곱한 후 정규화를 시행함으로써 \( \mu \)의 사후 분포를 구할 수 있다.
+\( \mu \)와 관련되어 있는 인자들만 남기면 사후 분포가 다음의 형태를 가지게 되는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(\mu \mid m,l,a,b) \propto \mu^{m+a-1}(1 - /m)^{l+b-1}\]&lt;/p&gt;
+
+&lt;p&gt;여기서 l = N -m이며 동전 던기기 예시에서 ‘뒷면’의 개수에 해당한다.&lt;/p&gt;
+
+&lt;p&gt;사후 분포의 식은 사전 분포와 \(\mu \)에 대해서 같은 함수적 종속성을 가지고 있다는 것을 확인할 수 있다. 이 사실이 가능도 함수에 대해서 사전 분포가 켤레성을 가지고 있다는 것을 반영한다. 
+실제로 사후 분포는 또 다른 베타 분포일 뿐이다.
+그러면 사후 분포의 정규화 계수는 베타 분포의 식을 참고하여 구할 수 있다. 그 결과 다음을 얻게 된다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(\mu \mid m,l,a,b) = \frac{\Gamma(m+a+l+b)}{\Gamma(m+a)\Gamma(l+b)} \mu^{m+a-1}(1-\mu)^{l+b-1}\]&lt;/p&gt;
+
+&lt;p&gt;\[ \]&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.1-Binary-Variables/&quot;&gt;2.1 Binary Variables&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
@@ -793,6 +826,91 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[감마 분포]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/감마 분포</id>
+  <published>2022-02-22T07:08:50+09:00</published>
+  <updated>2022-02-22T07:08:50+09:00</updated>
+  <author>
+    <name>Cho min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;p&gt;다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;다음과 같은 형태의 다항식이 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ y(x,\textbf{w})= w_{0}+w_{1}x+w2x^{2}+….+w_{M}x^{M} = \sum_{j = 0}^{M}w_{j}x^{j} \]&lt;/p&gt;
+
+&lt;p&gt;이는 x에 대해서는 비선형지만, 계수 w에 대해서는 선형이다. 이를 기하학적으로 해석하면 다음과 같다&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;먼저, 다항식을 훈련 집합 데이터에 피팅해서 계수의 값들을 정할 수 있다. 이때 훈련 집합과 함숫값 y(x,w)와의 오차를 측정하는 대표적인 오차 함수를 다음과 같이 정의할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{w})-t_n)^2 \]&lt;/p&gt;
+
+&lt;p&gt;E(w)를 초쇠화하는 w값을 선택함으로써 이 곡선 피팅 문제를 해결할 수 있다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 이 함수를 계수에 대해 미분하면 w에 대해 선형인 식이 나올 것이다. 이 오차 함수를 최소화하는 w는 유일한 값인 w*를 찾아낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;다음으로 다항식의 차수 M을 결정하는 문제가 여전히 남아있다. 이를 Model Selection이라 불린다&lt;/p&gt;
+
+&lt;p&gt;훈련 집합과 시험 집합 각각에 대해서 E(w*)의 잔차를 계산해 보자
+평균 제곱근 오차(RMS) 를 통해 각각의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인할 것이다.&lt;/p&gt;
+
+&lt;p&gt;평균 제곱근 오차는 다음과 같이 정의된다.&lt;/p&gt;
+
+&lt;p&gt;\[E_{rms} = \sqrt{\frac{2E(w^*)}{N}} \]&lt;/p&gt;
+
+&lt;p&gt;RMS를 통해 각가의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인하면 다음과 같다&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;M값이 작을 경우에는 시험 집합의 오차가 상대적으로 커 UnderFitting이 되었으며 큰 경우, Overfitting이 되었음을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이를 수치적으로 확인했을 때, 차수 M에 따른 피팅 함수의 계수 w*의 값들이 M이 커짐에 따라 계수값의 단위 역시 커지는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;사용되는 데이터 집합의 크기가 달라지는 경우에는 어떤 일이 일어나는지 확인해 보자&lt;/p&gt;
+
+&lt;p&gt;모델의 복잡도를 일정하게 유지시킬 때는 사용하는 데이터 수가 늘어날수록 과적합 문제가 완화되는 것을 확인할 수 있다. 즉 데이터 집합의 수가 클수록 더 복잡한 모델을 활용하여 피팅 가능하다. 
+( 사실 베이지안 모델에서는 데이터 집합의 크기에 따라서 적합한 매개 변수의 수가 자동으로 정해지기 때문에 과적합 문제를 피해갈 수 있다)
+이를 시각화하면 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;그렇다면 비교적 복잡하고 유연한 모델을 제한적인 숫자의 데이터 집합을 활용하여 피팅하려면 어떻게 해야할까?
+그 방법 중 하나가 정규화다&lt;/p&gt;
+
+&lt;p&gt;오차 함수에 계수의 크기가 커지는 것을 막기 위한 패널티항을 추가하는 것이다. 식은 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[\widetilde{E}(w) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{W}) - t_{n})^2 + \frac{\lambda }{2}\left| w \right|^2 \]&lt;/p&gt;
+
+&lt;p&gt;여기서, 이차 형식 정규화는 리지 회귀라고 부르고 뉴럴 네트워크의 맥락에서는 이를 가중치 감쇠라 한다.&lt;/p&gt;
+
+&lt;p&gt;마지막으로 지금까지의 결과를 바탕으로 모델 복잡도를 잘 선택하는 단순한 방법이 있다.&lt;/p&gt;
+
+&lt;p&gt;그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
+여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;감마 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
   </content>
 </entry>
 

@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>2.1 Binary Variables &#8211; MinPy</title>
+<title>감마 분포 &#8211; MinPy</title>
 <meta name="description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
 ">
-<meta name="keywords" content="PRML">
+<meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="2.1 Binary Variables">
+<meta name="twitter:title" content="감마 분포">
 <meta name="twitter:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
 ">
@@ -26,11 +26,11 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2.1 Binary Variables">
+<meta property="og:title" content="감마 분포">
 <meta property="og:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
 ">
-<meta property="og:url" content="http://localhost:4000/articles/PRML-2.1-Binary-Variables/">
+<meta property="og:url" content="http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/">
 <meta property="og:site_name" content="MinPy">
 
 <!-- Webmaster Tools verfication -->
@@ -38,7 +38,7 @@
 <meta name="msvalidate.01" content="D81F4C18A6CB3018F64D7C827D953DFD">
 
 
-<link rel="canonical" href="http://localhost:4000/articles/PRML-2.1-Binary-Variables/">
+<link rel="canonical" href="http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="MinPy Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -126,10 +126,10 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          <li><a href="http://localhost:4000/tags/#PRML" title="Pages tagged PRML">PRML</a></li>
+          
         </ul>
         
-          <h1 class="entry-title">2.1 Binary Variables</h1>
+          <h1 class="entry-title">감마 분포</h1>
         
       </header>
       <footer class="entry-meta">
@@ -138,7 +138,7 @@
           <img src="http://localhost:4000/images/chominhee.jpg" class="bio-photo" alt="Cho min Hee bio photo">
         
         <span class="author vcard">By <span class="fn">Cho min Hee</span></span>
-        <span class="entry-date date published"><time datetime="2022-03-02T04:01:50+09:00"><i class="fa fa-calendar-o"></i> March 02, 2022</time></span>
+        <span class="entry-date date published"><time datetime="2022-02-22T07:08:50+09:00"><i class="fa fa-calendar-o"></i> February 22, 2022</time></span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
@@ -165,116 +165,70 @@
         <p>이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
 
-<p>이 장에서 논의할 분포의 역할들 중 하나는 한정된 수의 관찰 집합 x1,….,xn이 주어졌을 때 확률 변수 x의 확률 분포 p(x)를 모델링하는 것이다. 이를 <b>밀도 추정 문제 </b> 라고 한다.
-이 장의 목표를 위해서 데이터 포인트들은 독립적이며, 동일하게 분포되어 있다고 가정할 것이다.</p>
+<p>다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.</p>
 
-<p>우선, 이산 확률 변수의 이항 분포와 다항 분포를 살펴보고 그 다음으로 연속 확률 변수의 가우시안 분포에 대해 논의할 것이다. 이 분포들은 매개변수 분포의 예다. 
-이러한 모델을 밀도 추정 문제에 적용하기 위해서는 관찰된 데이터 집합을 바탕으로 적절한 매개변숫값을 구하는 과정이 필요하다.<br />
-두 가지 관점에서 살펴보자</p>
-<ul>
-  <li>빈도적 관점 : 어떤 특정 기준을 최적화하는 방법으로 매개변수를 찾는다. 최적화 기준의 예로 가능도 함수가 있다.</li>
-  <li>베이지안 관점 : 매개변수에 대한 사전 분포를 바탕으로 관측된 데이터 집합이 주어졌을 때의 해당 사후분포를 계산한다.</li>
-</ul>
+<p>다음과 같은 형태의 다항식이 있다.</p>
 
-<p>켤레 사전 확률이 중요한 역할을 한다는 것도 살펴볼 것이다. 켤레 사전 확률은 사후 확률이 사전 확률과 같은 함수적 형태를 띠도록 만들어준다. 그 결과 , 베이지안 분석이 매우 단순해진다.</p>
+<p>\[ y(x,\textbf{w})= w_{0}+w_{1}x+w2x^{2}+….+w_{M}x^{M} = \sum_{j = 0}^{M}w_{j}x^{j} \]</p>
 
-<p>매개변수적인 접근법의 한계점도 존재한다. 분포가 특정한 함수 형태를 띠고있다고 가정하지만 몇몇 적용 사례의 경우에는 이 가정이 적절하지 않다. 이런 경우, 비매개변수적 밀도 추정 방식을 대안으로 활용할 수 있다.</p>
-
-<h4 id="이산-확률-변수">이산 확률 변수</h4>
-
-<p>하나의 이진 확률 변수 \( x \in (0,1) \)을 고려해 보자. 0과 1이 나올 확률이 동일하지 않다고 가정하면 이때 x = 1일 확률은 매개변수 \( \mu \)를 통해 다음과 같이 표현할 수 있다.
-\[ p(x = 1 \mid \mu) = \mu (0 \leq \mu \leq 1)\]
-\[ p(x = 0 \mid \mu ) = 1 - \mu \]</p>
-
-<p>따라서 x에 대한 확률은 다음의 형태로 적을 수 있다.</p>
-
-<p>\[ Bern(x \mid \mu ) = \mu^{x}(1 - \mu)^{1-x} \]</p>
-
-<p>이것을 <b> 베르누이 분포 </b>라고 한다. 베르누이 분포는 정규화되어 있으며, 그 평균과 분산이 다음과 같이 주어진다.</p>
-
-<p>\[ E(x) = \mu \]
-\[ var(x) = \mu(1-\mu) \]</p>
-
-<p>x의 관극값이 데이터 집합 \( D = (x_{1},…..x_{N})\)이 주어졌다고 하자. 관측값들이 \( p(x \mid \mu)\)에서 독립적으로 추출되었다는 가정하에 \( \mu \)함수로써 가능도 함수를 구성할 수 있다.
-\[ p(D \mid \mu ) = \prod_{n=1}^{N}p(x_{n} | \mu) = \prod_{n=1}^{N}\mu^{x_{n}}(1-\mu)^{1 - x_{n}} \]</p>
-
-<p>빈도적 관점에서는 가능도 함수를 최대화하는 \( \mu \)를 찾아서 \( \mu \)값을 추정할 수 있다. 베르누이 분포의 경우 로그 가능도 함수는 다음으로 주어진다.</p>
-
-<p>\[ lnp(D \mid \mu ) = \sum_{n=1}^{N}lnp(x_{n} \mid \mu) = \sum_{n=1}^{N}(x_{n}ln\mu + (1-x_{n})ln(1-\mu)) \]</p>
-
-<p>로그 가능도함수는 오직 관측값들의 합인 \(\sum_{n}x_{n}\)을 통해서만 N개의 관측값 \(x_{n} \)과 연관된다는 점에 주목할 필요가 있다. 이 합은 <b> 충분 통계량 </b>의 예시 중 하나다.</p>
-
-<p>\( lnp(D \mid \mu )\)을 \(\mu \)에 대해 미분하고 이를 0과 같다고 놓으면 다음과 같은 최대 가능도 추정값을 구할 수 있다.</p>
-
-<p>\[ \mu_{ML} = \frac{1}{N}\sum_{n=1}^{N}x_{n}\]</p>
-
-<p>이는 <b> 표본 평균 </b>이라고도 불린다. 데이터에서 x = 1인 관찰값의 수를 m이라고 하면 다음의 형태로 다시 적을 수 있다. 
-\[ \mu_{ML} = \frac{m}{N} \]</p>
-
-<p>즉, 최대가능도 체계하에에서 동전으로 예시를 들면, 동전의 앞면이 나올 확률은 데이터 집합에서 앞면이 나온 비율로 주어지게 되는 것이다.</p>
-
-<p>하지만 최대가능도를 사용할 경우 과적합이 발생할 수 있다.</p>
-
-<p>동전을 세 번 던졌는데 세 번 다 앞면이 나온 경우를 생각해보자. 그러면 N = m = 3이고 따라서 \( \mu_{ML} = 1 \)이 된다( 이 경우 앞으로 던지는 모든 동전이 앞면으로 나올 것이라고 예측하는 것이다! ) 이것이 실제로 최대 가능도를 사용했을 경우 발생할 수 있는 극단적인 사례다.( 이후에 사전 분포를 바탕으로 나은 결과를 도출할 수 있다.)</p>
-
-<p>크기 N의 데이터가 주어졌을 때 x = 1인 관측값의 수 m에 대해서도 분포를 생각할 수 있다. 이를 <b> 이항 분포 </b>라 한다. 위에서 구한 가능도 함수로부터 이항 분포는 \( \mu^{m}(1 - \mu)^{N - M}\)에 비례한다는 것을 알 수 있다.</p>
-
-<p>정규화 계수를 구하기 위해서 동전 던지기로 예시를 들면, 동전 던지기를 N번 했을 때 앞면이 m번 나올 수 있는 가능한 모든 가짓수를 구해야 한다. 따라서 이항 분포를 다음과 같이 적을 수 있다.
-\[Bin(m \mid N,\mu) = \binom{N}{m}\mu^{m}(1-\mu)^{N-m} \]</p>
-
-<p>여기서 다음과 같다.</p>
-
-<p>\[ \binom{N}{m} \equiv \frac{N!}{(N-m)!m!} \]</p>
-
-<p>\( \binom{N}{m} \)은 N개의 물체들 중 m개의 물체를 선별하는 가짓수를 구한 것이다. 이해를 위해 N = 10이고 \(\mu \)= 0.25일 때의 이항 분포의 히스토그램은 다음과 같다.</p>
+<p>이는 x에 대해서는 비선형지만, 계수 w에 대해서는 선형이다. 이를 기하학적으로 해석하면 다음과 같다</p>
 
 <figure>
-    <a href="/PRML/1.png" alt="image"><img src="/PRML/8.png" alt="image" /></a>
+    <a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="image" /></a>
 </figure>
 
-<h4 id="베타-분포">베타 분포</h4>
+<p>먼저, 다항식을 훈련 집합 데이터에 피팅해서 계수의 값들을 정할 수 있다. 이때 훈련 집합과 함숫값 y(x,w)와의 오차를 측정하는 대표적인 오차 함수를 다음과 같이 정의할 수 있다.</p>
 
-<p>이미 살펴본 방법들은 데이터 수가 적을 때 심각한 과적합이 일어나기 쉽다(동전 던지기 예시를 생각해보자!)</p>
+<p>\[E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{w})-t_n)^2 \]</p>
 
-<p>이 문제에 베이지안적으로 접근하기 위해서는 매개변수 \( \mu \)에 대한 사전 분포 \( p(\mu) \)를 도입하는 것이 필요하다.</p>
+<p>E(w)를 초쇠화하는 w값을 선택함으로써 이 곡선 피팅 문제를 해결할 수 있다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 이 함수를 계수에 대해 미분하면 w에 대해 선형인 식이 나올 것이다. 이 오차 함수를 최소화하는 w는 유일한 값인 w*를 찾아낼 수 있다.</p>
 
-<p>가능도 함수가 \( \mu^{x}(1-x)^{1-x}\)의 형태를 가지는 인자들의 곱의 형태를 띠고 있다는 것에 주목해보면, 만약 \(\mu \)dhk \( (1 - \mu) \)의 거듭제곱에 비례하는 형태를 사전 분포에 선택한다면, 사전 확률과 가능도 함수의 곱에 비례하는 사후 분포 역시 사전 분포와 같은 함수적 형태를 가지게 될 것이다. 이러한 성질을 <b> 켤레성</b>이라고 한다. ( 켤레성에 대한 이해를 돕고자 켤레의 수학적 의미를 설명하면, 두 개의 점,선,도형,수 등이 서로 대칭이거나 보완적인 관계에 있는 경우 켤레라고 한다.)</p>
+<p>다음으로 다항식의 차수 M을 결정하는 문제가 여전히 남아있다. 이를 Model Selection이라 불린다</p>
 
-<p>지금까지의 논의를 바탕삼아 사전 분포로 베타 분포를 사용할 것이다.( <a href="https://jjomaeng.github.io/blog/베타-분포/">왜 베타 분포를 사용하는 지에 대한 자세한 설명은 여기에 작성하였습니다!</a>)</p>
+<p>훈련 집합과 시험 집합 각각에 대해서 E(w*)의 잔차를 계산해 보자
+평균 제곱근 오차(RMS) 를 통해 각각의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인할 것이다.</p>
 
-<p>베타 분포는 다음의 형태를 가진다.
-\[ Beta(\mu \mid a,b) = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}\]</p>
+<p>평균 제곱근 오차는 다음과 같이 정의된다.</p>
 
-<p>\( \Gamma(x) \)는 다음과 같이 정의된다. (<a href="https://jjomaeng.github.io/blog/감마-분포/">감마 함수에 대한 자세한 내용은 여기에 작성하였습니다!</a>)</p>
+<p>\[E_{rms} = \sqrt{\frac{2E(w^*)}{N}} \]</p>
 
-<p>\[ \Gamma(x) = \int_{0}^{\infty } u^{x-1} e^{-1} du \]</p>
+<p>RMS를 통해 각가의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인하면 다음과 같다</p>
 
-<p>베타 분포의 계수들은 베타 분포가 정규화되도록 한다.</p>
+<figure>
+    <a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="image" /></a>
+</figure>
 
-<p>\[ \int_{0}^{1}Beta(\mu \mid a,b) d\mu = 1 \]</p>
+<p>M값이 작을 경우에는 시험 집합의 오차가 상대적으로 커 UnderFitting이 되었으며 큰 경우, Overfitting이 되었음을 확인할 수 있다.</p>
 
-<p>베타 분포의 평균과 분산은 다음과 같이 주어진다.</p>
+<p>이를 수치적으로 확인했을 때, 차수 M에 따른 피팅 함수의 계수 w*의 값들이 M이 커짐에 따라 계수값의 단위 역시 커지는 것을 확인할 수 있다.</p>
 
-<p>\[ E(\mu) = \frac{a}{a+b} \]
-\[ var(\mu) = \frac{ab}{(a+b)^{2}(a+b+1)} \]</p>
+<figure>
+    <a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="image" /></a>
+</figure>
 
-<p>매개변수 a와 b는 이들이 매개변수 \( \mu \)의 분포를 조절하기 때문에 <b>초매개변수</b>라고 불린다.</p>
+<p>사용되는 데이터 집합의 크기가 달라지는 경우에는 어떤 일이 일어나는지 확인해 보자</p>
 
-<p>이제 베타 사전 분포와 이항 가능도 함수를 곱한 후 정규화를 시행함으로써 \( \mu \)의 사후 분포를 구할 수 있다.
-\( \mu \)와 관련되어 있는 인자들만 남기면 사후 분포가 다음의 형태를 가지게 되는 것을 확인할 수 있다.</p>
+<p>모델의 복잡도를 일정하게 유지시킬 때는 사용하는 데이터 수가 늘어날수록 과적합 문제가 완화되는 것을 확인할 수 있다. 즉 데이터 집합의 수가 클수록 더 복잡한 모델을 활용하여 피팅 가능하다. 
+( 사실 베이지안 모델에서는 데이터 집합의 크기에 따라서 적합한 매개 변수의 수가 자동으로 정해지기 때문에 과적합 문제를 피해갈 수 있다)
+이를 시각화하면 다음과 같다.</p>
 
-<p>\[ p(\mu \mid m,l,a,b) \propto \mu^{m+a-1}(1 - /m)^{l+b-1}\]</p>
+<figure>
+    <a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt="image" /></a>
+</figure>
 
-<p>여기서 l = N -m이며 동전 던기기 예시에서 ‘뒷면’의 개수에 해당한다.</p>
+<p>그렇다면 비교적 복잡하고 유연한 모델을 제한적인 숫자의 데이터 집합을 활용하여 피팅하려면 어떻게 해야할까?
+그 방법 중 하나가 정규화다</p>
 
-<p>사후 분포의 식은 사전 분포와 \(\mu \)에 대해서 같은 함수적 종속성을 가지고 있다는 것을 확인할 수 있다. 이 사실이 가능도 함수에 대해서 사전 분포가 켤레성을 가지고 있다는 것을 반영한다. 
-실제로 사후 분포는 또 다른 베타 분포일 뿐이다.
-그러면 사후 분포의 정규화 계수는 베타 분포의 식을 참고하여 구할 수 있다. 그 결과 다음을 얻게 된다.</p>
+<p>오차 함수에 계수의 크기가 커지는 것을 막기 위한 패널티항을 추가하는 것이다. 식은 다음과 같다.</p>
 
-<p>\[ p(\mu \mid m,l,a,b) = \frac{\Gamma(m+a+l+b)}{\Gamma(m+a)\Gamma(l+b)} \mu^{m+a-1}(1-\mu)^{l+b-1}\]</p>
+<p>\[\widetilde{E}(w) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{W}) - t_{n})^2 + \frac{\lambda }{2}\left| w \right|^2 \]</p>
 
-<p>\[ \]</p>
+<p>여기서, 이차 형식 정규화는 리지 회귀라고 부르고 뉴럴 네트워크의 맥락에서는 이를 가중치 감쇠라 한다.</p>
 
+<p>마지막으로 지금까지의 결과를 바탕으로 모델 복잡도를 잘 선택하는 단순한 방법이 있다.</p>
+
+<p>그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
+여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.</p>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -306,8 +260,10 @@
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/articles/PRML-1.6-Information-Theory/" class="btn" title="1.6 Information Theory">Previous</a>
+        <a href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/" class="btn" title="1.1 Polynomial Curve Fitting">Previous</a>
       
+      
+        <a href="http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" class="btn" title="베타 분포">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
