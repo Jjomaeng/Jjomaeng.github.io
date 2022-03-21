@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "1.2. Probability theory (2)",
+      "link"			: "http://localhost:4000/articles/PRML-1.3-Polynomial-Curve-Fitting/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
       "title"			: "1.2 Probability theory",
       "link"			: "http://localhost:4000/articles/PRML-1.2-Probability-theory/",
       "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
@@ -28,14 +36,6 @@
     ,{
       "title"			: "1.1 Polynomial Curve Fitting",
       "link"			: "http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/",
-      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
-    }
-  
-
-  
-    ,{
-      "title"			: "1.1 Polynomial Curve Fitting",
-      "link"			: "http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB-4/",
       "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
     }
   

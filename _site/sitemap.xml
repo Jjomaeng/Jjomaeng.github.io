@@ -9,10 +9,6 @@
 <lastmod>2022-02-22T07:08:50+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%EB%B3%B5%EC%82%AC%EB%B3%B8-4/</loc>
-<lastmod>2022-02-22T07:08:50+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/</loc>
 <lastmod>2022-02-22T07:08:50+09:00</lastmod>
 </url>
@@ -27,6 +23,10 @@
 <url>
 <loc>http://localhost:4000/articles/PRML-1.2-Probability-theory/</loc>
 <lastmod>2022-02-24T04:01:50+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/articles/PRML-1.3-Polynomial-Curve-Fitting/</loc>
+<lastmod>2022-02-25T07:08:50+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
