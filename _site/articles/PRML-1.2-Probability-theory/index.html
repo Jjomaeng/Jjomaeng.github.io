@@ -190,46 +190,18 @@ nij는 X = xi, Y = yj 인 시도 개수를 의미하며, ci는 Y 값과는 상�
 <p>여기서 X = xi인 사례들만 고려해보자. 그들 중에서 Y = yi인 사례들의 비율을 생각해 볼 수 있고, 이를 확률 \(p(Y = y_{i} | X = x_{i}) \)로 적을 수 있으며
 이를 <b>조건부 확률</b>이라고 부른다</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>\[ p(Y = y_{i}</td>
-      <td>X = x_{i}) = \frac{n_{i,j}}{c_{i} \]</td>
-    </tr>
-  </tbody>
-</table>
+<p>\[ p(Y = y_{i} \mid X = x_{i}) = \frac{n_{i,j}}{c_{i}} \]</p>
 
 <p>지금까지의 식을 이용해서 다음의 관계를 도출할 수 있다.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>\[ p(X = x_{i}</td>
-      <td>Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j}</td>
-      <td>X = x_{i})p(X=x_{i}) \]</td>
-    </tr>
-  </tbody>
-</table>
+<p>\[ p(X = x_{i} \mid Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j} \mid X = x_{i})p(X=x_{i}) \]</p>
 
 <p>이것이 바로 확률의<b> 곱의 법칙</b>이다&lt;/p&gt;</p>
 
 <p>이제, 곱의 법칙과 합의 법칙, 대칭성 p(X,Y) = p(Y,X)로 부터 조건부 확률 간의 관계인 다음 식을 도출해 낼 수 있다.
 (여기서 부터는 간단하게 확률 변수 X에서 분포를 표현할 때는 p(X)라 적고 특정 값 xi에서의 분포를 표현할 때는 p(xi)로 적기로 한다)</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>\[p(Y</td>
-      <td>X) = \frac{p(X</td>
-      <td>Y</td>
-      <td>)p(Y)}{p(X)} = \frac{p(X</td>
-      <td>Y</td>
-      <td>)p(Y)}{\sum_{Y}p(X</td>
-      <td>Y</td>
-      <td>)p(Y)} \]</td>
-    </tr>
-  </tbody>
-</table>
+<p>\[p(Y \mid X) = \frac{p(X\mid Y)p(Y)}{p(X)} = \frac{p(X\mid Y)p(Y)}{\sum_{Y}p(X\mid Y)p(Y)} \]</p>
 
 <p>이를 <b>베이즈 정리</b>라고 한다( 책의 전반에 걸쳐 중요한 역할을 한다)</p>
 
@@ -293,18 +265,18 @@ nij는 X = xi, Y = yj 인 시도 개수를 의미하며, ci는 Y 값과는 상�
 
 <p>이를 전개하여 정리하면 다음과 같다. (식의 이해를 돕기 위하여 상수인 E[f(x)] 부분을  μ라 표현)</p>
 
-<p>\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \) =&gt; 공분산 특징 첫 번째 이용</p>
+<p>\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \)  -&gt; 공분산 특징 첫 번째 이용</p>
 
 <p>\( = E(f(x)^{2}) -2\mu E(f(x)) +\mu^{2} \)</p>
 
-<p>\( = E[f(x)^{2}] - E[f(x)]^{2} \)</p>
+<p>\( = E(f(x)^{2}) - E(f(x))^{2} \)</p>
 
 <p>여기서 변수 x 그 자체에도 고려가능하다.</p>
 
 <p>다음으로 두 개의 확률 변수 x 와 y에 대해서 공분산은 다음과 같이 정의된다.</p>
 
-<p>cov[x,y] = E[{x - E[x]}{y - E[y]}]
-         = E[xy] - E[x]E[y]</p>
+<p>\[ cov(x,y) = E((x - E(x))(y - E(y)) \]
+\[= E(xy) - E(x)E(y) \]</p>
 
 <p>이는 x값과 y값이 얼마나 함께 같이 변동하는가에 대한 지표이며 만얀 x,y가 서로 독립적일 경우 공부산값은 0으로 간다.</p>
 

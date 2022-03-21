@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-21T10:14:52+09:00</updated>
+<updated>2022-03-21T10:44:02+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho min Hee</name>
@@ -53,46 +53,18 @@ nij는 X = xi, Y = yj 인 시도 개수를 의미하며, ci는 Y 값과는 상�
 &lt;p&gt;여기서 X = xi인 사례들만 고려해보자. 그들 중에서 Y = yi인 사례들의 비율을 생각해 볼 수 있고, 이를 확률 \(p(Y = y_{i} | X = x_{i}) \)로 적을 수 있으며
 이를 &lt;b&gt;조건부 확률&lt;/b&gt;이라고 부른다&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\[ p(Y = y_{i}&lt;/td&gt;
-      &lt;td&gt;X = x_{i}) = \frac{n_{i,j}}{c_{i} \]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;\[ p(Y = y_{i} \mid X = x_{i}) = \frac{n_{i,j}}{c_{i}} \]&lt;/p&gt;
 
 &lt;p&gt;지금까지의 식을 이용해서 다음의 관계를 도출할 수 있다.&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\[ p(X = x_{i}&lt;/td&gt;
-      &lt;td&gt;Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j}&lt;/td&gt;
-      &lt;td&gt;X = x_{i})p(X=x_{i}) \]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;\[ p(X = x_{i} \mid Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j} \mid X = x_{i})p(X=x_{i}) \]&lt;/p&gt;
 
 &lt;p&gt;이것이 바로 확률의&lt;b&gt; 곱의 법칙&lt;/b&gt;이다&amp;lt;/p&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;이제, 곱의 법칙과 합의 법칙, 대칭성 p(X,Y) = p(Y,X)로 부터 조건부 확률 간의 관계인 다음 식을 도출해 낼 수 있다.
 (여기서 부터는 간단하게 확률 변수 X에서 분포를 표현할 때는 p(X)라 적고 특정 값 xi에서의 분포를 표현할 때는 p(xi)로 적기로 한다)&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\[p(Y&lt;/td&gt;
-      &lt;td&gt;X) = \frac{p(X&lt;/td&gt;
-      &lt;td&gt;Y&lt;/td&gt;
-      &lt;td&gt;)p(Y)}{p(X)} = \frac{p(X&lt;/td&gt;
-      &lt;td&gt;Y&lt;/td&gt;
-      &lt;td&gt;)p(Y)}{\sum_{Y}p(X&lt;/td&gt;
-      &lt;td&gt;Y&lt;/td&gt;
-      &lt;td&gt;)p(Y)} \]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;\[p(Y \mid X) = \frac{p(X\mid Y)p(Y)}{p(X)} = \frac{p(X\mid Y)p(Y)}{\sum_{Y}p(X\mid Y)p(Y)} \]&lt;/p&gt;
 
 &lt;p&gt;이를 &lt;b&gt;베이즈 정리&lt;/b&gt;라고 한다( 책의 전반에 걸쳐 중요한 역할을 한다)&lt;/p&gt;
 
@@ -156,18 +128,18 @@ nij는 X = xi, Y = yj 인 시도 개수를 의미하며, ci는 Y 값과는 상�
 
 &lt;p&gt;이를 전개하여 정리하면 다음과 같다. (식의 이해를 돕기 위하여 상수인 E[f(x)] 부분을  μ라 표현)&lt;/p&gt;
 
-&lt;p&gt;\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \) =&amp;gt; 공분산 특징 첫 번째 이용&lt;/p&gt;
+&lt;p&gt;\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \)  -&amp;gt; 공분산 특징 첫 번째 이용&lt;/p&gt;
 
 &lt;p&gt;\( = E(f(x)^{2}) -2\mu E(f(x)) +\mu^{2} \)&lt;/p&gt;
 
-&lt;p&gt;\( = E[f(x)^{2}] - E[f(x)]^{2} \)&lt;/p&gt;
+&lt;p&gt;\( = E(f(x)^{2}) - E(f(x))^{2} \)&lt;/p&gt;
 
 &lt;p&gt;여기서 변수 x 그 자체에도 고려가능하다.&lt;/p&gt;
 
 &lt;p&gt;다음으로 두 개의 확률 변수 x 와 y에 대해서 공분산은 다음과 같이 정의된다.&lt;/p&gt;
 
-&lt;p&gt;cov[x,y] = E[{x - E[x]}{y - E[y]}]
-         = E[xy] - E[x]E[y]&lt;/p&gt;
+&lt;p&gt;\[ cov(x,y) = E((x - E(x))(y - E(y)) \]
+\[= E(xy) - E(x)E(y) \]&lt;/p&gt;
 
 &lt;p&gt;이는 x값과 y값이 얼마나 함께 같이 변동하는가에 대한 지표이며 만얀 x,y가 서로 독립적일 경우 공부산값은 0으로 간다.&lt;/p&gt;
 
