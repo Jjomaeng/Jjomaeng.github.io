@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%EB%B3%B5%EC%82%AC%EB%B3%B8-2/</loc>
+<lastmod>2022-02-22T07:08:50+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%EB%B3%B5%EC%82%AC%EB%B3%B8-3/</loc>
+<lastmod>2022-02-22T07:08:50+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%EB%B3%B5%EC%82%AC%EB%B3%B8-4/</loc>
+<lastmod>2022-02-22T07:08:50+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/</loc>
 <lastmod>2022-02-22T07:08:50+09:00</lastmod>
 </url>
@@ -11,6 +23,10 @@
 <url>
 <loc>http://localhost:4000/articles/CS229-LECTURE-01/</loc>
 <lastmod>2022-02-23T07:50:50+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/articles/PRML-1.2-Probability-theory/</loc>
+<lastmod>2022-02-24T04:01:50+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

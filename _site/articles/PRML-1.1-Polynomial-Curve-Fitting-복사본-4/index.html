@@ -1,0 +1,334 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>1.1 Polynomial Curve Fitting &#8211; MinPy</title>
+<meta name="description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta name="keywords" content="PRML">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="1.1 Polynomial Curve Fitting">
+<meta name="twitter:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta name="twitter:site" content="@mmistakes">
+<meta name="twitter:creator" content="@mmistakes">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.1 Polynomial Curve Fitting">
+<meta property="og:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta property="og:url" content="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB-4/">
+<meta property="og:site_name" content="MinPy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y">
+<meta name="msvalidate.01" content="D81F4C18A6CB3018F64D7C827D953DFD">
+
+
+<link rel="canonical" href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB-4/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="MinPy Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/tags/" >Machine Learning</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/blog/" >Mathematical Statistics</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="MinPy"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="MinPy logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">MinPy</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">하루하루 꾸준하게</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#PRML" title="Pages tagged PRML">PRML</a></li>
+        </ul>
+        
+          <h1 class="entry-title">1.1 Polynomial Curve Fitting</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/chominhee.jpg" class="bio-photo" alt="Cho min Hee bio photo">
+        
+        <span class="author vcard">By <span class="fn">Cho min Hee</span></span>
+        <span class="entry-date date published"><time datetime="2022-02-22T07:08:50+09:00"><i class="fa fa-calendar-o"></i> February 22, 2022</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        <div class="google-ads" style="margin-top:40px; text-align:center;">
+  <style>
+  .responsive-ads { width: 300px; height: 200px; }
+  @media(min-width: 518px) { .responsive-ads { width: 468px; height: 60px; } }
+  @media(min-width: 778px) { .responsive-ads { width: 728px; height: 90px; } }
+  @media(min-width: 1000px) { .responsive-ads { width: 160px; height: 600px; } }
+  </style>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle responsive-ads"
+    style="display:inline-block"
+    data-ad-client="ca-pub-7328585512091257"
+    data-ad-slot="7855747535"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+<!-- /.google-ads -->
+      </footer>
+      <div class="entry-content">
+        <p>이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<p>다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.</p>
+
+<p>다음과 같은 형태의 다항식이 있다.</p>
+
+<p>\[ y(x,\textbf{w})= w_{0}+w_{1}x+w2x^{2}+….+w_{M}x^{M} = \sum_{j = 0}^{M}w_{j}x^{j} \]</p>
+
+<p>이는 x에 대해서는 비선형지만, 계수 w에 대해서는 선형이다. 이를 기하학적으로 해석하면 다음과 같다</p>
+
+<figure>
+    <a href="/PRML/1.png" alt="image"><img src="/PRML/1.png" alt="image" /></a>
+</figure>
+
+<p>먼저, 다항식을 훈련 집합 데이터에 피팅해서 계수의 값들을 정할 수 있다. 이때 훈련 집합과 함숫값 y(x,w)와의 오차를 측정하는 대표적인 오차 함수를 다음과 같이 정의할 수 있다.</p>
+
+<p>\[E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{w})-t_n)^2 \]</p>
+
+<p>E(w)를 초쇠화하는 w값을 선택함으로써 이 곡선 피팅 문제를 해결할 수 있다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 이 함수를 계수에 대해 미분하면 w에 대해 선형인 식이 나올 것이다. 이 오차 함수를 최소화하는 w는 유일한 값인 w*를 찾아낼 수 있다.</p>
+
+<p>다음으로 다항식의 차수 M을 결정하는 문제가 여전히 남아있다. 이를 Model Selection이라 불린다</p>
+
+<p>훈련 집합과 시험 집합 각각에 대해서 E(w*)의 잔차를 계산해 보자
+평균 제곱근 오차(RMS) 를 통해 각각의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인할 것이다.</p>
+
+<p>평균 제곱근 오차는 다음과 같이 정의된다.</p>
+
+<p>\[E_{rms} = \sqrt{\frac{2E(w^*)}{N}} \]</p>
+
+<p>RMS를 통해 각가의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인하면 다음과 같다</p>
+
+<figure>
+    <a href="/PRML/2.png" alt="image"><img src="/PRML/2.png" alt="image" /></a>
+</figure>
+
+<p>M값이 작을 경우에는 시험 집합의 오차가 상대적으로 커 UnderFitting이 되었으며 큰 경우, Overfitting이 되었음을 확인할 수 있다.</p>
+
+<p>이를 수치적으로 확인했을 때, 차수 M에 따른 피팅 함수의 계수 w*의 값들이 M이 커짐에 따라 계수값의 단위 역시 커지는 것을 확인할 수 있다.</p>
+
+<figure>
+    <a href="/PRML/3.png" alt="image"><img src="/PRML/3.png" alt="image" /></a>
+</figure>
+
+<p>사용되는 데이터 집합의 크기가 달라지는 경우에는 어떤 일이 일어나는지 확인해 보자</p>
+
+<p>모델의 복잡도를 일정하게 유지시킬 때는 사용하는 데이터 수가 늘어날수록 과적합 문제가 완화되는 것을 확인할 수 있다. 즉 데이터 집합의 수가 클수록 더 복잡한 모델을 활용하여 피팅 가능하다. 
+( 사실 베이지안 모델에서는 데이터 집합의 크기에 따라서 적합한 매개 변수의 수가 자동으로 정해지기 때문에 과적합 문제를 피해갈 수 있다)
+이를 시각화하면 다음과 같다.</p>
+
+<figure>
+    <a href="/PRML/4.png" alt="image"><img src="/PRML/4.png" alt="image" /></a>
+</figure>
+
+<p>그렇다면 비교적 복잡하고 유연한 모델을 제한적인 숫자의 데이터 집합을 활용하여 피팅하려면 어떻게 해야할까?
+그 방법 중 하나가 정규화다</p>
+
+<p>오차 함수에 계수의 크기가 커지는 것을 막기 위한 패널티항을 추가하는 것이다. 식은 다음과 같다.</p>
+
+<p>\[\widetilde{E}(w) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{W}) - t_{n})^2 + \frac{\lambda }{2}\left| w \right|^2 \]</p>
+
+<p>여기서, 이차 형식 정규화는 리지 회귀라고 부르고 뉴럴 네트워크의 맥락에서는 이를 가중치 감쇠라 한다.</p>
+
+<p>마지막으로 지금까지의 결과를 바탕으로 모델 복잡도를 잘 선택하는 단순한 방법이 있다.</p>
+
+<p>그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
+여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.</p>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'sosimpletheme'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting-%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB-3/" class="btn" title="1.1 Polynomial Curve Fitting">Previous</a>
+      
+      
+        <a href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/" class="btn" title="1.1 Polynomial Curve Fitting">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    <div class="google-ads" style="margin:10px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 320x50 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-7328585512091257"
+       data-ad-slot="7855747535"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+
+<span>&copy; 2022 Cho min Hee. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/mmistakes" title="Cho min Hee on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="https://facebook.com/michaelrose" title="Cho min Hee on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	<a href="https://plus.google.com/+MichaelRoseDesign" title="Cho min Hee on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	
+	
+	<a href="https://instagram.com/mmistakes" title="Cho min Hee on Instagram" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+	
+	<a href="https://github.com/mmistakes" title="Cho min Hee on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	<a href="http://mademistakes.tumblr.com" title="Cho min Hee on Tumblr" target="_blank"><i class="fa fa-tumblr-square fa-2x"></i></a>
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2011187-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

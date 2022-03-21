@@ -1,0 +1,410 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>1.2 Probability theory &#8211; MinPy</title>
+<meta name="description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta name="keywords" content="PRML">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="1.2 Probability theory">
+<meta name="twitter:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta name="twitter:site" content="@mmistakes">
+<meta name="twitter:creator" content="@mmistakes">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/site-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.2 Probability theory">
+<meta property="og:description" content="이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.
+">
+<meta property="og:url" content="http://localhost:4000/articles/PRML-1.2-Probability-theory/">
+<meta property="og:site_name" content="MinPy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y">
+<meta name="msvalidate.01" content="D81F4C18A6CB3018F64D7C827D953DFD">
+
+
+<link rel="canonical" href="http://localhost:4000/articles/PRML-1.2-Probability-theory/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="MinPy Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/tags/" >Machine Learning</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/blog/" >Mathematical Statistics</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/search/" >Search</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="MinPy"><img src="http://localhost:4000/images/site-logo.png" width="200" height="200" alt="MinPy logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">MinPy</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">하루하루 꾸준하게</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          <li><a href="http://localhost:4000/tags/#PRML" title="Pages tagged PRML">PRML</a></li>
+        </ul>
+        
+          <h1 class="entry-title">1.2 Probability theory</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/chominhee.jpg" class="bio-photo" alt="Cho min Hee bio photo">
+        
+        <span class="author vcard">By <span class="fn">Cho min Hee</span></span>
+        <span class="entry-date date published"><time datetime="2022-02-24T04:01:50+09:00"><i class="fa fa-calendar-o"></i> February 24, 2022</time></span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        <div class="google-ads" style="margin-top:40px; text-align:center;">
+  <style>
+  .responsive-ads { width: 300px; height: 200px; }
+  @media(min-width: 518px) { .responsive-ads { width: 468px; height: 60px; } }
+  @media(min-width: 778px) { .responsive-ads { width: 728px; height: 90px; } }
+  @media(min-width: 1000px) { .responsive-ads { width: 160px; height: 600px; } }
+  </style>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle responsive-ads"
+    style="display:inline-block"
+    data-ad-client="ca-pub-7328585512091257"
+    data-ad-slot="7855747535"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+<!-- /.google-ads -->
+      </footer>
+      <div class="entry-content">
+        <p>이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<p>패턴 인식에서 ‘불확실성’은 측정할 때의 노이즈를 통해서도 발생하고 데이터 집합 수가 제한되어 있다는 한계점 때문에도 발생한다.
+따라서, 확률론은 불확실성을 계량화하고 조작하기 위한 이론적 토대를 마련해 준다.</p>
+
+<p>예시를 들어보자</p>
+
+<p>이 예시에서는 X,Y라는 두 가지 확률 변수가 존재한다. X는 xi (i = 1,….,M)중 아무 값이나 취할 수 있고 Y는 yj (j = 1,…,L)중 아무 값이나 취할 수 있다. 또한, X와 Y각각에서 표본을 추출하는 시도를 N번 한다고 가정한다.
+nij는 X = xi, Y = yj 인 시도 개수를 의미하며, ci는 Y 값과는 상관없이 X= xi인 시도의 숫자, rj는 X값과 상관없이 Y=yj인 시도의 숫자를 의미한다.</p>
+
+<p>X = xi, Y = yj 일 결합 확률은 다음과 같이 표현된다.</p>
+
+<p>\[ p(X = x_{i},Y = y_{i}) = \frac{n_{i,j}}{N} \]</p>
+
+<p>비슷하게 Y값과 무관하게 X가 xi값을 가질 확률을 다음과 같다</p>
+
+<p>\[p(X = x_{i}) =\frac{c_{i}}{N} \]</p>
+
+<p>이 두 식을 이용하여 다음을 도출해 낼 수 있다.</p>
+
+<p>\[p(X = x_{i}) = \sum_{j=1}^{L}p(X = x_{i},Y = y_{j}) \]</p>
+
+<p>이것이 확률의 <b>합의 법칙</b>이다. 여기서 P(X = xi)는 주변 확률이라 불린다.</p>
+
+<p>여기서 X = xi인 사례들만 고려해보자. 그들 중에서 Y = yi인 사례들의 비율을 생각해 볼 수 있고, 이를 확률 \(p(Y = y_{i} | X = x_{i}) \)로 적을 수 있으며
+이를 <b>조건부 확률</b>이라고 부른다</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\[ p(Y = y_{i}</td>
+      <td>X = x_{i}) = \frac{n_{i,j}}{c_{i} \]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>지금까지의 식을 이용해서 다음의 관계를 도출할 수 있다.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\[ p(X = x_{i}</td>
+      <td>Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j}</td>
+      <td>X = x_{i})p(X=x_{i}) \]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이것이 바로 확률의<b> 곱의 법칙</b>이다&lt;/p&gt;</p>
+
+<p>이제, 곱의 법칙과 합의 법칙, 대칭성 p(X,Y) = p(Y,X)로 부터 조건부 확률 간의 관계인 다음 식을 도출해 낼 수 있다.
+(여기서 부터는 간단하게 확률 변수 X에서 분포를 표현할 때는 p(X)라 적고 특정 값 xi에서의 분포를 표현할 때는 p(xi)로 적기로 한다)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\[p(Y</td>
+      <td>X) = \frac{p(X</td>
+      <td>Y</td>
+      <td>)p(Y)}{p(X)} = \frac{p(X</td>
+      <td>Y</td>
+      <td>)p(Y)}{\sum_{Y}p(X</td>
+      <td>Y</td>
+      <td>)p(Y)} \]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이를 <b>베이즈 정리</b>라고 한다( 책의 전반에 걸쳐 중요한 역할을 한다)</p>
+
+<p>여기서 분모는 왼쪽 항을 모든 Y값에 대하여 합했을 때 1이 되도록 하는 역할을 한다.
+베이지안 정리는 다음과 같이 해석할 수 있다.
+확률 p(A|B)를 알고 있을 때, 관계가 정반대인 확률 p(B|A)를 계산하는 것으로 여기서 P(B)는 사전 확률, p(B|A)는 사후 확률에 해당한다.
+여기서, 두 확률 변수가 독립이라면, p(X,Y) = p(X)p(Y) 이다.</p>
+
+<h4 id="확률-밀도">확률 밀도</h4>
+
+<p>이번에는 연속적인 변수에서의 확률에 대해 알아본다.</p>
+
+<p>만약 실수 변수 x가 (x,x+δx)구간 안의 값을 가지고 그 변수의 확률이 p(x)δx로 주어진다면, p(x)를 x의 확률 밀도라고 부른다.
+이때, x가 (a,b) 구간 사이의 값을 가질 확률은 다음과 같다.</p>
+
+<p>\[ p(x \in (a,b)) = \int_{a}^{b}p(x)dx \]</p>
+
+<p>여기서, 확률은 양의 값을 가지고 x의 값은 실축선상에 존재해야 하기 때문에 다음의 두 조건을 만족시켜야 한다.</p>
+
+<ol>
+  <li>\( p(x) \geq 0 \)</li>
+  <li>\( \int_{-\infty }^{\infty}p(x)dx = 1 \)</li>
+</ol>
+
+<h4 id="누적-분포-함수">누적 분포 함수</h4>
+
+<p>x가 (-∞,z) 범위에 속할 확률은 <b>누적 분포 함수 </b> 로 표현된다.</p>
+
+<p>\[ P(z) = \int_{-\infty }^{z}p(x)dx \]</p>
+
+<p>여기서 P’(x) = p(x)이다.</p>
+
+<p>만약 x가 이산 변수일 경우 p(x)를  <b> 확률 질량 함수 </b>라고 부르기도 한다.</p>
+
+<h4 id="기댓값">기댓값</h4>
+<p>기댓값은 확률 밀도 p(x)하에서 어떤 함수 f(x)의 평균값을 의미한다. 이산 분포의 경우 기댓값은 다음과 같이 주어진다.</p>
+
+<p>\[ E(f) = \sum_{x}p(x)f(x) \]</p>
+
+<p>여기서 p(x)는 각 x값에 해당하는 확률이며 이것을 가중치로 사용한 가중 평균을 구하는 것으로 해석할 수 있다.</p>
+
+<p>연속 변수의 경우에는 해당 확률 밀도에 대해 적분을 시행해서 기댓값을 구할 수 있다.</p>
+
+<p>\[E(f) = \int p(x)f(x)dx \]</p>
+
+<p>공분산에 해당하는 특징은 다음과 같다.
+*E[aX + b] = aE[X] + b
+*E[X + Y] = E[X] + E[Y]
+*E[XY] = E[X]E[Y]</p>
+
+<h4 id="공분산">공분산</h4>
+
+<p>공분산을 설명하기 앞서 분산부터 설명하면, f(x)의 분산은 다음과 같다.</p>
+
+<p>\[ var(f) = E((f(x) - E(f(x)))^{2}) \]</p>
+
+<p>이는 f(x)가 평균값 E[f(x)]로부터 전반적으로 얼마나 멀리 분포되었는지를 나타내는 값이다.</p>
+
+<p>이를 전개하여 정리하면 다음과 같다. (식의 이해를 돕기 위하여 상수인 E[f(x)] 부분을  μ라 표현)</p>
+
+<p>\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \) =&gt; 공분산 특징 첫 번째 이용</p>
+
+<p>\( = E(f(x)^{2}) -2\mu E(f(x)) +\mu^{2} \)</p>
+
+<p>\( = E[f(x)^{2}] - E[f(x)]^{2} \)</p>
+
+<p>여기서 변수 x 그 자체에도 고려가능하다.</p>
+
+<p>다음으로 두 개의 확률 변수 x 와 y에 대해서 공분산은 다음과 같이 정의된다.</p>
+
+<p>cov[x,y] = E[{x - E[x]}{y - E[y]}]
+         = E[xy] - E[x]E[y]</p>
+
+<p>이는 x값과 y값이 얼마나 함께 같이 변동하는가에 대한 지표이며 만얀 x,y가 서로 독립적일 경우 공부산값은 0으로 간다.</p>
+
+<p>베이지안 확률에 대한 내용은 다음에 이어 설명하겠습니다.</p>
+
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'sosimpletheme'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://localhost:4000/articles/CS229-LECTURE-01/" class="btn" title=" LECTURE 01">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    <div class="google-ads" style="margin:10px 0;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 320x50 ad -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-7328585512091257"
+       data-ad-slot="7855747535"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
+
+<span>&copy; 2022 Cho min Hee. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="https://twitter.com/mmistakes" title="Cho min Hee on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="https://facebook.com/michaelrose" title="Cho min Hee on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	<a href="https://plus.google.com/+MichaelRoseDesign" title="Cho min Hee on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
+	
+	
+	<a href="https://instagram.com/mmistakes" title="Cho min Hee on Instagram" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+	
+	<a href="https://github.com/mmistakes" title="Cho min Hee on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	<a href="http://mademistakes.tumblr.com" title="Cho min Hee on Tumblr" target="_blank"><i class="fa fa-tumblr-square fa-2x"></i></a>
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2011187-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
