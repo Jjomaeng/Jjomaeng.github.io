@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-22T10:25:48+09:00</updated>
+<updated>2022-03-22T10:39:32+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho min Hee</name>
@@ -25,7 +25,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;이 장에서 논의할 분포의 역할들 중 하나는 한정된 수의 관찰 집합 x1,….,xn이 주어졌을 때 확률 변수 x의 확률 분포 p(x)를 모델링하는 것이다. 이를 &lt;b&gt;밀도 추정 문제 &lt;/b&gt; 라고 한다.
@@ -212,7 +212,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;figure&gt;
@@ -237,7 +237,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;패턴 인식에서 ‘불확실성’은 측정할 때의 노이즈를 통해서도 발생하고 데이터 집합 수가 제한되어 있다는 한계점 때문에도 발생한다.
@@ -379,7 +379,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;패턴 인식 문제를 풀 때는 불확실성이 존재하는 상황에서 의사 결정을 내려야 하는 경우가 많다. 이런 상황에서 결정 이론과 확률론을 함께 사용하면 최적의 의사 결정을 내릴 수 있다.&lt;/p&gt;
@@ -473,7 +473,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;h4 id=&quot;모델-선택&quot;&gt;모델 선택&lt;/h4&gt;
@@ -551,7 +551,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;이번에는 곡선 피팅 문제를 확률적 측면에서 살펴보자.&lt;/p&gt;
@@ -669,7 +669,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;지금까지 확률을 ‘반복 가능한 임의의 사건의 빈도수’라는 측면에서 살펴보았다. 이러한 해석을 고전적 또는 빈도적 관점이라 일컫는다.
@@ -830,7 +830,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;패턴 인식에서 ‘불확실성’은 측정할 때의 노이즈를 통해서도 발생하고 데이터 집합 수가 제한되어 있다는 한계점 때문에도 발생한다.
@@ -1161,7 +1161,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
 &lt;p&gt;다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.&lt;/p&gt;
