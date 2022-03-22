@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-22T10:39:32+09:00</updated>
+<updated>2022-03-22T21:19:57+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho min Hee</name>
@@ -14,11 +14,11 @@
 
 
 <entry>
-  <title type="html"><![CDATA[2.1 Binary Variables]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.1-Binary-Variables/" />
-  <id>http://localhost:4000/articles/[PRML]2.1 Binary Variables</id>
-  <published>2022-03-02T04:01:50+09:00</published>
-  <updated>2022-03-02T04:01:50+09:00</updated>
+  <title type="html"><![CDATA[2.2 Multinomial Variables]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/" />
+  <id>http://localhost:4000/articles/[PRML]2.2 Multinomial Variables</id>
+  <published>2022-03-03T04:01:50+09:00</published>
+  <updated>2022-03-03T04:01:50+09:00</updated>
   <author>
     <name>Cho min Hee</name>
     <uri>http://localhost:4000</uri>
@@ -182,11 +182,226 @@
 
 &lt;p&gt;관측된 데이터 집합 D에 대해서 매개변수 \( \theta \)를 추정하는 일반적인 베이지안 추론 문제를 고려해 보자. 이 문제는 결합 분포 \( p(\theta ,D)\)로 표현 가능하다. 매개변수 \( \theta \)에 대한 기댓값은 다음과 같다.&lt;/p&gt;
 
-&lt;p&gt;\[ E_{\theta}(\theta) = E_{D}(E_{\theta} \mid D)\]
+&lt;p&gt;먼저, \( E_{\theta}(\theta) = E_{D}(E_{\theta}(\theta \mid D))\) 증명하면 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/19.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/19.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;수식으로 다시 정리하면,&lt;/p&gt;
+
+&lt;p&gt;\[ E_{\theta}(\theta) = E_{D}(E_{\theta}(\theta \mid D))\]
 \[E_{\theta}(\theta) \equiv \int p(\theta)\theta d\theta \]
 \[E_{D}(E_{\theta}(\theta \mid D)) \equiv \int(\int \theta p(\theta \mid D)d\theta)p(D)dD \]&lt;/p&gt;
 
 &lt;p&gt;이로부터 데이터가 생성된 원 분포에 대해 평균을 낸 \( \theta \)의 사후 평균값은 \( \theta \)의 사전 평균과 같다는 것을 알 수 있다. 이와 유사하게 다음도 증명할 수 있다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/20.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/20.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;수식으로 다시 정리하면,&lt;/p&gt;
+
+&lt;p&gt;\[ var_{\theta }(\theta ) = E_{D}(var_{\theta}( \theta \mid D)) + var_{D}(E_{\theta}( \theta \mid D))\]&lt;/p&gt;
+
+&lt;p&gt;위의 식의 왼쪽 변은 \(\theta \)의 사전 분산에 해당한다. 오른쪽 변의 첫 번째 항은 \(\theta \)의 사후 분산의 평균이며, 두 번째 항은 \(\theta \)의 사후 평균의 분산에 해당한다.
+이 분산은 양의 값을 가진다. 따라서 이 결과에 따르면 평균적으로 \(\theta \)의 사후 분산은 사전 분산보다 작다는 것을 알 수 있다. 이 분산값의 감소치는 사후 평균의 분산값이 클수록 더 크게 된다.
+(이러한 추세는 평균적으로만 옳으며 , 특정 관찰 집합에 대해서는 사후 분산이 사전 분산보다 클수도 있다.)&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/&quot;&gt;2.2 Multinomial Variables&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[2.1 Binary Variables]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.1-Binary-Variables/" />
+  <id>http://localhost:4000/articles/[PRML]2.1 Binary Variables</id>
+  <published>2022-03-02T04:01:50+09:00</published>
+  <updated>2022-03-02T04:01:50+09:00</updated>
+  <author>
+    <name>Cho min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;p&gt;이 장에서 논의할 분포의 역할들 중 하나는 한정된 수의 관찰 집합 x1,….,xn이 주어졌을 때 확률 변수 x의 확률 분포 p(x)를 모델링하는 것이다. 이를 &lt;b&gt;밀도 추정 문제 &lt;/b&gt; 라고 한다.
+이 장의 목표를 위해서 데이터 포인트들은 독립적이며, 동일하게 분포되어 있다고 가정할 것이다.&lt;/p&gt;
+
+&lt;p&gt;우선, 이산 확률 변수의 이항 분포와 다항 분포를 살펴보고 그 다음으로 연속 확률 변수의 가우시안 분포에 대해 논의할 것이다. 이 분포들은 매개변수 분포의 예다. 
+이러한 모델을 밀도 추정 문제에 적용하기 위해서는 관찰된 데이터 집합을 바탕으로 적절한 매개변숫값을 구하는 과정이 필요하다.&lt;br /&gt;
+두 가지 관점에서 살펴보자&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;빈도적 관점 : 어떤 특정 기준을 최적화하는 방법으로 매개변수를 찾는다. 최적화 기준의 예로 가능도 함수가 있다.&lt;/li&gt;
+  &lt;li&gt;베이지안 관점 : 매개변수에 대한 사전 분포를 바탕으로 관측된 데이터 집합이 주어졌을 때의 해당 사후분포를 계산한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;켤레 사전 확률이 중요한 역할을 한다는 것도 살펴볼 것이다. 켤레 사전 확률은 사후 확률이 사전 확률과 같은 함수적 형태를 띠도록 만들어준다. 그 결과 , 베이지안 분석이 매우 단순해진다.&lt;/p&gt;
+
+&lt;p&gt;매개변수적인 접근법의 한계점도 존재한다. 분포가 특정한 함수 형태를 띠고있다고 가정하지만 몇몇 적용 사례의 경우에는 이 가정이 적절하지 않다. 이런 경우, 비매개변수적 밀도 추정 방식을 대안으로 활용할 수 있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;이산-확률-변수&quot;&gt;이산 확률 변수&lt;/h4&gt;
+
+&lt;p&gt;하나의 이진 확률 변수 \( x \in (0,1) \)을 고려해 보자. 0과 1이 나올 확률이 동일하지 않다고 가정하면 이때 x = 1일 확률은 매개변수 \( \mu \)를 통해 다음과 같이 표현할 수 있다.
+\[ p(x = 1 \mid \mu) = \mu (0 \leq \mu \leq 1)\]
+\[ p(x = 0 \mid \mu ) = 1 - \mu \]&lt;/p&gt;
+
+&lt;p&gt;따라서 x에 대한 확률은 다음의 형태로 적을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ Bern(x \mid \mu ) = \mu^{x}(1 - \mu)^{1-x} \]&lt;/p&gt;
+
+&lt;p&gt;이것을 &lt;b&gt; 베르누이 분포 &lt;/b&gt;라고 한다. 베르누이 분포는 정규화되어 있으며, 그 평균과 분산이 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(x) = \mu \]
+\[ var(x) = \mu(1-\mu) \]&lt;/p&gt;
+
+&lt;p&gt;x의 관측값이 데이터 집합 \( D = (x_{1},…..x_{N})\)이 주어졌다고 하자. 관측값들이 \( p(x \mid \mu)\)에서 독립적으로 추출되었다는 가정하에 \( \mu \)함수로써 가능도 함수를 구성할 수 있다.
+\[ p(D \mid \mu ) = \prod_{n=1}^{N}p(x_{n} | \mu) = \prod_{n=1}^{N}\mu^{x_{n}}(1-\mu)^{1 - x_{n}} \]&lt;/p&gt;
+
+&lt;p&gt;빈도적 관점에서는 가능도 함수를 최대화하는 \( \mu \)를 찾아서 \( \mu \)값을 추정할 수 있다. 베르누이 분포의 경우 로그 가능도 함수는 다음으로 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ lnp(D \mid \mu ) = \sum_{n=1}^{N}lnp(x_{n} \mid \mu) = \sum_{n=1}^{N}(x_{n}ln\mu + (1-x_{n})ln(1-\mu)) \]&lt;/p&gt;
+
+&lt;p&gt;로그 가능도함수는 오직 관측값들의 합인 \(\sum_{n}x_{n}\)을 통해서만 N개의 관측값 \(x_{n} \)과 연관된다는 점에 주목할 필요가 있다. 이 합은 &lt;b&gt; 충분 통계량 &lt;/b&gt;의 예시 중 하나다.&lt;/p&gt;
+
+&lt;p&gt;\( lnp(D \mid \mu )\)을 \(\mu \)에 대해 미분하고 이를 0과 같다고 놓으면 다음과 같은 최대 가능도 추정값을 구할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \mu_{ML} = \frac{1}{N}\sum_{n=1}^{N}x_{n}\]&lt;/p&gt;
+
+&lt;p&gt;이는 &lt;b&gt; 표본 평균 &lt;/b&gt;이라고도 불린다. 데이터에서 x = 1인 관찰값의 수를 m이라고 하면 다음의 형태로 다시 적을 수 있다. 
+\[ \mu_{ML} = \frac{m}{N} \]&lt;/p&gt;
+
+&lt;p&gt;즉, 최대가능도 체계하에에서 동전으로 예시를 들면, 동전의 앞면이 나올 확률은 데이터 집합에서 앞면이 나온 비율로 주어지게 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;하지만 최대가능도를 사용할 경우 과적합이 발생할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;동전을 세 번 던졌는데 세 번 다 앞면이 나온 경우를 생각해보자. 그러면 N = m = 3이고 따라서 \( \mu_{ML} = 1 \)이 된다( 이 경우 앞으로 던지는 모든 동전이 앞면으로 나올 것이라고 예측하는 것이다! ) 이것이 실제로 최대 가능도를 사용했을 경우 발생할 수 있는 극단적인 사례다.( 이후에 사전 분포를 바탕으로 나은 결과를 도출할 수 있다.)&lt;/p&gt;
+
+&lt;p&gt;크기 N의 데이터가 주어졌을 때 x = 1인 관측값의 수 m에 대해서도 분포를 생각할 수 있다. 이를 &lt;b&gt; 이항 분포 &lt;/b&gt;라 한다. 위에서 구한 가능도 함수로부터 이항 분포는 \( \mu^{m}(1 - \mu)^{N - M}\)에 비례한다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;정규화 계수를 구하기 위해서 동전 던지기로 예시를 들면, 동전 던지기를 N번 했을 때 앞면이 m번 나올 수 있는 가능한 모든 가짓수를 구해야 한다. 따라서 이항 분포를 다음과 같이 적을 수 있다.
+\[Bin(m \mid N,\mu) = \binom{N}{m}\mu^{m}(1-\mu)^{N-m} \]&lt;/p&gt;
+
+&lt;p&gt;여기서 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ \binom{N}{m} \equiv \frac{N!}{(N-m)!m!} \]&lt;/p&gt;
+
+&lt;p&gt;\( \binom{N}{m} \)은 N개의 물체들 중 m개의 물체를 선별하는 가짓수를 구한 것이다. 이해를 위해 N = 10이고 \(\mu \)= 0.25일 때의 이항 분포의 히스토그램은 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/8.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;베타-분포&quot;&gt;베타 분포&lt;/h4&gt;
+
+&lt;p&gt;이미 살펴본 방법들은 데이터 수가 적을 때 심각한 과적합이 일어나기 쉽다(동전 던지기 예시를 생각해보자!)&lt;/p&gt;
+
+&lt;p&gt;이 문제에 베이지안적으로 접근하기 위해서는 매개변수 \( \mu \)에 대한 사전 분포 \( p(\mu) \)를 도입하는 것이 필요하다.&lt;/p&gt;
+
+&lt;p&gt;가능도 함수가 \( \mu^{x}(1-x)^{1-x}\)의 형태를 가지는 인자들의 곱의 형태를 띠고 있다는 것에 주목해보면, 만약 \(\mu \)dhk \( (1 - \mu) \)의 거듭제곱에 비례하는 형태를 사전 분포에 선택한다면, 사전 확률과 가능도 함수의 곱에 비례하는 사후 분포 역시 사전 분포와 같은 함수적 형태를 가지게 될 것이다. 이러한 성질을 &lt;b&gt; 켤레성&lt;/b&gt;이라고 한다. ( 켤레성에 대한 이해를 돕고자 켤레의 수학적 의미를 설명하면, 두 개의 점,선,도형,수 등이 서로 대칭이거나 보완적인 관계에 있는 경우 켤레라고 한다.)&lt;/p&gt;
+
+&lt;p&gt;지금까지의 논의를 바탕삼아 사전 분포로 베타 분포를 사용할 것이다.( &lt;a href=&quot;https://jjomaeng.github.io/blog/베타-분포/&quot;&gt;왜 베타 분포를 사용하는 지에 대한 자세한 설명은 여기에 작성하였습니다!&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;베타 분포는 다음의 형태를 가진다.
+\[ Beta(\mu \mid a,b) = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}\]&lt;/p&gt;
+
+&lt;p&gt;\( \Gamma(x) \)는 다음과 같이 정의된다. (&lt;a href=&quot;https://jjomaeng.github.io/blog/감마-분포/&quot;&gt;감마 함수에 대한 자세한 내용은 여기에 작성하였습니다!&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;\[ \Gamma(x) = \int_{0}^{\infty } u^{x-1} e^{-1} du \]&lt;/p&gt;
+
+&lt;p&gt;베타 분포의 계수들은 베타 분포가 정규화되도록 한다.&lt;/p&gt;
+
+&lt;p&gt;\[ \int_{0}^{1}Beta(\mu \mid a,b) d\mu = 1 \]&lt;/p&gt;
+
+&lt;p&gt;베타 분포의 평균과 분산은 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(\mu) = \frac{a}{a+b} \]
+\[ var(\mu) = \frac{ab}{(a+b)^{2}(a+b+1)} \]&lt;/p&gt;
+
+&lt;p&gt;매개변수 a와 b는 이들이 매개변수 \( \mu \)의 분포를 조절하기 때문에 &lt;b&gt;초매개변수&lt;/b&gt;라고 불린다.&lt;/p&gt;
+
+&lt;p&gt;이제 베타 사전 분포와 이항 가능도 함수를 곱한 후 정규화를 시행함으로써 \( \mu \)의 사후 분포를 구할 수 있다.
+\( \mu \)와 관련되어 있는 인자들만 남기면 사후 분포가 다음의 형태를 가지게 되는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(\mu \mid m,l,a,b) \propto \mu^{m+a-1}(1 - /m)^{l+b-1}\]&lt;/p&gt;
+
+&lt;p&gt;여기서 l = N -m이며 동전 던기기 예시에서 ‘뒷면’의 개수에 해당한다.&lt;/p&gt;
+
+&lt;p&gt;사후 분포의 식은 사전 분포와 \(\mu \)에 대해서 같은 함수적 종속성을 가지고 있다는 것을 확인할 수 있다. 이 사실이 가능도 함수에 대해서 사전 분포가 켤레성을 가지고 있다는 것을 반영한다. 
+실제로 사후 분포는 또 다른 베타 분포일 뿐이다.
+그러면 사후 분포의 정규화 계수는 베타 분포의 식을 참고하여 구할 수 있다. 그 결과 다음을 얻게 된다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(\mu \mid m,l,a,b) = \frac{\Gamma(m+a+l+b)}{\Gamma(m+a)\Gamma(l+b)} \mu^{m+a-1}(1-\mu)^{l+b-1}\]&lt;/p&gt;
+
+&lt;p&gt;x = 1인 값이(예를 들어 앞면의 수) m개 있고 x = 0인 값 ㅣ개가 있는 데이터 집합을 관찰한 결과, 사전 분포와 비교했을 떄 사후 분포에서는 a의 값이 m만큼, b의 값이 l만큼 증가하는 것을 확인할 수 있다.
+이 사실로부터 사전 분포의 초매개변수 a와b를 각각 x = 1, x = 0인 경우에 대한 &lt;b&gt;유효 관찰수&lt;/b&gt;로 해석할 수 있다.(a와 b는 반드시 정수가 아니어도 된다.)&lt;/p&gt;
+
+&lt;p&gt;만약 우리가 추가적으로 관측 데이터를 얻게 되면 지금의 사후 분포가 새로운 사전 분포가 될 수 있다. 
+매번 업데이트 단계에서 새로운 관측값에 해당하는 가능도 함수를 곱하고 그 다음에 정규화를 시행해서 새로운 수정된 사후 분포를 &lt;b&gt;순차적&lt;/b&gt;으로 얻는 것이다.
+각 단계에서 사후 분포는 x = 1과 x = 0에 해당하는 관측값들의 전체 숫자가 새로운 a와 b값으로 주어지는 베타 분포에 해당한다. x = 1인 새로운 관측값이 주어졌을 때는 단순히 a값을 1 증가시키고 x = 0인 관측값이 새로 주어졌을 때는 b값을 1 증가시키면 된다.
+이 과정의 한 단계를 그림으로 보면 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/10.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/10.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;이는 사전 분포나 가능도 함수의 선택과는 상관없이 오직 데이터가 독립적이고 동이랗게 분포되었다는 것에만 의존적이다.
+순차적인 방법론은 관측값을 한 번에 하나씩, 혹은 한 번에 적은 수 만큼 사용한다.
+사용한 관측값들을 다음 관측값을 사용하기 전에 버린다. 
+이는 실시간 학습에 적용할 수 있으며, 큰 데이터 집합에도 사용 가능하다.&lt;/p&gt;
+
+&lt;p&gt;만약 우리의 목표가 다음 시도의 결과값을 가장 잘 예측하는 것이라면, 관측 데이터 집합 D가 주어진 상황하에서 x의 예측 분포를 계산해야 한다.
+확률의 합과 곱의 법칙에 따라서 이는 다음 형태를 띤다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(x = 1 \mid D) = \int_{0}^{1}p(x=1 \mid \mu)p(\mu \mid D)d\mu = \int_{0}^{1}\mu p(\mu \mid D )d\mu = E(\mu \mid D)\]&lt;/p&gt;
+
+&lt;p&gt;사후 분포 \(p(\mu \mid D)\)에 대한 결과 식과 베타 분포의 평균에 대한 식을 이용해서 다음을 구할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(x = 1 \mid D) = \frac{m+a}{m_a+l+b}\]&lt;/p&gt;
+
+&lt;p&gt;전체 관측값(실제 관측값과 허구의 사전 관측값 둘 다)중에서 x = 1인 관측값의 비율로 해석할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;데이터 집합이 무한이 커서 \( m,l \rightarrow  \infty \)이 된다면 최대가능도의 결과값과 같아진다.
+(베이지안 결과값과 최대 가능도의 결과값이 무한하게 큰 데이터 집합 하에서 동일한 것은 매우 일반적인 성향이다.)&lt;/p&gt;
+
+&lt;p&gt;제한된 크기의 데이터 집합에서 \(\mu \)의 사후 평균 값은 사전 평균값과 사건의 상대적 빈도수를 바탕으로 한 가능도 추정치 사이에 있게 된다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/9.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/9.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;위의 그림에서 관측값의 수가 늘어날수록 사후 분포가 더 날카롭고 뾰족해는 것을 확인할 수 있다. 이는 베타 분포의 분산에 대한 식의 결과에도 확인할 수 있다.
+\( a \rightarrow  \infty \), 또는 \( b \rightarrow  \infty \)가 됨에 따라서 분산이 0에 가까워지는 것이다.&lt;/p&gt;
+
+&lt;p&gt;더 많은 데이터를 관측할수록 사후 분포의 확실성의 정도가 꾸준히 감소하는 것은 평균적으로 베이지안 학습의 일반적인 성질이다.&lt;/p&gt;
+
+&lt;p&gt;이를 확인하기 위해 베이지안 학습을 빈도적 관점에서 살펴보도록 하자.&lt;/p&gt;
+
+&lt;p&gt;관측된 데이터 집합 D에 대해서 매개변수 \( \theta \)를 추정하는 일반적인 베이지안 추론 문제를 고려해 보자. 이 문제는 결합 분포 \( p(\theta ,D)\)로 표현 가능하다. 매개변수 \( \theta \)에 대한 기댓값은 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;먼저, \( E_{\theta}(\theta) = E_{D}(E_{\theta}(\theta \mid D))\) 증명하면 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/19.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/19.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;수식으로 다시 정리하면,&lt;/p&gt;
+
+&lt;p&gt;\[ E_{\theta}(\theta) = E_{D}(E_{\theta}(\theta \mid D))\]
+\[E_{\theta}(\theta) \equiv \int p(\theta)\theta d\theta \]
+\[E_{D}(E_{\theta}(\theta \mid D)) \equiv \int(\int \theta p(\theta \mid D)d\theta)p(D)dD \]&lt;/p&gt;
+
+&lt;p&gt;이로부터 데이터가 생성된 원 분포에 대해 평균을 낸 \( \theta \)의 사후 평균값은 \( \theta \)의 사전 평균과 같다는 것을 알 수 있다. 이와 유사하게 다음도 증명할 수 있다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/20.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/20.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;수식으로 다시 정리하면,&lt;/p&gt;
 
 &lt;p&gt;\[ var_{\theta }(\theta ) = E_{D}(var_{\theta}( \theta \mid D)) + var_{D}(E_{\theta}( \theta \mid D))\]&lt;/p&gt;
 
@@ -215,9 +430,55 @@
     &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
+&lt;p&gt;이번에는 패턴 인식과 머신 러닝 테크닉을 이해하는 데 있어서 중요한 역할을 하게 될 또 하나의 이론인 정보 이론에 대해 살펴보고자 한다.
+먼저, 엔트로피를 포함한 정보 이론의 중요한 개념들에 대해 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;이산 확률 변수 x를 고려했을 때, x의 값을 학습하는 데 있어서 정보의 양은 ‘놀라움의 정도’라고 생각할 수 있을 것이다.
+따라서 우리가 사용하게 될 정보량의 측정 단위는 확률 분포 p(x)에 종속적이게 된다.&lt;/p&gt;
+
+&lt;p&gt;지금부터 p(x)에 대해 단조 함수인 정보량을 표현하는 함수 h(x)에 대해 살펴보도록 하자.
+서로 연관되어 있지 않은 두 사건 x와 y를 고려해 보면, 이 경우 x와 y가 함께 일어났을 때 얻는 정보량은 각자의 사건이 따로 일어났을 때 얻는 정보량의 합이 될 것이다. 따라서 h(x,y) = h(x) + h(y)가 된다. 연관되어 있지 않은 두 사건은 통계적으로 독립적이며 따라서 p(x,y) = p(x)p(y)다. 이 관계로부터 h(x)는 p(x)의 로그에 해당하는 것을 보일 수 있다. 이에 따라 다음 식을 얻게 된다.
+\[h(x) = -log_{2}p(x) \]&lt;/p&gt;
+
+&lt;p&gt;사건 x의 확률이 낮을수록 그로부터 얻을 수 있는 정보량은 크다는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;송신자가 어떤 확률 변수의 값을 수신자에게 전송하고자 하는 상황을 가정해 보자.
+전송에 필요한 정보량의 평균치는 p(x)에 대해 위의 식을 통해 기대값을 구함으로써 알아낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ H(X) = -\sum_{x}p(x)log_{2}p(x)  \]&lt;/p&gt;
+
+&lt;p&gt;이 값이 바로 확률 변수의 x의 엔트로피다.&lt;/p&gt;
+
+&lt;p&gt;(이제부터는 엔트로피를 정의하는 데 있어서 자연 로그를 사용하도록 하겠다.)
+이 장에서는 엔트로피를 확률 변수의 상태를 결정짓는 데 필요한 정보량의 평균으로 정의하였다. 다음의 관점으로 엔트로피를 이해해보자.
+N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보자. 이때 i번쨰 통 안의 ni개의 물체가 담기도록 할 것이다. 물체를 통 안에 담는 가짓수는 N!개의 방법이있다. 하지만 한 통 안에서 물체들이 어떤 순서로 놓여 있는지는 중요하지 않다. i 번째 통에는 물체를 정렬하기 위한 ni!가지 방법이 있을 것이고, 이에 따라 N개의 물체를 통에 넣는 가짓수는 다음과 같이 될 것이다.&lt;/p&gt;
+
+&lt;p&gt;\[ W = \frac{N!}{\prod_{i}n_{i}!}\]&lt;/p&gt;
+
+&lt;p&gt;위의 식을 다중도라 한다. 엔트로피는 다중도의 로그를 취해서 적절한 상수로 나눈 것이다.&lt;/p&gt;
+
+&lt;p&gt;비율 \( \frac{ni}{N} \)을 그대로 유지시킨 상태에서 N-&amp;gt;∞을 취하여 보자. 그리고 다음 식의 스털링 근사식을 적용해보자
+\[lnN! \simeq N ln N - N \]&lt;/p&gt;
+
+&lt;p&gt;그러면 다음을 얻게 된다.&lt;/p&gt;
+
+&lt;p&gt;\[ H = -lim_{N -&amp;gt; \infty }\sum_{i}(\frac{n_{i}}{N})ln(\frac{n_{i}}{N})= -\sum_{i}p_{i}lnp_{i} (\sum_{i}n_{i} = N) \]&lt;/p&gt;
+
+&lt;p&gt;여기서 pi는 물체가 i번째 통에 속하게 될 확률이다. 물리학 용어로 통 안의 물체들의 순서를 미시 상태라 하며, ni/N으로 표현되는 통 각각이 가지고 있는 물체의 숫자 비율을 일컬어 거시 상태라 한다. 다중도 W를 거시 상태의 가중치라 일컫기도 한다.&lt;/p&gt;
+
+&lt;p&gt;각각의 통을 확률 변수 X의 상태 xi라고 해석할 수 있다. 여기서 p(X = xi) = pi다. 이 경우 확률 변수 X의 엔트로피는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ H(p) = -\sum_{i}p(x_{i})lnp(x_{i}) \]&lt;/p&gt;
+
+&lt;p&gt;이를 그림으로 확인해보자.&lt;/p&gt;
+
 &lt;figure&gt;
-    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/5.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/PRML/24.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/24.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;p&gt;그림에서 볼 수 있는 것처럼 분포\(p(x_{i}) \)가 몇몇 값에 뾰족하게 집중되어 있는 경우에는 상대적으로 낮은 엔트로피를 가지는 반면, 더 많은 값들 사이에 퍼져 있을 때는 높은 엔트로피를 가지게 된다.&lt;/p&gt;
+
+&lt;p&gt;(중간 내용은 완전히 이해하지 못하여 이후에 정리하여 작성하겠습니다.)&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.6-Information-Theory/&quot;&gt;1.6 Information Theory&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 01, 2022.&lt;/p&gt;
@@ -240,126 +501,95 @@
     &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
 
-&lt;p&gt;패턴 인식에서 ‘불확실성’은 측정할 때의 노이즈를 통해서도 발생하고 데이터 집합 수가 제한되어 있다는 한계점 때문에도 발생한다.
-따라서, 확률론은 불확실성을 계량화하고 조작하기 위한 이론적 토대를 마련해 준다.&lt;/p&gt;
+&lt;h4 id=&quot;추론과-결정&quot;&gt;추론과 결정&lt;/h4&gt;
 
-&lt;p&gt;예시를 들어보자&lt;/p&gt;
+&lt;p&gt;지금까지 분류 문제를 두 개의 단계로 나누어 보았다. 첫 번째는 추론 단계로 훈련 집단을 활용하여 \(p(C_{k} \mid x) \)에 대한 모델을 학습시키는 단계. 두 번째는 결정 단계로 학습된 사후 확률들을 이용해서 최적의 클래스 할당을 시행하는 것이다. 두 가지 문제를 한 번에 풀어내는 방식도 생각해 볼 수 있다. x가 주어졌을 때 결정값을 돌려주는 함수를 직접 학습시키는 것이다. 이러한 함수를 판별함수라고 한다.&lt;/p&gt;
+
+&lt;p&gt;결정 문제를 푸는 데는 세 가지 다른 접근법이 있다. 이를 표로 정리하면 다음과 같다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/5.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/PRML/21.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/21.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;p&gt;하지만 (c)방식을 사용할 경우 사후 확률을 알지 못하게 되는데, 사후 확률을 구하는 것에는 유의미한 여러 가지 이유가 있다.&lt;/p&gt;
+
+&lt;p&gt;① 위험의 최소화
+손실 행렬의 값들이 때때로 변하는 문제를 고려했을 때, 사후 확률을 알고 있다면 앞 서 설명한 기대 손실 식을 수정함으로써 쉽게 최소 위험 결정 기준을 구할 수 있다. 반면에 판별 함수만 알고 있을 경우에는 손실 행렬 값이 변할 때마다 훈련 집합을 활용하여 분류 문제를 새로 풀어야 할 것이다.&lt;/p&gt;
+
+&lt;p&gt;② 거부 옵션
+사후 확률을 알고 있으면 주어진 거부 데이터 포인트 비율에 대해 오분류 비율(기대 손실값)을 최소화하는 거부 기준을 쉽게 구할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;③ 클래스 사전 확률에 대한 보상
+클래스의 불균형을 가지는 데이터에 대해, 각각의 클래스에서 같은 숫자 예시를 선택한 균형 잡힌 데이터 집합을 활용하여 더 정확한 모델을 찾을 수 있다. 하지만 그렇게 할 경우에는 우리가 훈련 집합을 변경한 것에 대한 보상을 적용해야 한다. 이러한 수정된 데이터 집합을 사용하여 사후 확률에 대한 모델을 찾아낸다고 가정할 경우, 사후 확률 식은 베이지안 정리로부터 사전 확률에 비례함을 알 수 있다. 이 예시의 경우 사전 확률로는 각 클래스의 비율을 사용할 수 있다. 따라서 인공의 균형 잡힌 데이터 집합에서 구한 사후 확률을 인공 데이터 집합의 클래스 비율로 나누고, 여기에 우리가 실제로 모델을 적용할 모수 집합의 클래스이 비율을 곱함으로써 수정된 사후 확률을 구할 수 있다. 최종적으로는 새 사후 확률이 합이 1이 되도록 정규화해야 한다. 하지만 직접 판별 함수를 구하는 방식으로 학습을 시킨 경우에는 이러한 수정이 불가능하다.&lt;/p&gt;
+
+&lt;p&gt;④ 모델들의 결합
+복잡한 응용 사례의 경우에는 하나의 큰 문제를 여러 개의 작은 문제로 나누어서 각각을 분리된 모듈로써 해결하는 것이 바람직한 경우가 있다. 이를 위한 한 가지 쉬운 방법은 각 클래스에 대해서 분리된 데이터 분포가 독립적이라고 가정하는 것이다. (분리된 데이터 \(X_{a},X_{b} \)라고 가정)&lt;/p&gt;
+
+&lt;p&gt;\[ p(x_{A},x_{B} \mid C_{k}) = p(x_{A} \mid C_{k})p(x_{B} \mid C_{k})\]&lt;/p&gt;
+
+&lt;p&gt;이는 조건부 독립의 성질의 예시다. 분포들이 클래스 Ck에 포함된다는 조건하에 독립적이기 때문이다. 이를 바탕으로 분리된 데이터들이 주어졌을 때의 사후 확률을 다음과 같이 구할 수 있다.
+\[ p(C_{k}|x_{A},x_{B}) \propto p(x_{A},x_{B}|C_{k})p(C_{k}) \propto p(x_{A}|C_{k})p(x_{B}|C_{k})p(C_{k}) \propto \frac{p(C_{k}|x_{A})p(C_{k}|x_{B})}{p(C_{k})} \]&lt;/p&gt;
+
+&lt;p&gt;클래스 사전 확률 p(Ck)가 필요한데, 이는 데이터 포인트들의 각 클래스별 비율에서부터 쉽게 유추하는 것이 가능하다. 그리고 최종적으로 사후 확률을 정규화하여 합이 1이 되도록 하는 과정이 필요하다.  여기서 보인 특정 조건부 독립 가정은 나이브 베이즈 모델의 예시다. 결합 확률 분포 p(xa,xb)는 보통 나이브 베이즈 모델하에서는 인수분해가 되지 않는다. (조건부 독립 가정 없어도 데이터들을 결합시키는 방법은 이후에 나온다)&lt;/p&gt;
+
+&lt;h4 id=&quot;회귀에서-손실-함수&quot;&gt;회귀에서 손실 함수&lt;/h4&gt;
+
+&lt;p&gt;지금까지 분류 문제를 바탕으로 결정 이론에 대해 살펴보았다. 이제부터는 회귀 문제의 경우에 대해 살펴보도록 하자.
+회귀 문제의 결정 단계에서는 각각의 x에 대해서 t의 추정값 y(x)를 선택해야 한다. 이 과정에서 손실 L(t,y(x))가 발생한다고 가정해보자. 그러면 평균(기대) 손실은 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(L) = \int \int L(t,y(\textbf{x}))p(\textbf{x},t)dxdt \]&lt;/p&gt;
+
+&lt;p&gt;손실 함수가 L(t,y(x)) = {y(X) - t}^2으로 주어지는 제곱 손실인 경우 기대 손실은 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ E(L) = \int \int (y(\textbf{x})-t)^{2}p(\textbf{x},t)dxdt \]&lt;/p&gt;
+
+&lt;p&gt;우리의 목표는 E[L]을 최소화하는 y(x)를 선택하는 것이다. 만약 완벽하게 유연하게 함수 y(x)를 결정할 수 있다고 가정하면, 변분법을 적용해서 다음과 같이 적을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \frac{\delta E(L)}{\delta y(x)} = 2\int (y(\textbf{x}) - t)p(\textbf{x},t)dt = 0 \]&lt;/p&gt;
+
+&lt;p&gt;y(x)에 대해서 해를 구하고 확률의 합과 곱의 법칙을 적용하면 다음을 얻게 된다.&lt;/p&gt;
+
+&lt;p&gt;\[ y(\textbf{x}) = \frac{\int tp(\textbf{x},t)dt}{p(x)} = \frac{\int tp(\textbf{x},t)dt}{p(\textbf{x})} = \int tp(t \mid \textbf{x})dt = E_{t}[t \mid \textbf{x}] \]&lt;/p&gt;
+
+&lt;p&gt;위의 식은 x가 주어졌을 때의 t의 조건부 평균으로써 회귀 함수라고 한다. 이에 대한 그림은 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/22.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/22.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;이 예시에서는 X,Y라는 두 가지 확률 변수가 존재한다. X는 \(x_{i} \) (i = 1,….,M)중 아무 값이나 취할 수 있고 Y는 \(y_{j} \) (j = 1,…,L)중 아무 값이나 취할 수 있다. 또한, X와 Y각각에서 표본을 추출하는 시도를 N번 한다고 가정한다.
-\(n_{i,j} \)는 \( X = x_{i}, Y = y_{j} \) 인 시도 개수를 의미하며, \(c_{i} \)는 Y 값과는 상관없이 \(X= x_{i} \)인 시도의 숫자, \(r_{j} \)는  X값과 상관없이 \(Y=y_{j} \)인 시도의 숫자를 의미한다.&lt;/p&gt;
+&lt;p&gt;타깃 변수가 벡터 t로 표현되는 다차원 변수일 경우에 대해서도 이 결과를 쉽게 확장할 수 있다. 이 경우 최적의 해는 조건부 평균 \( y(x) = E[t \mid x] \)다.&lt;/p&gt;
 
-&lt;p&gt;\( X = x_{i}, Y = y_{j} \) 일 결합 확률은 다음과 같이 표현된다.&lt;/p&gt;
+&lt;p&gt;이 결과는 약간 다른 방식을 통해서도 도출할 수 있다. 이 다른 도출 방법을 통해 회귀 문제의 본질에 대해 더 자세히 살펴볼 수 있을 것이다. 최적의 해가 조건부 기댓값이라는 지식을 바탕으로 제곱항을 다음과 같이 전개할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;\[ p(X = x_{i},Y = y_{i}) = \frac{n_{i,j}}{N} \]&lt;/p&gt;
+&lt;p&gt;\[ (y(\textbf{x}) - t)^{2} = (y(\textbf{x}) - E(t \mid \textbf{x}) + E(t \mid \textbf{x}) -t)^{2} \]
+\[= (y(x)-E(t \mid \textbf{x}))^{2}+2(y(x)-E(t \mid x))(E(t \mid x)-t)+(E(t \mid x)-t)^{2} \]&lt;/p&gt;
 
-&lt;p&gt;비슷하게 Y값과 무관하게 X가 \(x_{i} \)값을 가질 확률을 다음과 같다&lt;/p&gt;
+&lt;p&gt;이 전개 결과를 손실 함수에 대입하고 t에 대해 적분하면 교차항들이 사라지게 된다. 그 결과로 다음 형태의 손실 함수를 얻을 수 있다.&lt;/p&gt;
 
-&lt;p&gt;\[p(X = x_{i}) =\frac{c_{i}}{N} \]&lt;/p&gt;
+&lt;p&gt;\[ E(L) = \int (y(\textbf{x})-E(t \mid \textbf{x}))^{2}p(\textbf{x})dx + \int var(t \mid \textbf{x})p(\textbf{x})dx \]&lt;/p&gt;
 
-&lt;p&gt;이 두 식을 이용하여 다음을 도출해 낼 수 있다.&lt;/p&gt;
+&lt;p&gt;우리가 찾고자 하는 함수 y(x)는 첫 번째 항에만 있는데, y(x)가 E(t|x)일 때 이 항은 최소화되어 항 자체가 사라지게 된다.
+따라서 이는 우리가 앞서서 도출한 결과와 동일하다. 즉 최적의 최소 제곱 예측은 조건부 평균으로 주어진다는 것을 보여 준다.
+두 번째 항은 t에 대한 분포의 분산을 계사하고, 이를 x에 대해 평균을 낸 것이다.  이 항은 표적 데이터가 가지고 있는 내재적인 변동성을 표현한 것으로, 노이즈라고 해석할 수 있다. 이 항은 y(x)에는 독립적이며, 따라서 절대로 더 이상 줄일 수 없는 손실 함수의 최솟값에 해당한다.&lt;/p&gt;
 
-&lt;p&gt;\[p(X = x_{i}) = \sum_{j=1}^{L}p(X = x_{i},Y = y_{j}) \]&lt;/p&gt;
+&lt;p&gt;분류 문제와 마찬가지로 회귀 문제를 풀기 위한 세 가지 서로 다른 방식은 다음과 같다.&lt;/p&gt;
 
-&lt;p&gt;이것이 확률의 &lt;b&gt;합의 법칙&lt;/b&gt;이다. 여기서 \(P(X = x_{i}) \)는 주변 확률이라 불린다.&lt;/p&gt;
+&lt;p&gt;(a) 우선 결합 밀도 p(x,t)를 구하는 추론 문제를 풀어낸다. 다음에 이를 정규화하여 조건부밀도 \( p(t \mid x) \)를 구하고 최종적으로 조건부 평균을 구한다.&lt;/p&gt;
 
-&lt;p&gt;여기서 \(X = x_{i} \)인 사례들만 고려해보자. 그들 중에서 \(Y = y_{i} \)인 사례들의 비율을 생각해 볼 수 있고, 이를 확률 \(p(Y = y_{i} | X = x_{i}) \)로 적을 수 있으며
-이를 &lt;b&gt;조건부 확률&lt;/b&gt;이라고 부른다&lt;/p&gt;
+&lt;p&gt;(b)우선 조건부 밀도 \(p(t \mid x) \)를 구하는 추론 문제를 풀고 주어지는 조건부 평균을 구한다.&lt;/p&gt;
 
-&lt;p&gt;\[ p(Y = y_{i} \mid X = x_{i}) = \frac{n_{i,j}}{c_{i}} \]&lt;/p&gt;
+&lt;p&gt;(c)훈련 데이터로부터 회귀 함수 y(x)를 직접 구한다.&lt;/p&gt;
 
-&lt;p&gt;지금까지의 식을 이용해서 다음의 관계를 도출할 수 있다.&lt;/p&gt;
+&lt;p&gt;각각의 방식의 장단점은 분류 문제에서의 세 가지 방식의 장단점과 일맥상통한다.&lt;/p&gt;
 
-&lt;p&gt;\[ p(X = x_{i} \mid Y = x_{j}) = \frac{n_{i,j}}{c_{i}} = \frac{n_{i,j}}{c_{i}}\cdot \frac{c_{i}}{N} = p(Y = y_{j} \mid X = x_{i})p(X=x_{i}) \]&lt;/p&gt;
+&lt;p&gt;회귀 문제의 손실 함수로 제곱 손실 이외의 다른 것을 사용하는 것도 가능하다. 실제로 제곱 손실이 상당히 좋지 않은 결과를 가져오기 때문에 더 복잡한 접근법을 사용해야 하는 경우가 종종 있다. 조건부 분푸 \( p(t \mid x) \)가 다봉 분포인 상황이 이 중 하나다. 역 문제의 해를 구할 때 이런 상황이 종종 발생한다.제곱 손실을 일반화한 예시인 민코프스키 손실에 대해 간략히 살펴보자. &lt;b&gt;민코프스키 손실&lt;/b&gt;의 기댓값은 다음과 같이 주어진다.&lt;/p&gt;
 
-&lt;p&gt;이것이 바로 확률의&lt;b&gt; 곱의 법칙&lt;/b&gt;이다&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;\[ E[L_{q}] = \int \int \mid y(x)-t \mid ^{q}p(\textbf{x},t)dxdt \]&lt;/p&gt;
 
-&lt;p&gt;이제, 곱의 법칙과 합의 법칙, 대칭성 p(X,Y) = p(Y,X)로 부터 조건부 확률 간의 관계인 다음 식을 도출해 낼 수 있다.
-(여기서 부터는 간단하게 확률 변수 X에서 분포를 표현할 때는 p(X)라 적고 특정 값 xi에서의 분포를 표현할 때는 \(p(x_{i}) \)로 적기로 한다)&lt;/p&gt;
+&lt;p&gt;q=2인 경우 제곱 손실에 해당하게 된다. 다양한 q 값에 대하여 함수 \(\mid y-t \mid ^{q} \) 와 y-t값의 그래프를 확인할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;\[p(Y \mid X) = \frac{p(X\mid Y)p(Y)}{p(X)} = \frac{p(X\mid Y)p(Y)}{\sum_{Y}p(X\mid Y)p(Y)} \]&lt;/p&gt;
-
-&lt;p&gt;이를 &lt;b&gt;베이즈 정리&lt;/b&gt;라고 한다( 책의 전반에 걸쳐 중요한 역할을 한다)&lt;/p&gt;
-
-&lt;p&gt;여기서 분모는 왼쪽 항을 모든 Y값에 대하여 합했을 때 1이 되도록 하는 역할을 한다.
-베이지안 정리는 다음과 같이 해석할 수 있다.
-확률 p(A|B)를 알고 있을 때, 관계가 정반대인 확률 p(B|A)를 계산하는 것으로 여기서 P(B)는 사전 확률, p(B|A)는 사후 확률에 해당한다.
-여기서, 두 확률 변수가 독립이라면, p(X,Y) = p(X)p(Y) 이다.&lt;/p&gt;
-
-&lt;h4 id=&quot;확률-밀도&quot;&gt;확률 밀도&lt;/h4&gt;
-
-&lt;p&gt;이번에는 연속적인 변수에서의 확률에 대해 알아본다.&lt;/p&gt;
-
-&lt;p&gt;만약 실수 변수 x가 (x,x+δx)구간 안의 값을 가지고 그 변수의 확률이 p(x)δx로 주어진다면, p(x)를 x의 확률 밀도라고 부른다.
-이때, x가 (a,b) 구간 사이의 값을 가질 확률은 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;\[ p(x \in (a,b)) = \int_{a}^{b}p(x)dx \]&lt;/p&gt;
-
-&lt;p&gt;여기서, 확률은 양의 값을 가지고 x의 값은 실축선상에 존재해야 하기 때문에 다음의 두 조건을 만족시켜야 한다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;\( p(x) \geq 0 \)&lt;/li&gt;
-  &lt;li&gt;\( \int_{-\infty }^{\infty}p(x)dx = 1 \)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;누적-분포-함수&quot;&gt;누적 분포 함수&lt;/h4&gt;
-
-&lt;p&gt;x가 (-∞,z) 범위에 속할 확률은 &lt;b&gt;누적 분포 함수 &lt;/b&gt; 로 표현된다.&lt;/p&gt;
-
-&lt;p&gt;\[ P(z) = \int_{-\infty }^{z}p(x)dx \]&lt;/p&gt;
-
-&lt;p&gt;여기서 P’(x) = p(x)이다.&lt;/p&gt;
-
-&lt;p&gt;만약 x가 이산 변수일 경우 p(x)를  &lt;b&gt; 확률 질량 함수 &lt;/b&gt;라고 부르기도 한다.&lt;/p&gt;
-
-&lt;h4 id=&quot;기댓값&quot;&gt;기댓값&lt;/h4&gt;
-&lt;p&gt;기댓값은 확률 밀도 p(x)하에서 어떤 함수 f(x)의 평균값을 의미한다. 이산 분포의 경우 기댓값은 다음과 같이 주어진다.&lt;/p&gt;
-
-&lt;p&gt;\[ E(f) = \sum_{x}p(x)f(x) \]&lt;/p&gt;
-
-&lt;p&gt;여기서 p(x)는 각 x값에 해당하는 확률이며 이것을 가중치로 사용한 가중 평균을 구하는 것으로 해석할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;연속 변수의 경우에는 해당 확률 밀도에 대해 적분을 시행해서 기댓값을 구할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;\[E(f) = \int p(x)f(x)dx \]&lt;/p&gt;
-
-&lt;p&gt;공분산에 해당하는 특징은 다음과 같다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;E[aX + b] = aE[X] + b&lt;/li&gt;
-  &lt;li&gt;E[X + Y] = E[X] + E[Y]&lt;/li&gt;
-  &lt;li&gt;E[XY] = E[X]E[Y]&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;공분산&quot;&gt;공분산&lt;/h4&gt;
-
-&lt;p&gt;공분산을 설명하기 앞서 분산부터 설명하면, f(x)의 분산은 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;\[ var(f) = E((f(x) - E(f(x)))^{2}) \]&lt;/p&gt;
-
-&lt;p&gt;이는 f(x)가 평균값 E[f(x)]로부터 전반적으로 얼마나 멀리 분포되었는지를 나타내는 값이다.&lt;/p&gt;
-
-&lt;p&gt;이를 전개하여 정리하면 다음과 같다. (식의 이해를 돕기 위하여 상수인 E[f(x)] 부분을  μ라 표현)&lt;/p&gt;
-
-&lt;p&gt;\( var(f) = E(f(x)^{2} -2\mu f(x) +\mu^{2})) \)  -&amp;gt; 공분산 특징 첫 번째 이용&lt;/p&gt;
-
-&lt;p&gt;\( = E(f(x)^{2}) -2\mu E(f(x)) +\mu^{2} \)&lt;/p&gt;
-
-&lt;p&gt;\( = E(f(x)^{2}) - E(f(x))^{2} \)&lt;/p&gt;
-
-&lt;p&gt;여기서 변수 x 그 자체에도 고려가능하다.&lt;/p&gt;
-
-&lt;p&gt;다음으로 두 개의 확률 변수 x 와 y에 대해서 공분산은 다음과 같이 정의된다.&lt;/p&gt;
-
-&lt;p&gt;\[ cov(x,y) = E((x - E(x))(y - E(y)) \]
-\[= E(xy) - E(x)E(y) \]&lt;/p&gt;
-
-&lt;p&gt;이는 x값과 y값이 얼마나 함께 같이 변동하는가에 대한 지표이며 만얀 x,y가 서로 독립적일 경우 공부산값은 0으로 간다.&lt;/p&gt;
-
-&lt;p&gt;베이지안 확률에 대한 내용은 다음에 이어 설명하겠습니다.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/23.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/23.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.5-Decision-Theory(2)/&quot;&gt;1.5 Decision Theory(2)&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 28, 2022.&lt;/p&gt;

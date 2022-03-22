@@ -2,6 +2,14 @@
 
   
     {
+      "title"			: "2.2 Multinomial Variables",
+      "link"			: "http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
       "title"			: "2.1 Binary Variables",
       "link"			: "http://localhost:4000/articles/PRML-2.1-Binary-Variables/",
       "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
