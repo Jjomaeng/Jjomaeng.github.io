@@ -2,9 +2,41 @@
 
   
     {
+      "title"			: "2.3 The Gaussian Distribution",
+      "link"			: "http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/",
+      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
+      "title"			: "라그랑주 승수법",
+      "link"			: "http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: "다항 분포",
+      "link"			: "http://localhost:4000/blog/%E1%84%83%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
       "title"			: "2.2 Multinomial Variables",
       "link"			: "http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/",
       "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+    }
+  
+
+  
+    ,{
+      "title"			: "충분 통계량",
+      "link"			: "http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/",
+      "excerpt"		: ""
     }
   
 
@@ -75,6 +107,14 @@
   
     ,{
       "title"			: " LECTURE 01",
+      "link"			: "http://localhost:4000/articles/CS231-LECTURE-01/",
+      "excerpt"		: ""
+    }
+  
+
+  
+    ,{
+      "title"			: " LECTURE 01",
       "link"			: "http://localhost:4000/articles/CS229-LECTURE-01/",
       "excerpt"		: ""
     }
@@ -84,7 +124,7 @@
     ,{
       "title"			: "베타 분포",
       "link"			: "http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/",
-      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+      "excerpt"		: ""
     }
   
 
@@ -92,7 +132,7 @@
     ,{
       "title"			: "감마 분포",
       "link"			: "http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/",
-      "excerpt"		: "이 글은 Pattern Recognition and Machine Learning을 읽고 공부한 내용을 작성한 글입니다. 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다."
+      "excerpt"		: ""
     }
   
 
