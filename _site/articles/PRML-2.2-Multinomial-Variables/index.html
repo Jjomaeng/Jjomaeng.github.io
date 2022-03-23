@@ -178,11 +178,42 @@
 <p>이 분포에 대해서 다음의 두 가지를 쉽게 증명할 수 있다.
 \[ \sum_{\textbf{X}} p(\textbf{X} \mid \textbf{ μ }) = \sum_{k = 1}^{K} \mu_{k} = 1\]</p>
 
-<p>\[ E(\textbf{X} \mid \textbf{μ}) = \sum_{\textbf{X}} p(\textbf{X} \mid \textbf{ μ })\textbf{X}\]</p>
+<p>\[ E(\textbf{X} \mid \textbf{μ}) = \sum_{\textbf{X}} p(\textbf{X} \mid \textbf{ μ })\textbf{X} = (\mu_{1},…,\mu_{k})^{T} = \textbf{μ} \]</p>
+
+<p>N개의 독립적인 관측값 \( \textbf{X}<em>{1},…,\textbf{X}</em>{N} \)을 가진 데이터 집합 D를 고려해 보자. 해당 가능도 함수는 다음의 형태를 가진다.
+\[ p(D \mid \textbf{μ} ) = \prod_{n=1}^{N}\prod_{k = 1}^{K} \mu_{k}^{x_{n,k}} = \prod_{k=1}^{K}\mu_{k}^{(\sum_{n}x_{n,k})} = \prod_{k=1}^{K}\mu_{k}^{m_{k}}\]
+가능도 함숫값이 K값을 통해서만 N개의 데이터 포인트와 연관되어 있음을 확인할 수 있다.</p>
+
+<p>\[ m_{k} = \sum_{n}x_{n,k}\]</p>
+
+<p>위의 식은 \( x_{k} = 1\)인 관측값의 숫자에 해당한다. 위의 식은 분포의 <b>충분 통계량</b>이라고 한다.(<a href="https://jjomaeng.github.io/blog/충분-통계량/">충분 통계량에 대한 자세한 설명은 여기에 작성하였습니다</a>)</p>
+
+<p>\(\textbf{ μ } \)값의 최대 가능도 해를 찾기 위해서는 \( \mu_{k} \)의 합이 1이어야 한다는 제약 조건하에서 \(lnp(D \mid \textbf{ μ }  )\)의 최댓값을 찾아야 한다. 이를 위해서는 라그랑주 승수 \(\lambda \)를 사용해서 다음 식의 최댓값을 구하면 된다.(<a href="https://jjomaeng.github.io/blog/라그랑주-승수법/">라그랑주 승수법에 대한 자세한 설명은 여기에 작성하였습니다</a>)</p>
+
+<p>\[L(\mu,m,\lambda) = \sum_{k = 1}^{k}m_{k}ln(\mu_{k}) + \lambda(\sum_{k=1}^{K}\mu_{k}-1) \]</p>
+
+<p>먼저, \( \mu_{k}\)에 대해 미분한 뒤 이를 0으로 설정한다.</p>
 
 <figure>
-    <a href="/PRML/20.jpeg" alt="image"><img src="/PRML/20.jpeg" alt="image" /></a>
+    <a href="/PRML/25.jpeg" alt="image"><img src="/PRML/25.jpeg" alt="image" /></a>
 </figure>
+
+<p>그 다음 \(\lambda\)에 대해 미분하여 0이 되는 식을 구한다.</p>
+
+<figure>
+    <a href="/PRML/26.jpeg" alt="image"><img src="/PRML/26.jpeg" alt="image" /></a>
+</figure>
+
+<p>따라서 최대 가능도의 해는 다음의 형태를 띠게 된다.</p>
+
+<p>\[ \mu_{k}^{ML} = \frac{m_{k}}{N}\]</p>
+
+<p>이는 N개의 관측값 중 \(x_{k} = 1 \)인 경우의 비율이다.</p>
+
+<p>매개변수 \( \textbf{μ} \)와 관측값 숫자 N에 의해 결정되는 수량 \( m_{1},….,m_{k}\)의 결합 분포를 고려해 보자.
+가능도 함수에 따라 이는 다음의 형태를 띠게 된다.</p>
+
+<p>위의 식을 <b>다항 분포</b>라고 한다.( <a href="https://jjomaeng.github.io/blog/다항-분포/">이항 분포와 유사한 형태를 띠고 있다는 것을 확인했을 것이다! 이에 대한 자세한 설명은 여기에 적어두었다.</a>)</p>
 
 
         
@@ -218,7 +249,7 @@
         <a href="http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/" class="btn" title="충분 통계량">Previous</a>
       
       
-        <a href="http://localhost:4000/blog/%E1%84%83%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" class="btn" title="다항 분포">Next</a>
+        <a href="http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/" class="btn" title="라그랑주 승수법">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
