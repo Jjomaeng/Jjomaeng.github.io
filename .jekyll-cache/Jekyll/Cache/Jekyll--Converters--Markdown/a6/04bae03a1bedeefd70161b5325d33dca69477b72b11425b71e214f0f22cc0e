@@ -1,0 +1,21 @@
+I"�<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<p>이 파트를 공부하면서, 이전 파트에 비해 통계적 내용이 많이 필요하다고 느끼게 되어 통계적 내용을 추가적으로 많이 덧붙였고, 길어지는 내용은 따로 작성하였습니다.</p>
+
+<p>정규 분포라고도 알려져 있는 가우시안 분포는 연속 변수를 모델하는 분포로 매우 널리 활용되고 있습니다.
+단일 변수 x에 대한 가우시안 분포는 다음과 같습니다.</p>
+
+<p>\[ N(x \mid \mu,\sigma^{2}) = \frac{1}{(2\pi \sigma^{2})^{\frac{1}{2}}}exp(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}) \quad 식(2.42)\]</p>
+
+<p>여기서 \(\mu \)평균을, \(\sigma^{2}\)는 분산을 나타낸다. D차원 벡터 x에 대한 다변량 가우시안 분포는 다음의 형태를 띤다.</p>
+
+<p>\[ N(x \mid \mu,\Sigma) = \frac{1}{(2\pi)^{\frac{1}{2}}}\frac{1}{\mid \Sigma \mid^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)) \quad 식(2.43)\]</p>
+
+<p>여기서 \(\mu \)는 D차원 평균를, \(\sigma^{2}\)는 D x D 공분산 행렬을,\(\Sigma \)는 \(\Sigma \)의 행렬식을 의미한다.</p>
+
+<figure>
+    <a href="/PRML/8.png" alt="image"><img src="/PRML/8.png" alt="image" /></a>
+</figure>
+
+:ET

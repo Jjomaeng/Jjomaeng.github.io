@@ -4,23 +4,23 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-23T15:39:52+09:00</updated>
+<updated>2022-03-28T14:45:30+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
-  <name>Cho min Hee</name>
+  <name>Cho Min Hee</name>
   <uri>http://localhost:4000/</uri>
   <email>aezjk56@gmail.com</email>
 </author>
 
 
 <entry>
-  <title type="html"><![CDATA[2.3 The Gaussian Distribution]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/" />
-  <id>http://localhost:4000/articles/[PRML]2.3 The Gaussian Distribution</id>
-  <published>2022-03-04T04:01:50+09:00</published>
-  <updated>2022-03-04T04:01:50+09:00</updated>
+  <title type="html"><![CDATA[2.3 The Gaussian Distribution(4)]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(4)/" />
+  <id>http://localhost:4000/articles/[PRML]2.3 The Gaussian Distribution(4)</id>
+  <published>2022-03-07T04:01:50+09:00</published>
+  <updated>2022-03-07T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -33,7 +33,253 @@
 &lt;/figure&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/&quot;&gt;2.3 The Gaussian Distribution&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(4)/&quot;&gt;2.3 The Gaussian Distribution(4)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 07, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[적률과 적률 생성 함수]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF%E1%84%80%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC-%E1%84%92%E1%85%A1%E1%86%B7%E1%84%89%E1%85%AE/" />
+  <id>http://localhost:4000/blog/적률과 적률 생성 함수</id>
+  <published>2022-03-06T07:08:50+09:00</published>
+  <updated>2022-03-06T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF%E1%84%80%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC-%E1%84%92%E1%85%A1%E1%86%B7%E1%84%89%E1%85%AE/&quot;&gt;적률과 적률 생성 함수&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 06, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[2.3 The Gaussian Distribution(3)]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(3)/" />
+  <id>http://localhost:4000/articles/[PRML]2.3 The Gaussian Distribution(3)</id>
+  <published>2022-03-06T04:01:50+09:00</published>
+  <updated>2022-03-06T04:01:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/8.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(3)/&quot;&gt;2.3 The Gaussian Distribution(3)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 06, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[고윳값,고유 벡터와 스펙트럼 분석]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2%E1%86%BA%E1%84%80%E1%85%A1%E1%86%B9,%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2-%E1%84%87%E1%85%A6%E1%86%A8%E1%84%90%E1%85%A5%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%86%B7-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8/" />
+  <id>http://localhost:4000/blog/고윳값,고유 벡터와 스펙트럼 분석</id>
+  <published>2022-03-05T07:08:50+09:00</published>
+  <updated>2022-03-05T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2%E1%86%BA%E1%84%80%E1%85%A1%E1%86%B9,%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2-%E1%84%87%E1%85%A6%E1%86%A8%E1%84%90%E1%85%A5%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%86%B7-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8/&quot;&gt;고윳값,고유 벡터와 스펙트럼 분석&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 05, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[2.3 The Gaussian Distribution(2)]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(2)/" />
+  <id>http://localhost:4000/articles/[PRML]2.3 The Gaussian Distribution(2)</id>
+  <published>2022-03-05T04:01:50+09:00</published>
+  <updated>2022-03-05T04:01:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/8.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/8.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(2)/&quot;&gt;2.3 The Gaussian Distribution(2)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 05, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[디리클레 분포]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%83%E1%85%B5%E1%84%85%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/디리클레 분포</id>
+  <published>2022-03-04T07:08:50+09:00</published>
+  <updated>2022-03-04T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%83%E1%85%B5%E1%84%85%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;디리클레 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[2.3 The Gaussian Distribution]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/" />
+  <id>http://localhost:4000/articles/[PRML]2.3 The Gaussian Distribution</id>
+  <published>2022-03-04T04:01:50+09:00</published>
+  <updated>2022-03-04T04:01:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;p&gt;정규 분포라고도 알려져 있는 가우시안 분포는 연속 변수를 모델하는 분포로 매우 널리 활용되고 있다.
+단일 변수 x에 대한 가우시안 분포는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ N(x \mid \mu,\sigma^{2}) = \frac{1}{(2\pi \sigma^{2})^{\frac{1}{2}}}exp(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}) \qquad 식(2.42)\]&lt;/p&gt;
+
+&lt;p&gt;여기서 \(\mu \)평균을, \(\sigma^{2}\)는 분산을 나타낸다. D차원 벡터 x에 대한 다변량 가우시안 분포는 다음의 형태를 띤다.&lt;/p&gt;
+
+&lt;p&gt;\[ N(x \mid \mu,\Sigma) = \frac{1}{(2\pi)^{\frac{1}{2}}}\frac{1}{\mid \Sigma \mid^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)) \qquad 식(2.43)\]&lt;/p&gt;
+
+&lt;p&gt;여기서 \(\mu \)는 D차원 평균를, \(\sigma^{2}\)는 D x D 공분산 행렬을,\(\Sigma \)는 \(\Sigma \)의 행렬식을 의미한다.&lt;/p&gt;
+
+&lt;p&gt;가우시안 분포는 여러 다양한 상황에서 여러 가지 다른 용도로 활용될 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;단일 실변수에 대해서 엔트로피를 극대화하는 분포가 가우시안 분포이다. 이 성질은 다변량 가우시안 분포의 경우에도 동일하게 적용된다.&lt;/li&gt;
+  &lt;li&gt;라플라스의 중심 극한 정리
+    &lt;ul&gt;
+      &lt;li&gt;여러개의 확률 변수들의 합에 해당하는 확률 변수는 몇몇 조건하에서 합해지는 확률 변수의 숫자가 증가함에 따라서 점점 가우시안 분포가 되어간다.&lt;/li&gt;
+      &lt;li&gt;표본 평균(sample mean)들이 이루는 분포는 샘플 크기가 큰 경우 모집단의 원래 분포와 상관없이 가우시안 분포를 따른다.&lt;/li&gt;
+      &lt;li&gt;동일한 확률 분포를 따르는 N개의 독립 확률 변수의 평균 값은 N이 충분이 크다면 가우시안 분포를 따른다.&lt;/li&gt;
+      &lt;li&gt;N개의 확률 변수가 어떤 확률 분포를 따르든지 상관없이 N이 충분이 크다면 그 합은 가우시안 분포를 따른다.&lt;/li&gt;
+      &lt;li&gt;표본의 값을 랜덤 변수로 놓는 것이 아니라 표본의 평균 값을 랜덤 변수로 놓는 것이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/27.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/27.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;p&gt;균일하게 분포된 N개의 값의 평균에 대한 히스토그램을 다양한 N값에 대해 그러보면, N값이 증가함에 따라서 분포는 가우시안 형태를 띠게 된다.
+마찬가지로 N개의 이진 확률 변수 x의 관찰값의 합인 m에 대한 이항 분포 역시 N -&amp;gt; ∞이 됨에 따라서 가우시안의 형태를 띤다.
+가우시안 분포를 자세히 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;우선 첫 번째로 가우시안 분포의 기하학적 형태를 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;x에 대한 가우시안 분포의 함수적 종속성은 식(2.43)의 지수부에 나타난다.&lt;/p&gt;
+
+&lt;p&gt;\[ \Delta^{2} = (x - \mu )^{T} \Sigma^{-1}(x-\mu) \qquad 식(2.44) \]&lt;/p&gt;
+
+&lt;p&gt;여기서 \(\Delta \)값은  μ로부터 x까지의 마할라노비스 거리(Mahalanobis distance)라고 한다.
+마할라노비스 거리는 \(\Sigma \)가 항등 행렬(I)일 경우 유클리디안 거리가 된다. 이 값은 평균과의 거리가 표준편차의 몇 배인지를 나타내는 값으로 평균과의 거리를 측정할 때 분산도를 고려한다는 의미가 된다. 이 이차식의 상수가 되는 x 공간의 표면에서는 가우시안 분포 역시 상수가 된다.&lt;/p&gt;
+
+&lt;p&gt;여기서 중요한 점은 공분산 행렬 \(\Sigma\)가 대칭 행렬이라는 점이다.
+(&lt;a href=&quot;https://jjomaeng.github.io/blog/고윳값,고유-벡터와-스펙트럼-분석/&quot;&gt;여기서 고윳값, 고유 벡터, 스펙트럼 분석에 대한 기본적인 개념이 필요하여 따로 작성하여 정리하였습니다.&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;공분산 행렬의 고유벡터, 고윳값을 정의한 식은 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ \Sigma u_{i} = \lambda_{i}u_{i} \qquad 식(2.45)\]&lt;/p&gt;
+
+&lt;p&gt;이로 인해 지수(exponent) 연산에 의해서 비대칭적인 요소가 모두 사라진다.( 종모양의 대칭적인 요소가 된다.)&lt;/p&gt;
+
+&lt;p&gt;여기서 i = 1,…,D다. \(\Sigma \)가 실수 대칭 행렬이므로 고윳값 역시 실수이다.
+또한 공분산 행렬 \(\Sigma \)가 대칭행렬이기 때문에 고유벡터는 모두 직교한다.
+따라서 다음을 만족한다.&lt;/p&gt;
+
+&lt;p&gt;\[ U_{i}^{T}U_{j} = I_{i,j} \qquad 식(2.46)\]&lt;/p&gt;
+
+&lt;p&gt;이때 고유 벡터를 이용해서 공분산 행렬 \(\Sigma \)를 전개할 수 있으며, 이는 다음의 형태를 띠게 된다.&lt;/p&gt;
+
+&lt;p&gt;\[ \Sigma = \sum_{i = 1}^{D} \lambda_{i} u_{i}u_{i}^{T} \qquad 식(2.48)\]&lt;/p&gt;
+
+&lt;p&gt;여기서 공분산 행렬이 직교 행렬이라는 것을 알 수 있으며 (고유벡터로 이루어져 있으니까) 직교 행렬의 성징을 정리하고 가면 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;nxn 직교 행렬이면, n개의 서로 직교하는 벡터들로 이루어진 행렬 그 벡터들의 길이가 1이다.&lt;/li&gt;
+  &lt;li&gt;직교 행렬의 행렬식은 -1 혹은 1 이다.&lt;/li&gt;
+  &lt;li&gt;역행렬과 전치 행렬이 같다 \( \;A^{T} = A^{-1}\quad (A는 직교행렬) \)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;따라서 공분산 행렬의 역행렬 \( \Sigma^{-1} \)을 다음과 같이 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \Sigma^{-1} = \sum_{i = 1}^{D} \frac{1}{\lambda_{i}} u_{i}u_{i}^{T} \qquad 식(2.49)\]&lt;/p&gt;
+
+&lt;p&gt;식(2.49)를 식(2.44)에 대입하면 이차식이 다음의 형태를 띤다.
+\[ \Delta^{2} = \sum_{i = 1}^{D} \frac{y_{i}^{2}}{\lambda_{i}} \qquad 식(2.50)\]&lt;/p&gt;
+
+&lt;p&gt;여기서 \(y_{i}\)는 다음처럼 정의된다.&lt;/p&gt;
+
+&lt;p&gt;\[ y_{i} = u_{i}^{T}(x-\mu) \qquad 식(2.51)\]&lt;/p&gt;
+
+&lt;p&gt;\({y_{i}} \)를 정규직교 벡터 \(u_{i}\)들로 정의되는 새로운 좌표계라고 해석할 수 있다. 원래의 \(x_{i}\)좌표계로부터 이동되고 회전된 것이다. 벡터 \(\textbf{Y}= (y_{1},….y_{D})^{T}\)이라 하면 다음 식을 얻게 된다.
+\[ \textbf{Y} = \textbf{U}(x-\mu) \qquad 식(2.52) \]&lt;/p&gt;
+
+&lt;p&gt;직교 행렬의 성질에 따라 \(\textbf{U}\textbf{U}^{T} = \textbf{I}\)를 만족한다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이차식, 즉 가우시안 밀도 함수는 식(2.50)이 상수인 표면에 대해서 상수일 것이다. 만약 모든 고윳값 \( \lambda \)들이 양의 값을 가진다면, 이 표면은 타원형을 띤다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/28.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/28.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;그림에 대해 설명하자면, 타원형의 중심은 \(\mu \)에 위치하며, 이 타원형의 축은 \(\mu_{i} \)상에 위치하게 된다.
+그리고 각각의 축 방향에 대한 척도 인자는 \( \lambda_{i}^{\frac{1}{2}}\)로 주어진다.&lt;/p&gt;
+
+&lt;p&gt;가우시안 분포를 더 잘 정의하기 위해서는 공분산 행렬의 모든 고윳값 \(\lambda_{i}\)들이 순양숫값을ㄹ 가질 필요가 있다.
+이 순양수의 값을 가지는 행렬을 &lt;b&gt;양의 정부호(positive definite)&lt;/b&gt;행렬이라 한다. 만약 모든 고윳값이 0 또는 0보다 큰 값을 가질 경우에 공분산 행렬을 &lt;b&gt;양의 준정부호(positive semidefinite)&lt;/b&gt;의 성징을 가졌다고 한다.&lt;/p&gt;
+
+&lt;p&gt;야코비언 행렬을 먼저 설명하면, 공간의 선형 변환시 발생되는 부피의 변화율을 확률식에 반영하면 다음과 같다.
+\[\int_{x}f(x)dx = \int_{y}f(y) \left| J \right| dy\]&lt;/p&gt;
+
+&lt;p&gt;이제 \( y_{i}\)로 정의되는 새로운 좌표 체계상에서의 가우시안 분포의 형태에 대해서 살펴보면, x좌표계에서 y좌표계로 변환되는 과정에서 야코비안 행렬 J를 가지게 된다.&lt;/p&gt;
+
+&lt;p&gt;J의 각 원소는 다음과 같이 주어진다.&lt;/p&gt;
+
+&lt;p&gt;\[ J_{i,j} = \frac{\partial x_{i}}{\partial y_{j}} =\frac{\partial}{\partial y_{j}} (U_{j,i}y_{i} + \mu) = U_{j,i} \qquad 식(2.53)\]&lt;/p&gt;
+
+&lt;p&gt;여기서 \(U_{j,i}\)는 행렬 \(U^{T} \)의 원소에 해당한다. 행렬 U의 정규직교성을 바탕으로 야코비안 행렬의 행렬식 제곱이 다음과 같음을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ \mid J \mid^{2} = \mid U^{T}\mid^{2} = \mid U^{T} \mid \mid U \mid= \mid U^{T}U \mid = \mid I \mid = 1 \qquad 식(2.54) \]&lt;/p&gt;
+
+&lt;p&gt;따라서 \(\mid J \mid  = 1\)이다.&lt;/p&gt;
+
+&lt;p&gt;또한, 공분산 행렬의 행렬식 \( \mid \Sigma \mid \)는 고윳값의 곱으로 표현할 수 있다. 따라서 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[ \mid \Sigma \mid^{\frac{1}{2}} = \prod_{j = 1}^{D}\lambda_{j}^{\frac{1}{2}} \qquad 식(2.55) \]&lt;/p&gt;
+
+&lt;p&gt;따라서 \(y_{j}\)좌표계에서 가우시안 분포는 다음의 형태를 가지게 된다. 이는 x축에서 y축의 전환이다.&lt;/p&gt;
+
+&lt;p&gt;\[ p(y) = p(x)\mid J \mid =  \prod_{j = 1}^{D} \]&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/&quot;&gt;2.3 The Gaussian Distribution&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -45,14 +291,14 @@
   <published>2022-03-03T07:08:50+09:00</published>
   <updated>2022-03-03T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9%E1%84%8B%E1%85%AA-%E1%84%83%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;이항 분포와 다항 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9%E1%84%8B%E1%85%AA-%E1%84%83%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;이항 분포와 다항 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -64,14 +310,14 @@
   <published>2022-03-03T07:08:50+09:00</published>
   <updated>2022-03-03T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/&quot;&gt;라그랑주 승수법&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/&quot;&gt;라그랑주 승수법&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -83,7 +329,7 @@
   <published>2022-03-03T04:01:50+09:00</published>
   <updated>2022-03-03T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -154,7 +400,7 @@
 &lt;h4 id=&quot;디리클레-분포&quot;&gt;디리클레 분포&lt;/h4&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/&quot;&gt;2.2 Multinomial Variables&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/&quot;&gt;2.2 Multinomial Variables&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -166,14 +412,14 @@
   <published>2022-03-02T07:08:50+09:00</published>
   <updated>2022-03-02T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/&quot;&gt;충분 통계량&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/&quot;&gt;충분 통계량&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -185,7 +431,7 @@
   <published>2022-03-02T04:01:50+09:00</published>
   <updated>2022-03-02T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -374,7 +620,7 @@
 (이러한 추세는 평균적으로만 옳으며 , 특정 관찰 집합에 대해서는 사후 분산이 사전 분산보다 클수도 있다.)&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.1-Binary-Variables/&quot;&gt;2.1 Binary Variables&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.1-Binary-Variables/&quot;&gt;2.1 Binary Variables&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -386,7 +632,7 @@
   <published>2022-03-01T04:01:50+09:00</published>
   <updated>2022-03-01T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -445,7 +691,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 &lt;p&gt;(중간 내용은 완전히 이해하지 못하여 이후에 정리하여 작성하겠습니다.)&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.6-Information-Theory/&quot;&gt;1.6 Information Theory&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 01, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.6-Information-Theory/&quot;&gt;1.6 Information Theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 01, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -457,7 +703,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
   <published>2022-02-28T04:01:50+09:00</published>
   <updated>2022-02-28T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -556,7 +802,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 &lt;/figure&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.5-Decision-Theory(2)/&quot;&gt;1.5 Decision Theory(2)&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 28, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.5-Decision-Theory(2)/&quot;&gt;1.5 Decision Theory(2)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 28, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -568,7 +814,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
   <published>2022-02-27T04:01:50+09:00</published>
   <updated>2022-02-27T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -650,7 +896,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 
 &lt;p&gt;추론과 결정에 대한 내용은 다음에 이어 설명하겠습니다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.5-Decision-Theory/&quot;&gt;1.5 Decision Theory&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 27, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.5-Decision-Theory/&quot;&gt;1.5 Decision Theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 27, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -662,7 +908,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
   <published>2022-02-26T07:08:50+09:00</published>
   <updated>2022-02-26T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -728,7 +974,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 
 &lt;p&gt;성공적인 패턴 인식 테크닉은 이 특성들을 활용하여 만들어지는 경우가 많다.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.3-Model-Selection-1.4-The-Curse-of-Dimensionality/&quot;&gt;1.3 Model Selection - 1.4 The Curse of Dimensionality&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.3-Model-Selection-1.4-The-Curse-of-Dimensionality/&quot;&gt;1.3 Model Selection - 1.4 The Curse of Dimensionality&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -740,7 +986,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
   <published>2022-02-26T07:08:50+09:00</published>
   <updated>2022-02-26T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -846,7 +1092,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 빨간색 선은 예측 분포의 평균값을, 그리고 빨간색 영역은 평균값으로부터 ±1 표준 편찻값을 가지는 부분을 표현한 것이다.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory(3)/&quot;&gt;1.2 Probability theory(3)&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory(3)/&quot;&gt;1.2 Probability theory(3)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -858,7 +1104,7 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
   <published>2022-02-25T07:08:50+09:00</published>
   <updated>2022-02-25T07:08:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -1007,7 +1253,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 &lt;p&gt;곡선 피팅에 대한 내용은 다음에 이어 설명하겠습니다.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory(2)/&quot;&gt;1.2. Probability theory (2)&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 25, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory(2)/&quot;&gt;1.2. Probability theory (2)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 25, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1019,7 +1265,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
   <published>2022-02-24T04:01:50+09:00</published>
   <updated>2022-02-24T04:01:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
@@ -1149,7 +1395,7 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 &lt;p&gt;베이지안 확률에 대한 내용은 다음에 이어 설명하겠습니다.&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory/&quot;&gt;1.2 Probability theory&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 24, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory/&quot;&gt;1.2 Probability theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 24, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1161,156 +1407,14 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
   <published>2022-02-23T07:50:50+09:00</published>
   <updated>2022-02-23T07:50:50+09:00</updated>
   <author>
-    <name>Cho min Hee</name>
+    <name>Cho Min Hee</name>
     <uri>http://localhost:4000</uri>
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231-LECTURE-01/&quot;&gt; LECTURE 01&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 01]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS229-LECTURE-01/" />
-  <id>http://localhost:4000/articles/[CS229]LECTURE 01</id>
-  <published>2022-02-23T07:50:50+09:00</published>
-  <updated>2022-02-23T07:50:50+09:00</updated>
-  <author>
-    <name>Cho min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS229-LECTURE-01/&quot;&gt; LECTURE 01&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[베타 분포]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
-  <id>http://localhost:4000/blog/베타 분포</id>
-  <published>2022-02-22T07:08:50+09:00</published>
-  <updated>2022-02-22T07:08:50+09:00</updated>
-  <author>
-    <name>Cho min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[감마 분포]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
-  <id>http://localhost:4000/blog/감마 분포</id>
-  <published>2022-02-22T07:08:50+09:00</published>
-  <updated>2022-02-22T07:08:50+09:00</updated>
-  <author>
-    <name>Cho min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;감마 분포&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[1.1 Polynomial Curve Fitting]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/" />
-  <id>http://localhost:4000/articles/[PRML]1.1 Polynomial Curve Fitting</id>
-  <published>2022-02-22T07:08:50+09:00</published>
-  <updated>2022-02-22T07:08:50+09:00</updated>
-  <author>
-    <name>Cho min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
-모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
-
-&lt;p&gt;다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.&lt;/p&gt;
-
-&lt;p&gt;다음과 같은 형태의 다항식이 있다.&lt;/p&gt;
-
-&lt;p&gt;\[ y(x,\textbf{w})= w_{0}+w_{1}x+w2x^{2}+….+w_{M}x^{M} = \sum_{j = 0}^{M}w_{j}x^{j} \]&lt;/p&gt;
-
-&lt;p&gt;이는 x에 대해서는 비선형지만, 계수 w에 대해서는 선형이다. 이를 기하학적으로 해석하면 다음과 같다&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;먼저, 다항식을 훈련 집합 데이터에 피팅해서 계수의 값들을 정할 수 있다. 이때 훈련 집합과 함숫값 y(x,w)와의 오차를 측정하는 대표적인 오차 함수를 다음과 같이 정의할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;\[E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{w})-t_n)^2 \]&lt;/p&gt;
-
-&lt;p&gt;E(w)를 초쇠화하는 w값을 선택함으로써 이 곡선 피팅 문제를 해결할 수 있다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 이 함수를 계수에 대해 미분하면 w에 대해 선형인 식이 나올 것이다. 이 오차 함수를 최소화하는 w는 유일한 값인 w*를 찾아낼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;다음으로 다항식의 차수 M을 결정하는 문제가 여전히 남아있다. 이를 Model Selection이라 불린다&lt;/p&gt;
-
-&lt;p&gt;훈련 집합과 시험 집합 각각에 대해서 E(w*)의 잔차를 계산해 보자
-평균 제곱근 오차(RMS) 를 통해 각각의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인할 것이다.&lt;/p&gt;
-
-&lt;p&gt;평균 제곱근 오차는 다음과 같이 정의된다.&lt;/p&gt;
-
-&lt;p&gt;\[E_{rms} = \sqrt{\frac{2E(w^*)}{N}} \]&lt;/p&gt;
-
-&lt;p&gt;RMS를 통해 각가의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인하면 다음과 같다&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;/PRML/2.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/2.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;M값이 작을 경우에는 시험 집합의 오차가 상대적으로 커 UnderFitting이 되었으며 큰 경우, Overfitting이 되었음을 확인할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;이를 수치적으로 확인했을 때, 차수 M에 따른 피팅 함수의 계수 w*의 값들이 M이 커짐에 따라 계수값의 단위 역시 커지는 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;/PRML/3.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/3.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;사용되는 데이터 집합의 크기가 달라지는 경우에는 어떤 일이 일어나는지 확인해 보자&lt;/p&gt;
-
-&lt;p&gt;모델의 복잡도를 일정하게 유지시킬 때는 사용하는 데이터 수가 늘어날수록 과적합 문제가 완화되는 것을 확인할 수 있다. 즉 데이터 집합의 수가 클수록 더 복잡한 모델을 활용하여 피팅 가능하다. 
-( 사실 베이지안 모델에서는 데이터 집합의 크기에 따라서 적합한 매개 변수의 수가 자동으로 정해지기 때문에 과적합 문제를 피해갈 수 있다)
-이를 시각화하면 다음과 같다.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;/PRML/4.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/4.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;그렇다면 비교적 복잡하고 유연한 모델을 제한적인 숫자의 데이터 집합을 활용하여 피팅하려면 어떻게 해야할까?
-그 방법 중 하나가 정규화다&lt;/p&gt;
-
-&lt;p&gt;오차 함수에 계수의 크기가 커지는 것을 막기 위한 패널티항을 추가하는 것이다. 식은 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;\[\widetilde{E}(w) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{W}) - t_{n})^2 + \frac{\lambda }{2}\left| w \right|^2 \]&lt;/p&gt;
-
-&lt;p&gt;여기서, 이차 형식 정규화는 리지 회귀라고 부르고 뉴럴 네트워크의 맥락에서는 이를 가중치 감쇠라 한다.&lt;/p&gt;
-
-&lt;p&gt;마지막으로 지금까지의 결과를 바탕으로 모델 복잡도를 잘 선택하는 단순한 방법이 있다.&lt;/p&gt;
-
-&lt;p&gt;그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
-여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/&quot;&gt;1.1 Polynomial Curve Fitting&lt;/a&gt; was originally published by Cho min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231-LECTURE-01/&quot;&gt; LECTURE 01&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
   </content>
 </entry>
 
