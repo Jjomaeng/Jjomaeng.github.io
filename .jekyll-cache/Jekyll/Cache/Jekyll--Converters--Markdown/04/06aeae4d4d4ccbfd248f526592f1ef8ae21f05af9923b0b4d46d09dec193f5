@@ -1,0 +1,19 @@
+I"v<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<h4 id="주변-가우시안-분포">주변 가우시안 분포</h4>
+
+<p>이제 두 번째, 각 변수 집합의 주변 분포 역시 가우시안 분포를 보이는 것을 확인해보자.</p>
+
+<p>먼저, 주변 확률 분포가 무엇인지 확인하고 넘어가자.</p>
+
+<ul>
+  <li>결합 확률 분포에서 한 쪽의 변수만 보는 것.</li>
+  <li>이 때 나머지 변수는 합산하여 사라지게 되는데</li>
+</ul>
+
+<figure>
+    <a href="/PRML/8.png" alt="image"><img src="/PRML/8.png" alt="image" /></a>
+</figure>
+
+:ET
