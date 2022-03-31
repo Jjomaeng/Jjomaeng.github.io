@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-30T10:43:09+09:00</updated>
+<updated>2022-03-31T13:23:22+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -343,12 +343,24 @@
               &lt;li&gt;대각 행렬 공분산 사용 : 2D개의 매개변수만 고려&lt;/li&gt;
               &lt;li&gt;동방성 (항등 행렬 상수배) 공분산 사용 : D+1개의 매개변수만 고려&lt;/li&gt;
               &lt;li&gt;확률 밀도의 형태를 제약시키며, 그에 따라 모델에 데이터 상의 흥미로운 상관관계를 표현하는 것을 방해할 수 있다.&lt;/li&gt;
+              &lt;li&gt;그림으로 살펴보면 다음과 같다&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/32.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/32.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        * (a) 일반적인 공분산 행렬 경우
+        * (b) 공분산이 대각 행렬인 경우, 좌표축에 따라 타원형 형태를 띤다
+        * (c) 공분산 행렬이 항등 행렬의 상수배인 경우, 경로가 동심원 형태를 띤다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
   &lt;li&gt;가우시안 분포가 단봉 분포 형태
     &lt;ul&gt;
       &lt;li&gt;다봉 분포에 대해 적절한 근사치를 제공할 수 없다.&lt;/li&gt;
@@ -368,6 +380,129 @@
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;조건부-가우시안-분포&quot;&gt;조건부 가우시안 분포&lt;/h4&gt;
+
+&lt;p&gt;다차원 가우시안 확률 분포의 특징을 살펴보자
+결론부터 설명하자면,&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;두 변수 집합이 결합적으로 가우시안 분포를 보인다면 하나의 변수 집합에 대한 다른 변수 집합의 조건부 분포 역시 가우시안 분포를 보인다.&lt;/li&gt;
+  &lt;li&gt;각 변수 집합의 주변 분포 역시 가우시안 분포를 보인다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;먼저, 첫 번째의 조건부 분포의 경우를 살펴보자.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;D차원의 벡터 x가 \(N(x \mid \mu,\Sigma)\)의 가우시안 분포를 가진다고 가정하고 x를 두 개의 부분집합 \(x_{a},x_{b}\)로 분리해보자&lt;/li&gt;
+  &lt;li&gt;\(x_{a}\)가 x의 첫 M 원소에, \(x_{b}\)가 나머지 D-M개의 원소에 해당한다고 가정할 수 있다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;그러면 다음과 같이 표현할 수 있다.
+\[ X = \binom{X_{a}}{X_{b}} \qquad 식(2.65)\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이에 해당하는 각각 부분 집합의 평균값 벡터 \(\mu \)를 다음과 같이 정의할 수 있다.
+\[\mu = \binom{\mu_{a}}{\mu_{b}}\qquad 식(2.66) \]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;공분산 행렬 \(\Sigma \)는 다음처럼 주어진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\Sigma =  \begin{pmatrix}
+    \Sigma_{aa} &amp;amp; \Sigma_{ab} \\
+    \Sigma_{ba} &amp;amp; \Sigma_{bb} \\
+    \end{pmatrix} \qquad 식(2.67)\]
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;여기서 \(\Sigma^{-1} = \Sigma \) (공분산 행렬이 대칭행렬이니까)는 \(\Sigma_{aa}\)와 \(\Sigma_{bb}\)가 대칭 행렬이라는 것을 암시한다.이 경우 \(\Sigma_{ba} = \Sigma_{ab}^{T}\)다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;수식의 편의를 위해 공분산 행렬의 역행렬 (정밀도 행렬)을 다음처럼 정의한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\[ \Lambda \equiv \Sigma^{-1} \qquad 식(2.68)\]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;분할된 형태의 정밀 행렬은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\Lambda = \begin{pmatrix}
+\Lambda_{aa} &amp;amp;\lambda_{ab}  \\
+\Lambda_{ba} &amp;amp;\lambda_{bb}  \\
+\end{pmatrix} \qquad 식(2.69)\]
+
+&lt;ul&gt;
+  &lt;li&gt;마찬가지로 \(\Lambda_{ab}^{T} = \Lambda_{ba} \)가 성립한다&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(\Lambda_{aa}\)가 \(\Sigma_{aa}\)의 역행렬이 아님을 주의하자!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;우리가 찾고자 하는 것은 조건부 분포 \(p(x_{a} \mid x_{b})\)이다.
+    &lt;ul&gt;
+      &lt;li&gt;확률 곱의 법칙에 따라서 결합 분포 \(p(x)  = p(x_{a},x_{b}) \)로부터 계산할 수 있다.&lt;/li&gt;
+      &lt;li&gt;\(x_{b}\)를 관측된 값으로 고정하고 그때의 \(x_{a}\)애 해당하는 확률분포를 구할 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이 식을 다시 살펴보자
+\[ -\frac{1}{2}(x -\mu)^{t}\Sigma^{-1}(x -\mu) \]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;식(2.65),식(2.66),식(2.69)의 식을 이용하여 전개하면 다음과 같다.&lt;/p&gt;
+
+    &lt;p&gt;\[ -\frac{1}{2}(x -\mu)^{t}\Sigma^{-1}(x -\mu) =  \]
+  \[-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{aa}(x_{a}-\mu_{a})-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{ab}(x_{b}-\mu_{b}) \]
+  \[\qquad \qquad \quad -\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{ba}(x_{a}-\mu_{a})-\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{bb}(x_{b}-\mu_{b}) \qquad 식(2.70) \]&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;\(x_{b}\)가 고정이니까 이 식은 \(x_{a}\)에 대해 이차식이다.&lt;/li&gt;
+      &lt;li&gt;즉, 조건부 가우시안 분포 \(p(x_{a} \mid x_{b})\)의 이차식이다.&lt;/li&gt;
+      &lt;li&gt;이 식을 통해 \(p(x_{a} \mid x_{b})\)는 가우시안 분포임을 알 수 있다.&lt;/li&gt;
+      &lt;li&gt;가우시안 분포는 평균과 분산에 의해 결정되므로 이걸 구해보자.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;완전제곱식
+    &lt;ul&gt;
+      &lt;li&gt;위의 식을 완전제곱식으로 변경하면 다음과 같다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;figure&gt;
+  &lt;a href=&quot;/PRML/33.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/33.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;여기서 const는 x에 대한 독립적인 항들을 의미한다는 것을 알 수 있다.&lt;/li&gt;
+      &lt;li&gt;x의 이차항에 해당하는 계수들의 행렬과 공분산 행렬의 역행렬 \(\Sigma^{-1}\)이 같다.&lt;/li&gt;
+      &lt;li&gt;x의 일차함의 계수들과 \(\Sigma^{-1}\mu\)가 같다.&lt;/li&gt;
+      &lt;li&gt;이를 식(2.70)에 적용해서 \(\mu \)를 구해보자!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;식(2.70)의 평균은 \( \mu_{a \mid b}\), 공분산은 \(\Sigma_{a \mid b}\)이다.&lt;/li&gt;
+  &lt;li&gt;식(2.70)dmf \(x_{a}\)에 대해 전개하여 \(x_{a}\)의 이차식에 해당하는 항만 골라내면 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[-\frac{1}{2}\textbf{x}_{a}^{T}\Lambda_{aa}\textbf{x}_{a} \qquad 식(2.72)\]
+
+&lt;ul&gt;
+  &lt;li&gt;따라서 공분산은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\[\Sigma_{a \mid b} = \Lambda_{aa}^{-1} \qquad 식(2.73)\]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(x_{a}\)에 대해 일차식에 해당하는 항만 추려내면 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\textbf{x}_{a}^{T} \begin{Bmatrix} \Lambda_{aa} \mu_{a} - \Lambda_{ab}(\textbf{x}_{b} - \mu_{b}) \end{Bmatrix} \qquad 식(2.74)\]
+
+&lt;ul&gt;
+  &lt;li&gt;식 (2.71)에서의 우리의 논의에 따라 이 표현식에서 \(x_{a}\)의 계수는 \(\Sigma_{a \mid b}^{T} \mu_{a \mid b} \)와 동일해야 한다. 따라서 다음을 구할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+&lt;a href=&quot;/PRML/34.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/34.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;식(2.73)과 위의 식은 조건부 분포 \(p(x_{a},x_{b})\)의 분할 정밀 행렬에 대한 식으로 표현되었다. 해당 결과값은 분할 공분산 행렬의 식으로도 표현 가능하다.&lt;/li&gt;
+  &lt;li&gt;이를 위해서는 분할 행렬의 역행렬에 대한 다음의 성징을 활용해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution/&quot;&gt;2.3 The Gaussian Distribution&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
