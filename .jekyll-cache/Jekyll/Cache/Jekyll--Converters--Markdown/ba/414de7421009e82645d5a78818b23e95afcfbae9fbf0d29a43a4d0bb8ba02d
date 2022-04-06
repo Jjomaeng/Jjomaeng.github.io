@@ -1,0 +1,59 @@
+I"<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<h4 id="주변-가우시안-분포">주변 가우시안 분포</h4>
+
+<p>이제 두 번째, 각 변수 집합의 주변 분포 역시 가우시안 분포를 보이는 것을 확인해보자.</p>
+
+<p>먼저,<b>주변 확률 분포</b>가 무엇인지 확인하고 넘어가자.</p>
+
+<ul>
+  <li>결합 확률 분포에서 한 쪽의 변수만 보는 것.</li>
+  <li>이 때 나머지 변수는 합산하여 사라지게 되는데 이산 변수는 모든 확률 값의 합으로, 연속 변수의 경우 적분을 통해 진행된다.</li>
+</ul>
+
+<p>이제 다음의 식으로 주어지는 주변 분포에 대해 살펴보자.</p>
+
+\[p(\textbf{x}_{a}) = \int p(\textbf{x}_{a},\textbf{x}_{b}) \; d\textbf{x}_{b} \qquad 식(2.83)\]
+
+<ul>
+  <li>앞에서와 같이 이차식에서 평균과 공분산을 구하는 전략을 사용할 것이다.</li>
+</ul>
+
+<p>자 그러면, 가우시안 분포에서 이차 형식을 다시 살펴보자.</p>
+
+<p>\[ -\frac{1}{2}(x -\mu)^{t}\Sigma^{-1}(x -\mu) =  \]
+\[-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{aa}(x_{a}-\mu_{a})-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{ab}(x_{b}-\mu_{b}) \]
+\[\qquad \qquad \quad -\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{ba}(x_{a}-\mu_{a})-\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{bb}(x_{b}-\mu_{b}) \qquad 식(2.70) \]</p>
+
+<ul>
+  <li>여기서 우리는 \(x_{b}\)에 연관된 항들을 적분시켜서 없애는 것이 우리의 목표다.</li>
+  <li>이를 위해서 \(x_{b} \)에 연관된 항들을 일단 먼저 고려하여 완전제곱식을 적용해야 한다.</li>
+  <li>완전제곱식 역시 다시 살펴보자.</li>
+</ul>
+
+<p>\[ -\frac{1}{2}(x -\mu)^{T}\Sigma^{-1}(x -\mu) = -\frac{1}{2}x^{T}\Sigma{-1}x + x^{T}\Sigma{-1}\mu + const \qquad 식(2.71)\]</p>
+<ul>
+  <li>이를 이용한 전략은 다음과 같다.</li>
+</ul>
+
+<figure>
+    <a href="/PRML/36.jpeg" alt="image"><img src="/PRML/36.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>자세히 설명하면,
+    <ul>
+      <li>\(f(x_{b},x_{a}) : 원래 지수부를 \( (x_{a},x_{b}) \)</li>
+    </ul>
+  </li>
+  <li>완전제곱식을 이용해서 \(x_{b} \)에 대해 전개하면 다음과 같다.</li>
+</ul>
+
+\[-\frac{1}{2}\textbf{x}_{b}^{T}\Lambda_{bb}\textbf{x}_{b} + \textbf_{b}^{T}m = -\frac{1}{2}(\textbf{x}_{b} - \Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(\textbf{x}_{b}-\Lambda_{bb}^{-1}m) +\frac{1}{2}m^{T}\Lambda_{aa}^{-1}m \qquad 식(2.84)\]
+
+<figure>
+    <a href="/PRML/35.png" alt="image"><img src="/PRML/35.png" alt="image" /></a>
+</figure>
+
+:ET

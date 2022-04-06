@@ -197,12 +197,55 @@
 </ul>
 
 <p>\[ -\frac{1}{2}(x -\mu)^{T}\Sigma^{-1}(x -\mu) = -\frac{1}{2}x^{T}\Sigma{-1}x + x^{T}\Sigma{-1}\mu + const \qquad 식(2.71)\]</p>
+<ul>
+  <li>이를 이용한 전략은 다음과 같다.</li>
+</ul>
+
+<figure>
+    <a href="/PRML/36.jpeg" alt="image"><img src="/PRML/36.jpeg" alt="image" /></a>
+</figure>
 
 <ul>
-  <li>완전제곱식을 이용해서 \(x_{b} \)에 대해 전개하면 다음과 같다.</li>
+  <li>자세히 설명하면,
+    <ul>
+      <li>
+        <p>\(f(x_{b},x_{a})\) : 원래 지수부를 \( (x_{a},x_{b}) \) 부분 집합을 통해 전개한 식 중에서 \(x_{b} \)을 포함한 모든 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>\( g(x_{a}) \) : \(f(x_{b},x_{a})\)에 포함된 항등을 제외한 항들 중 \(x_{a}\)를 포함한 모든 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>const : 그 외 나머지 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>\(\tau + g(x_{a})\)를 \(x_{a}\)의 완전제곱식으로 만들면 \(x_{a}\)의 평균벡터와 공분산 행렬을 구할 수 있다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>이제 식을 펼쳐보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/37.jpeg" alt="image"><img src="/PRML/37.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>완전제곱식을 이용해서 \(f(x_{b},x_{a})\)에 대해 전개하면 다음과 같다.</li>
 </ul>
 
 \[-\frac{1}{2}\textbf{x}_{b}^{T}\Lambda_{bb}\textbf{x}_{b} + \textbf_{b}^{T}m = -\frac{1}{2}(\textbf{x}_{b} - \Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(\textbf{x}_{b}-\Lambda_{bb}^{-1}m) +\frac{1}{2}m^{T}\Lambda_{aa}^{-1}m \qquad 식(2.84)\]
+
+<ul>
+  <li>여기서 m은 다음과 같다.</li>
+</ul>
+
+\[m = \Lambda_{bb}\mu_{b} - \Lambda_{ba}(\textbf{x}_{a} - \mu_{a}) \qquad 식(2.85)\]
+
+<ul>
+  <li>그러면 \(\tau \)는 다음과 같음을 알 수 있다.</li>
+</ul>
+
+\[\tau = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m\]
 
 <figure>
     <a href="/PRML/35.png" alt="image"><img src="/PRML/35.png" alt="image" /></a>

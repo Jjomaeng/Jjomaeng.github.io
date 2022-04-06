@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-03-31T14:52:52+09:00</updated>
+<updated>2022-04-05T11:42:32+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -148,12 +148,55 @@
 &lt;/ul&gt;
 
 &lt;p&gt;\[ -\frac{1}{2}(x -\mu)^{T}\Sigma^{-1}(x -\mu) = -\frac{1}{2}x^{T}\Sigma{-1}x + x^{T}\Sigma{-1}\mu + const \qquad 식(2.71)\]&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;이를 이용한 전략은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/36.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/36.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;완전제곱식을 이용해서 \(x_{b} \)에 대해 전개하면 다음과 같다.&lt;/li&gt;
+  &lt;li&gt;자세히 설명하면,
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;\(f(x_{b},x_{a})\) : 원래 지수부를 \( (x_{a},x_{b}) \) 부분 집합을 통해 전개한 식 중에서 \(x_{b} \)을 포함한 모든 항들을 모은 식이다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;\( g(x_{a}) \) : \(f(x_{b},x_{a})\)에 포함된 항등을 제외한 항들 중 \(x_{a}\)를 포함한 모든 항들을 모은 식이다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;const : 그 외 나머지 항들을 모은 식이다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;\(\tau + g(x_{a})\)를 \(x_{a}\)의 완전제곱식으로 만들면 \(x_{a}\)의 평균벡터와 공분산 행렬을 구할 수 있다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이제 식을 펼쳐보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/37.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/37.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;완전제곱식을 이용해서 \(f(x_{b},x_{a})\)에 대해 전개하면 다음과 같다.&lt;/li&gt;
 &lt;/ul&gt;
 
 \[-\frac{1}{2}\textbf{x}_{b}^{T}\Lambda_{bb}\textbf{x}_{b} + \textbf_{b}^{T}m = -\frac{1}{2}(\textbf{x}_{b} - \Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(\textbf{x}_{b}-\Lambda_{bb}^{-1}m) +\frac{1}{2}m^{T}\Lambda_{aa}^{-1}m \qquad 식(2.84)\]
+
+&lt;ul&gt;
+  &lt;li&gt;여기서 m은 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[m = \Lambda_{bb}\mu_{b} - \Lambda_{ba}(\textbf{x}_{a} - \mu_{a}) \qquad 식(2.85)\]
+
+&lt;ul&gt;
+  &lt;li&gt;그러면 \(\tau \)는 다음과 같음을 알 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\tau = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m\]
 
 &lt;figure&gt;
     &lt;a href=&quot;/PRML/35.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/35.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
