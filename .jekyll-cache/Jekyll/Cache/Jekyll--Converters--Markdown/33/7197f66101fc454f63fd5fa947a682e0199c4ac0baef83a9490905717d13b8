@@ -1,4 +1,4 @@
-I"�<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+I"~<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
 
 <h4 id="주변-가우시안-분포">주변 가우시안 분포</h4>
@@ -83,8 +83,49 @@
 
 \[\tau = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m\]
 
+<ul>
+  <li>
+    <p>그러면
+\[ \int exp(f(x_{b},x_{a}) - \tau)dx_{b} = \int exp(-\frac{1}{2}(x_{b}-\Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(x_{b}-\Lambda_{bb}^{-1}m))dx_{b} \qquad 식(2.86)\]</p>
+  </li>
+  <li>이 값은 공분산 \( \Lambda_{aa}\)에만 종속되고 \(x_{a}\)에 독립적이므로 \(\alpha \beta exp(\tau + g(x_{a} )+ const )\)의 지수부에만 집중하면 된다.</li>
+  <li>그러면 \(\tau + g(x_{a}) + const\)를 살펴보자</li>
+</ul>
+
+<p>\[ \tau + g(x_{a}) + const = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m - \frac{1}{2}x_{a}^{TT}\Lambda_{aa}x_{a}+x_{a}^{T}(\Lambda_{aa}\mu_{a} + \Lambda_{ab}\mu_{b}) + const \]
+\[\qquad \qquad \qquad \qquad \;\; =-\frac{1}{2}x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})x_{a} + x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} + const \qquad 식(2.87) \]</p>
+
+<ul>
+  <li>
+    <p>따라서 공분산은 다음과 같다(이차식을 살펴보자).
+\[\Sigma_{a} = (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} \qquad 식(2.88)\]</p>
+  </li>
+  <li>
+    <p>평균 벡터는 다음과 같다(1차식을 살펴보자).
+\[ \Sigma_{a}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} = \mu_{a} \qquad 식(2.89)\]</p>
+  </li>
+</ul>
+
+<p>*공분산의 형태가 복잡하게 보이지만, 슈어 보수행렬(Schur complement)를 사용하면 다음을 알 수 있다.
+\[ (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} = \Sigma_{aa} \]</p>
+
+<ul>
+  <li>따라서 정리하면</li>
+</ul>
+
+\[E[x_{a}] = \mu_{a}\]
+
+\[cov[x_{a}] = \Sigma_{aa}\]
+
+<ul>
+  <li>이 결과는 우리의 직돤과도 일치한다.</li>
+  <li>두 개의 변수에 대한 다변량 가우시안 분포의 조건부 분포와 주변 분포의 예시를 마지막으로 살펴보자</li>
+</ul>
+
 <figure>
     <a href="/PRML/35.png" alt="image"><img src="/PRML/35.png" alt="image" /></a>
 </figure>
+
+<h4 id="가우시안-변수에-대한-베이지안-정리">가우시안 변수에 대한 베이지안 정리</h4>
 
 :ET

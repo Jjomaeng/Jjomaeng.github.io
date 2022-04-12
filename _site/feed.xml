@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-04-07T14:35:31+09:00</updated>
+<updated>2022-04-12T16:45:58+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -198,9 +198,61 @@
 
 \[\tau = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m\]
 
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;그러면
+\[ \int exp(f(x_{b},x_{a}) - \tau)dx_{b} = \int exp(-\frac{1}{2}(x_{b}-\Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(x_{b}-\Lambda_{bb}^{-1}m))dx_{b} \qquad 식(2.86)\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이 값은 공분산 \( \Lambda_{aa}\)에만 종속되고 \(x_{a}\)에 독립적이므로 \(\alpha \beta exp(\tau + g(x_{a} )+ const )\)의 지수부에만 집중하면 된다.&lt;/li&gt;
+  &lt;li&gt;그러면 \(\tau + g(x_{a}) + const\)를 살펴보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;\[ \tau + g(x_{a}) + const = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m - \frac{1}{2}x_{a}^{TT}\Lambda_{aa}x_{a}+x_{a}^{T}(\Lambda_{aa}\mu_{a} + \Lambda_{ab}\mu_{b}) + const \]
+\[\qquad \qquad \qquad \qquad \;\; =-\frac{1}{2}x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})x_{a} + x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} + const \qquad 식(2.87) \]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;따라서 공분산은 다음과 같다(이차식을 살펴보자).
+\[\Sigma_{a} = (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} \qquad 식(2.88)\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;평균 벡터는 다음과 같다(1차식을 살펴보자).
+\[ \Sigma_{a}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} = \mu_{a} \qquad 식(2.89)\]&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*공분산의 형태가 복잡하게 보이지만, 슈어 보수행렬(Schur complement)를 사용하면 다음을 알 수 있다.
+\[ (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} = \Sigma_{aa} \]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;따라서 정리하면&lt;/li&gt;
+&lt;/ul&gt;
+
+\[E[x_{a}] = \mu_{a}\]
+
+\[cov[x_{a}] = \Sigma_{aa}\]
+
+&lt;ul&gt;
+  &lt;li&gt;이 결과는 우리의 직돤과도 일치한다.&lt;/li&gt;
+  &lt;li&gt;두 개의 변수에 대한 다변량 가우시안 분포의 조건부 분포와 주변 분포의 예시를 마지막으로 살펴보자&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;figure&gt;
     &lt;a href=&quot;/PRML/35.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/35.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;h4 id=&quot;가우시안-변수에-대한-베이지안-정리&quot;&gt;가우시안 변수에 대한 베이지안 정리&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;앞서 배운 내용을 정리하면
+    &lt;ul&gt;
+      &lt;li&gt;가우시안 분포 p(x)에 대해 벡터 집합 \( x = (x_{a} , x_{b}) \)로 나눈 후, 조건부 분포 \( p(x_{a} \mid x_{b}) \)와 주변 분포 \(p(x_{a})\) 역시 가우시안 분포임을 확인하였다.&lt;/li&gt;
+      &lt;li&gt;이때, 조건부 분포 \( p(x_{a} \mid x_{b}) \)의 평균이 \(x_{b}\)에 대해서 선형이다.&lt;/li&gt;
+      &lt;li&gt;가우시안 주변 분포 p(x)와 가우시안 조건부 분포 \(p(y \mid x)\)가 있을 때 \(p(y \mid x)\)의 평균이 x에 대한 선형 함수이며, 공분산 x에 대해 독립적이다.&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(2)/&quot;&gt;2.3 The Gaussian Distribution(2)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 05, 2022.&lt;/p&gt;
@@ -1269,6 +1321,25 @@ N개의 동일한 물체가 몇 개의 통 안에 담겨 있다고 가정해 보
 
 
 <entry>
+  <title type="html"><![CDATA[ LECTURE 02 Classification and Logistic Regression]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS229-LECTURE-02/" />
+  <id>http://localhost:4000/articles/[CS229]LECTURE 02</id>
+  <published>2022-02-26T07:50:50+09:00</published>
+  <updated>2022-02-26T07:50:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS229-LECTURE-02/&quot;&gt; LECTURE 02 Classification and Logistic Regression&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 26, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[1.3 Model Selection - 1.4 The Curse of Dimensionality]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-1.3-Model-Selection-1.4-The-Curse-of-Dimensionality/" />
   <id>http://localhost:4000/articles/[PRML]1.3 Model Selection - 1.4 The Curse of Dimensionality</id>
@@ -1763,25 +1834,6 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory/&quot;&gt;1.2 Probability theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 24, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 01]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231-LECTURE-01/" />
-  <id>http://localhost:4000/articles/[CS231]LECTURE 01</id>
-  <published>2022-02-23T07:50:50+09:00</published>
-  <updated>2022-02-23T07:50:50+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231-LECTURE-01/&quot;&gt; LECTURE 01&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
   </content>
 </entry>
 
