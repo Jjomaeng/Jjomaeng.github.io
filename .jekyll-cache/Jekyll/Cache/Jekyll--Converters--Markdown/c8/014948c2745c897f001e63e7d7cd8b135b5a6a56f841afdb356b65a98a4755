@@ -1,0 +1,9 @@
+I"�<p>앞서 우리는 <a href="https://jjomaeng.github.io/articles/PRML-2.1-Binary-Variables/">베르누이 분포(Bernoulli Distribution)</a>에 대해 살펴봤다</p>
+
+<p>들어가기에 앞서 베르누이 과정을 정리하면,</p>
+<ul>
+  <li>베르누이 과정은 결과가 오직 두가지인 확률 변수의 과정이다.</li>
+  <li>쉬운 예시로 동전 던지기를 생각하면 된다.</li>
+</ul>
+
+:ET
