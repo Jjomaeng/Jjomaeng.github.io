@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-05-18T15:18:07+09:00</updated>
+<updated>2022-05-18T16:15:00+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -50,7 +50,29 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    
+    &lt;p&gt;적률(moment)를 이해하기 위해, 물리학에서 말하는 moment를 먼저 살펴보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;물리학에서 말하는 ‘moment’는 어떤 물리량과 거리의 곱을 말한다.&lt;/li&gt;
+  &lt;li&gt;여기서 거리는 ‘어떤 기준점에서 물리량 사이의 거리’를 뜻한다.&lt;/li&gt;
+  &lt;li&gt;이 ‘거리’는 물리량의 분포를 보여준다.&lt;/li&gt;
+  &lt;li&gt;즉, 통계학에서의 적률(moment)은 이 ‘분포’와 관련되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그렇다면 통계학에서 적률의 정의를 살펴보자&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;양수 n에 대해 확률변수 \(x^{n}\)의 기댓값 \(E(x^{n})\)을 확륣변수 x의 원점에 대한 n차 적률이라 한다.
+\[ \mu_{n} = E(x^{n})\]
+\(E(x^{n}) = \left\{\begin{matrix}
+discrete \; random \;  variable : &amp;amp;  \sum_{x}x^{n}f(x)\\
+continuous \; random \; variable : &amp;amp; \int_{-\infty }^{\infty}x^{n}f(x)dx \\
+\end{matrix}\right.\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;f(x)는 확률질량함수 또는 확률밀도함수&lt;/li&gt;
+  &lt;li&gt;위 정의에서 n = 1일 경우 우리가 알고있는 확륣변수 x의 기댓값이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF%E1%84%80%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%85%E1%85%B2%E1%86%AF-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC-%E1%84%92%E1%85%A1%E1%86%B7%E1%84%89%E1%85%AE/&quot;&gt;적률과 적률 생성 함수&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 06, 2022.&lt;/p&gt;
   </content>
@@ -253,7 +275,7 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;앞서 살펴봤던 &lt;a href=&quot;https://jjomaeng.github.io/blog/베타-분포/&quot;&gt;베타 분포&lt;/a&gt;의 확장 버전인 디리클레 분포(Dirichlet distribution)를 살펴보자&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://jjomaeng.github.io/blog/베타-분포/&quot;&gt;베타 분포&lt;/a&gt;의 확장 버전인 디리클레 분포(Dirichlet distribution)를 살펴보자&lt;/p&gt;
 
 &lt;h3 id=&quot;디리클레-분포dirichlet-distribution&quot;&gt;디리클레 분포(Dirichlet distribution)&lt;/h3&gt;
 
@@ -283,7 +305,7 @@
 
 &lt;p&gt;마지막으로, 앞서 배운 이항 분포와 함께 켤레 사전 분포의 관계를 표로 정리해보자&lt;/p&gt;
 
-&lt;table&gt;
+&lt;table rules=&quot;groups&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;우도&lt;/th&gt;
