@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-05-18T14:20:37+09:00</updated>
+<updated>2022-05-18T15:18:07+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -253,7 +253,60 @@
     <email>aezjk56@gmail.com</email>
   </author>
   <content type="html">
-    
+    &lt;p&gt;앞서 살펴봤던 &lt;a href=&quot;https://jjomaeng.github.io/blog/베타-분포/&quot;&gt;베타 분포&lt;/a&gt;의 확장 버전인 디리클레 분포(Dirichlet distribution)를 살펴보자&lt;/p&gt;
+
+&lt;h3 id=&quot;디리클레-분포dirichlet-distribution&quot;&gt;디리클레 분포(Dirichlet distribution)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;디리클레 분포는 2가지 경우만을 다루는 베타분포를 k가지 경우를 다루도록 확장한 버전이다.&lt;/li&gt;
+  &lt;li&gt;디리클레분포란 𝑘차원의 실수 벡터 중 벡터의 요소가 양수이며 모든 요소를 더한 값이 1인 경우에 확률값이 정의되는 연속확률분포이다.&lt;/li&gt;
+  &lt;li&gt;2이상의 자연수 𝑘와 양의 상수 α1,…,α𝑘에 대하여 디리클레분포의 확률밀도함수는 다음과 같이 정의된다.
+    &lt;ul&gt;
+      &lt;li&gt;실수값 \(x_{1},\cdots,x_{k}\)가 모두 양의 실수이며 \(\sum_{i = 1 }^{k}x_{i} = 1\)을 만족할 때,&lt;/li&gt;
+      &lt;li&gt;\( f(x_{1},\cdots,x_{k};,\alpha_{1},\cdots,\alpha_{k}) = \frac{1}{\beta(\alpha)}\prod_{i = 1}^{k}x_{i}^{\alpha_{i}-1}\)의 값을 가지며,&lt;/li&gt;
+      &lt;li&gt;그 외의 경우는 0의 값을 가진다&lt;/li&gt;
+      &lt;li&gt;이때 \(\alpha = (\alpha_{1},\cdots,\alpha_{k})\)이며, \(\beta(\alpha)\)는 정규화 상수로서 다음의 값을 가진다.&lt;/li&gt;
+      &lt;li&gt;\(\beta(\alpha) = \frac{\prod_{i = 1}^{k}\Gamma(\alpha_{i}}{\Gamma(\sum_{i = 1}^{k}\alpha_{i})}\)&lt;/li&gt;
+      &lt;li&gt;디리클레 분포에서 k = 2인 경우가 베타 분포가 된다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;다항-분포의-결레-사전-분포&quot;&gt;다항 분포의 결레 사전 분포&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이항 분포의 켤레 사전 분포로 베타 분포를 봤듯이 다항 분포와 디리클레 분포는 동일한 분포를 따른다.&lt;/li&gt;
+  &lt;li&gt;즉, 디리클레 분포 \(\theta \sim Dir(\alpha)\)와 그에 대한 다항 분포 \(X \mid \theta \sim Multinomial(\theta )\)에 대하여, X가 주어졌을 때 \(\theta \)의 사후 확률 \(\theta \mid X\)는 다음과 같이 나타낼 수 있다.
+\[ \theta \mid X  \sim Dir(\alpha + X)\]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;켤레-사전-분포conjugate-prior-distribution&quot;&gt;켤레 사전 분포(Conjugate prior distribution)&lt;/h3&gt;
+
+&lt;p&gt;마지막으로, 앞서 배운 이항 분포와 함께 켤레 사전 분포의 관계를 표로 정리해보자&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;우도&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;켤레사전분포&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;사후확률분포&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;파라미터의 의미&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;이항분포&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;베타분포 \(Beta(\alpha,\beta)\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;베타분포 \(Beta({}\alpha ‘,{}\beta ‘)\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;성공횟수 : α−1, 실패횟수 : β−1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;다항분포&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;디리클레분포 \(Dir(\alpha)\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;디리클레분포 \(Dir({}\alpha ‘)\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;𝑖번째 범주가 나타날 횟수 : \(α_{𝑖}\)−1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%83%E1%85%B5%E1%84%85%E1%85%B5%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;디리클레 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
   </content>
