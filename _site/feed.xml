@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-05-18T11:09:46+09:00</updated>
+<updated>2022-05-18T12:11:58+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -78,25 +78,6 @@
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(3)/&quot;&gt;2.3 The Gaussian Distribution(3)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 06, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[고윳값,고유 벡터와 스펙트럼 분석]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2%E1%86%BA%E1%84%80%E1%85%A1%E1%86%B9,%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2-%E1%84%87%E1%85%A6%E1%86%A8%E1%84%90%E1%85%A5%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%86%B7-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8/" />
-  <id>http://localhost:4000/blog/고윳값,고유 벡터와 스펙트럼 분석</id>
-  <published>2022-03-05T07:08:50+09:00</published>
-  <updated>2022-03-05T07:08:50+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2%E1%86%BA%E1%84%80%E1%85%A1%E1%86%B9,%E1%84%80%E1%85%A9%E1%84%8B%E1%85%B2-%E1%84%87%E1%85%A6%E1%86%A8%E1%84%90%E1%85%A5%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%B3%E1%84%91%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%E1%84%85%E1%85%A5%E1%86%B7-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8/&quot;&gt;고윳값,고유 벡터와 스펙트럼 분석&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 05, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -335,8 +316,7 @@
 &lt;p&gt;여기서 \(\Delta \)값은  μ로부터 x까지의 마할라노비스 거리(Mahalanobis distance)라고 한다.
 마할라노비스 거리는 \(\Sigma \)가 항등 행렬(I)일 경우 유클리디안 거리가 된다. 이 값은 평균과의 거리가 표준편차의 몇 배인지를 나타내는 값으로 평균과의 거리를 측정할 때 분산도를 고려한다는 의미가 된다. 이 이차식의 상수가 되는 x 공간의 표면에서는 가우시안 분포 역시 상수가 된다.&lt;/p&gt;
 
-&lt;p&gt;여기서 중요한 점은 공분산 행렬 \(\Sigma\)가 대칭 행렬이라는 점이다.
-(&lt;a href=&quot;https://jjomaeng.github.io/blog/고윳값,고유-벡터와-스펙트럼-분석/&quot;&gt;여기서 고윳값, 고유 벡터, 스펙트럼 분석에 대한 기본적인 개념이 필요하여 따로 작성하여 정리하였습니다.&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;여기서 중요한 점은 공분산 행렬 \(\Sigma\)가 대칭 행렬이라는 점이다.&lt;/p&gt;
 
 &lt;p&gt;공분산 행렬의 고유벡터, 고윳값을 정의한 식은 다음과 같다.&lt;/p&gt;
 
@@ -723,25 +703,6 @@ M &amp;amp; -MBD^{-1} \\
 
 
 <entry>
-  <title type="html"><![CDATA[라그랑주 승수법]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/" />
-  <id>http://localhost:4000/blog/라그랑주 승수법</id>
-  <published>2022-03-03T07:08:50+09:00</published>
-  <updated>2022-03-03T07:08:50+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%85%E1%85%A1%E1%84%80%E1%85%B3%E1%84%85%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AE-%E1%84%89%E1%85%B3%E1%86%BC%E1%84%89%E1%85%AE%E1%84%87%E1%85%A5%E1%86%B8/&quot;&gt;라그랑주 승수법&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
   <title type="html"><![CDATA[2.2 Multinomial Variables]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/" />
   <id>http://localhost:4000/articles/[PRML]2.2 Multinomial Variables</id>
@@ -777,9 +738,9 @@ M &amp;amp; -MBD^{-1} \\
 
 &lt;p&gt;\[ m_{k} = \sum_{n}x_{n,k}\]&lt;/p&gt;
 
-&lt;p&gt;위의 식은 \( x_{k} = 1\)인 관측값의 숫자에 해당한다. 위의 식은 분포의 &lt;b&gt;충분 통계량&lt;/b&gt;이라고 한다.(&lt;a href=&quot;https://jjomaeng.github.io/blog/충분-통계량/&quot;&gt;충분 통계량에 대한 자세한 설명은 여기에 작성하였습니다&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;위의 식은 \( x_{k} = 1\)인 관측값의 숫자에 해당한다. 위의 식은 분포의 &lt;b&gt;충분 통계량&lt;/b&gt;이라고 한다.&lt;/p&gt;
 
-&lt;p&gt;\(\textbf{ μ } \)값의 최대 가능도 해를 찾기 위해서는 \( \mu_{k} \)의 합이 1이어야 한다는 제약 조건하에서 \(lnp(D \mid \textbf{ μ }  )\)의 최댓값을 찾아야 한다. 이를 위해서는 라그랑주 승수 \(\lambda \)를 사용해서 다음 식의 최댓값을 구하면 된다.(&lt;a href=&quot;https://jjomaeng.github.io/blog/라그랑주-승수법/&quot;&gt;라그랑주 승수법에 대한 자세한 설명은 여기에 작성하였습니다&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;\(\textbf{ μ } \)값의 최대 가능도 해를 찾기 위해서는 \( \mu_{k} \)의 합이 1이어야 한다는 제약 조건하에서 \(lnp(D \mid \textbf{ μ }  )\)의 최댓값을 찾아야 한다. 이를 위해서는 라그랑주 승수 \(\lambda \)를 사용해서 다음 식의 최댓값을 구하면 된다.&lt;/p&gt;
 
 &lt;p&gt;\[L(\mu,m,\lambda) = \sum_{k = 1}^{k}m_{k}ln(\mu_{k}) + \lambda(\sum_{k=1}^{K}\mu_{k}-1) \]&lt;/p&gt;
 
@@ -820,25 +781,6 @@ M &amp;amp; -MBD^{-1} \\
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.2-Multinomial-Variables/&quot;&gt;2.2 Multinomial Variables&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 03, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[충분 통계량]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/" />
-  <id>http://localhost:4000/blog/충분 통계량</id>
-  <published>2022-03-02T07:08:50+09:00</published>
-  <updated>2022-03-02T07:08:50+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%8E%E1%85%AE%E1%86%BC%E1%84%87%E1%85%AE%E1%86%AB-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8%E1%84%85%E1%85%A3%E1%86%BC/&quot;&gt;충분 통계량&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 02, 2022.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1834,6 +1776,120 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory/&quot;&gt;1.2 Probability theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 24, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[ LECTURE 01]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231-LECTURE-01/" />
+  <id>http://localhost:4000/articles/[CS231]LECTURE 01</id>
+  <published>2022-02-23T07:50:50+09:00</published>
+  <updated>2022-02-23T07:50:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231-LECTURE-01/&quot;&gt; LECTURE 01&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[ LECTURE 01 Rinear Regression]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS229-LECTURE-01/" />
+  <id>http://localhost:4000/articles/[CS229]LECTURE 01</id>
+  <published>2022-02-23T07:50:50+09:00</published>
+  <updated>2022-02-23T07:50:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS229-LECTURE-01/&quot;&gt; LECTURE 01 Rinear Regression&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[베타 분포]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/베타 분포</id>
+  <published>2022-02-22T07:08:50+09:00</published>
+  <updated>2022-02-22T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;이번엔 베타 분포(Beta Distribution)에 대해 알아보자&lt;/p&gt;
+
+&lt;h3 id=&quot;베타-분포&quot;&gt;베타 분포&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;베타 분포는 확률에 대한 확률 분포이다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;먼저, 베타 분포의 확률 밀도 함수를 살펴보자
+\[ X \sim Beta(\alpha,\beta )\]
+\[ f_{x}(x) = \frac{1}{\beta(\alpha,\beta)}d^{\alpha-1}(1-x)^{\beta-1} \qquad (0 &amp;lt; x &amp;lt;1,\alpha,\beta &amp;gt;0) \]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이전에 했던 감마 분포가 대기 시간에 대한 분포이기 때문에 x의 범위가 0보다 컸다.&lt;/li&gt;
+  &lt;li&gt;베타 분포는 확률에 대한 분포이기 때문에 x의 범위가 0에서 1사이 이다.&lt;/li&gt;
+  &lt;li&gt;여기서 α-1, β -1 는 각각 어떤 사건의 ‘성공 횟수’,’실패 횟수’로 볼 수 있다.&lt;/li&gt;
+  &lt;li&gt;β(α,β)는 확률 밀도 함수의 0부터 1사이의 integral sumdl 1이 되도록 하는 상수이다.
+\[ 1 = \int_{0}^{1}\frac{1}{\beta(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}dx \]
+\[ \beta(\alpha,\beta) = \int_{0}^{1}x^{\alpha-1}(1-x)^{\beta-1}dx \]&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이 상수는 감마함수로 표현된다(&lt;a href=&quot;https://jjomaeng.github.io/blog/감마-분포/&quot;&gt;감마 함수에 대한 자세한 내용은 여기에 작성하였습니다!&lt;/a&gt;)
+\[ \beta(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;왜 감마 함수의 분수로 증명되는지는 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/40.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/40.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;이항-분포의-켤레-사전-분포&quot;&gt;이항 분포의 켤레 사전 분포&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;베타 분포의 확률 밀도 함수에서 앞의 상수항만 떼고 보면 이항 분포의 확률 질량 함수와 닮아 있다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이항 분포에서는 확률 p가 고정된 것이고, 성공 횟수 및 실패 횟수가 확률 변수인 반면, 베타 분포에서는 성공 횟수(α -1)와 실패 횟수(β-1)가 고정된 것이고, 확률이 확률 변수이다.
+\[ beta = x^{\alpha -1}(1-x)^{\beta -1}\] 
+\[ binomial = p^{x}(1-p)^{n -x}\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;따라서, 베타 분포는 베이지안 방법에서 이항 분포의 켤레 사전 분포로 활용된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;베타-분포의-기대값과-분산&quot;&gt;베타 분포의 기대값과 분산&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;마지막으로 베타 분포의 기대값과 분산을 구하고 마무리하자.&lt;/li&gt;
+  &lt;li&gt;먼저, 기대값을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/41.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/41.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다음은 분산을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/42.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/42.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
   </content>
 </entry>
 
