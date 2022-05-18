@@ -1,0 +1,50 @@
+I"�<p>연속형 분포의 일종인 감마 분포(Gamma Distribution)에 대해 알아보자</p>
+
+<p>감마 분포를 살펴보기 전에 감마 함수에 대해 먼저 살펴보자</p>
+
+<h3 id="감마함수">감마함수</h3>
+
+<p>감마 함수는 factorial를 정수에서 실수로 확장하고자 고안되었다. 즉, 복소수 범위까지 일반화된 factorial이다.
+감마 함수의 정의는 다음과 같다.
+\[ \Gamma  (\alpha) = \int_{0}^{\infty } t^{\alpha - 1}e^{-t}dt \qquad (\alpha &gt; 0) \]</p>
+
+<p>여기서 factorial을 일반화하면 다음과 같다.</p>
+
+<ul>
+  <li>\( \Gamma(x + 1) = x\Gamma(x) \)</li>
+  <li>\( \Gamma(n + 1) = n! \)</li>
+</ul>
+
+<p>이제 감마 분포에 대해 알아보자.</p>
+
+<h3 id="감마분포">감마분포</h3>
+
+<ul>
+  <li>먼저, 감마 분포의 확률 밀도는 다음과 같다.
+\[ X \sim Gamma(\alpha, \beta) \]
+\[ f_{x}(x) =  \frac{1}{\beta^{\alpha}\Gamma(\alpha)}x^{\alpha-1}e-\frac{x}{\beta}\qquad (x,\alpha,\beta &gt; 0) \]</li>
+  <li>여기서 감마 분포는 α개의 사건이 일어날 때까지 걸리는 대기 시간에 대한 분포이다.</li>
+  <li>즉, 여기서 α는 사건 개수 β는 사건 사이 평균 소요 시간을 의미한다.</li>
+  <li>이는 한번의 사건이 일어날 때를 고려하는 지수분포를 여러개의 사건으로 확장한 것이라고 할 수 있다. 다시 말해, α가 1인 것이다.</li>
+  <li>여기서 지수 분포와 포아송 분포의 기본 개념에 대해 알아야 한다. 간단히 설명해서 어떤 사건의 발생 횟수가 포아송 분포를 따르면, 사건 사이의 대기 시간은 지수 분포를 따르게 된다.</li>
+</ul>
+
+<h3 id="감마분포의-기대값과-분산">감마분포의 기대값과 분산</h3>
+<ul>
+  <li>그럼 이제 감마 분포의 기대값을 구해보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/38.jpeg" alt="image"><img src="/PRML/38.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>다음은 분산을 구해보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/39.jpeg" alt="image"><img src="/PRML/39.jpeg" alt="image" /></a>
+</figure>
+
+<p>베타 분포에 대한 내용은 다음에 이어 설명하겠습니다.</p>
+:ET
