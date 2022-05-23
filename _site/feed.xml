@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-05-21T21:23:32+09:00</updated>
+<updated>2022-05-23T15:03:01+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -71,7 +71,7 @@ continuous \; random \; variable : &amp;amp; \int_{-\infty }^{\infty}x^{n}f(x)dx
   &lt;/li&gt;
   &lt;li&gt;f(x)는 확률질량함수 또는 확률밀도함수&lt;/li&gt;
   &lt;li&gt;위 정의에서 n = 1일 경우 우리가 알고있는 확률변수 x의 기댓값이 된다.&lt;/li&gt;
-  &lt;li&gt;즉, 확률 변수의 ‘적률(moment)이 확률 분포의 특직을 설명해 주는 역할이다.&lt;/li&gt;
+  &lt;li&gt;즉, 확률 변수의 ‘적률(moment)’이 확률 분포의 특징을 설명해 주는 역할이다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;적률-생성-함수&quot;&gt;적률 생성 함수&lt;/h3&gt;
@@ -277,10 +277,43 @@ continuous \; random \; variable &amp;amp; \int_{-\infty }^{\infty} e^{tx}f(x) d
     &lt;ul&gt;
       &lt;li&gt;가우시안 분포 p(x)에 대해 벡터 집합 \( x = (x_{a} , x_{b}) \)로 나눈 후, 조건부 분포 \( p(x_{a} \mid x_{b}) \)와 주변 분포 \(p(x_{a})\) 역시 가우시안 분포임을 확인하였다.&lt;/li&gt;
       &lt;li&gt;이때, 조건부 분포 \( p(x_{a} \mid x_{b}) \)의 평균이 \(x_{b}\)에 대해서 선형이다.&lt;/li&gt;
-      &lt;li&gt;가우시안 주변 분포 p(x)와 가우시안 조건부 분포 \(p(y \mid x)\)가 있을 때 \(p(y \mid x)\)의 평균이 x에 대한 선형 함수이며, 공분산 x에 대해 독립적이다.&lt;/li&gt;
-      &lt;li&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;이번에는 가우시안 주변 확률 분포인 p(x)와 가우시안 조건부 분포 p(y&lt;/td&gt;
+          &lt;td&gt;x)에 대해 살펴보자&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;ul&gt;
+      &lt;li&gt;여기서, \(p(y \mid x)\)의 평균이 x에 대한 선형 함수이며, 공분산 x에 대해 독립적이다.&lt;/li&gt;
+      &lt;li&gt;이는 바로 선형 가우시안 모델의 한 예이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이때 주변 분포와 조건부 분포를 다음과 같이 정의하자.
+\[ p(x) = N(x \mid \mu, \Lambda^{-1} )\]
+\[ p( y \mid x) = N(y \mid Ax + b, L^{-1})\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;식에 대해 설명하면,
+    &lt;ul&gt;
+      &lt;li&gt;\(\mu \), A, b : 평균을 조절하는 매개변수&lt;/li&gt;
+      &lt;li&gt;\(\Lambda^{-1},L^{-1}\) : 정밀도 행렬&lt;/li&gt;
+      &lt;li&gt;만약 x가 M차원, y가 D차원이면 행령 A의 크기는 D x M이 된다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;x와 y의 결한 분포에 대한 표현식을 살펴보자
+\[ z = \binom{x}{y} \]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;결론부터 말하자면, p(x)와 \(p(y \mid x)\)룰 이용하여 p(y),\(p(x \mid y)\)를 구하는 것이다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;즉, \(p(z) = p(x)p(y \mid x) \)인 식을 \(p(x \mid y)p(y)\)의 식으로 전개하는 것을 베이즈론을 활용하여 증명하고자 하는 것이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;그리고 이어서, 결합 분포에 로그를 씌우면 다음과 같다.&lt;/li&gt;
 &lt;/ul&gt;
 
 
