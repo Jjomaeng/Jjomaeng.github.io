@@ -1,0 +1,209 @@
+I"$<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
+
+<h4 id="주변-가우시안-분포">주변 가우시안 분포</h4>
+
+<p>이제 두 번째, 각 변수 집합의 주변 분포 역시 가우시안 분포를 보이는 것을 확인해보자.</p>
+
+<p>먼저,<b>주변 확률 분포</b>가 무엇인지 확인하고 넘어가자.</p>
+
+<ul>
+  <li>결합 확률 분포에서 한 쪽의 변수만 보는 것.</li>
+  <li>이 때 나머지 변수는 합산하여 사라지게 되는데 이산 변수는 모든 확률 값의 합으로, 연속 변수의 경우 적분을 통해 진행된다.</li>
+</ul>
+
+<p>이제 다음의 식으로 주어지는 주변 분포에 대해 살펴보자.</p>
+
+\[p(\textbf{x}_{a}) = \int p(\textbf{x}_{a},\textbf{x}_{b}) \; d\textbf{x}_{b} \qquad 식(2.83)\]
+
+<ul>
+  <li>앞에서와 같이 이차식에서 평균과 공분산을 구하는 전략을 사용할 것이다.</li>
+</ul>
+
+<p>자 그러면, 가우시안 분포에서 이차 형식을 다시 살펴보자.</p>
+
+<p>\[ -\frac{1}{2}(x -\mu)^{t}\Sigma^{-1}(x -\mu) =  \]
+\[-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{aa}(x_{a}-\mu_{a})-\frac{1}{2}(x_{a}-\mu_{a})^{T}\Lambda_{ab}(x_{b}-\mu_{b}) \]
+\[\qquad \qquad \quad -\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{ba}(x_{a}-\mu_{a})-\frac{1}{2}(x_{b}-\mu_{b})^{T}\Lambda_{bb}(x_{b}-\mu_{b}) \qquad 식(2.70) \]</p>
+
+<ul>
+  <li>여기서 우리는 \(x_{b}\)에 연관된 항들을 적분시켜서 없애는 것이 우리의 목표다.</li>
+  <li>이를 위해서 \(x_{b} \)에 연관된 항들을 일단 먼저 고려하여 완전제곱식을 적용해야 한다.</li>
+  <li>완전제곱식 역시 다시 살펴보자.</li>
+</ul>
+
+<p>\[ -\frac{1}{2}(x -\mu)^{T}\Sigma^{-1}(x -\mu) = -\frac{1}{2}x^{T}\Sigma{-1}x + x^{T}\Sigma{-1}\mu + const \qquad 식(2.71)\]</p>
+<ul>
+  <li>이를 이용한 전략은 다음과 같다.</li>
+</ul>
+
+<figure>
+    <a href="/PRML/36.jpeg" alt="image"><img src="/PRML/36.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>자세히 설명하면,
+    <ul>
+      <li>
+        <p>\(f(x_{b},x_{a})\) : 원래 지수부를 \( (x_{a},x_{b}) \) 부분 집합을 통해 전개한 식 중에서 \(x_{b} \)을 포함한 모든 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>\( g(x_{a}) \) : \(f(x_{b},x_{a})\)에 포함된 항등을 제외한 항들 중 \(x_{a}\)를 포함한 모든 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>const : 그 외 나머지 항들을 모은 식이다.</p>
+      </li>
+      <li>
+        <p>\(\tau + g(x_{a})\)를 \(x_{a}\)의 완전제곱식으로 만들면 \(x_{a}\)의 평균벡터와 공분산 행렬을 구할 수 있다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>이제 식을 펼쳐보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/37.jpeg" alt="image"><img src="/PRML/37.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>완전제곱식을 이용해서 \(f(x_{b},x_{a})\)에 대해 전개하면 다음과 같다.</li>
+</ul>
+
+\[-\frac{1}{2}\textbf{x}_{b}^{T}\Lambda_{bb}\textbf{x}_{b} + \textbf_{b}^{T}m = -\frac{1}{2}(\textbf{x}_{b} - \Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(\textbf{x}_{b}-\Lambda_{bb}^{-1}m) +\frac{1}{2}m^{T}\Lambda_{aa}^{-1}m \qquad 식(2.84)\]
+
+<ul>
+  <li>여기서 m은 다음과 같다.</li>
+</ul>
+
+\[m = \Lambda_{bb}\mu_{b} - \Lambda_{ba}(\textbf{x}_{a} - \mu_{a}) \qquad 식(2.85)\]
+
+<ul>
+  <li>그러면 \(\tau \)는 다음과 같음을 알 수 있다.</li>
+</ul>
+
+\[\tau = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m\]
+
+<ul>
+  <li>
+    <p>그러면
+\[ \int exp(f(x_{b},x_{a}) - \tau)dx_{b} = \int exp(-\frac{1}{2}(x_{b}-\Lambda_{bb}^{-1}m)^{T}\Lambda_{bb}(x_{b}-\Lambda_{bb}^{-1}m))dx_{b} \qquad 식(2.86)\]</p>
+  </li>
+  <li>이 값은 공분산 \( \Lambda_{aa}\)에만 종속되고 \(x_{a}\)에 독립적이므로 \(\alpha \beta exp(\tau + g(x_{a} )+ const )\)의 지수부에만 집중하면 된다.</li>
+  <li>그러면 \(\tau + g(x_{a}) + const\)를 살펴보자</li>
+</ul>
+
+<p>\[ \tau + g(x_{a}) + const = \frac{1}{2}m^{T}\Lambda_{bb}^{-1}m - \frac{1}{2}x_{a}^{TT}\Lambda_{aa}x_{a}+x_{a}^{T}(\Lambda_{aa}\mu_{a} + \Lambda_{ab}\mu_{b}) + const \]
+\[\qquad \qquad \qquad \qquad \;\; =-\frac{1}{2}x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})x_{a} + x_{a}^{T}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} + const \qquad 식(2.87) \]</p>
+
+<ul>
+  <li>
+    <p>따라서 공분산은 다음과 같다(이차식을 살펴보자).
+\[\Sigma_{a} = (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} \qquad 식(2.88)\]</p>
+  </li>
+  <li>
+    <p>평균 벡터는 다음과 같다(1차식을 살펴보자).
+\[ \Sigma_{a}(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_{a} = \mu_{a} \qquad 식(2.89)\]</p>
+  </li>
+</ul>
+
+<p>*공분산의 형태가 복잡하게 보이지만, 슈어 보수행렬(Schur complement)를 사용하면 다음을 알 수 있다.
+\[ (\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})^{-1} = \Sigma_{aa} \]</p>
+
+<ul>
+  <li>따라서 정리하면</li>
+</ul>
+
+\[E[x_{a}] = \mu_{a}\]
+
+\[cov[x_{a}] = \Sigma_{aa}\]
+
+<ul>
+  <li>이 결과는 우리의 직돤과도 일치한다.</li>
+  <li>두 개의 변수에 대한 다변량 가우시안 분포의 조건부 분포와 주변 분포의 예시를 마지막으로 살펴보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/35.png" alt="image"><img src="/PRML/35.png" alt="image" /></a>
+</figure>
+
+<h4 id="가우시안-변수에-대한-베이지안-정리">가우시안 변수에 대한 베이지안 정리</h4>
+
+<ul>
+  <li>앞서 배운 내용을 정리하면
+    <ul>
+      <li>가우시안 분포 p(x)에 대해 벡터 집합 \( x = (x_{a} , x_{b}) \)로 나눈 후, 조건부 분포 \( p(x_{a} \mid x_{b}) \)와 주변 분포 \(p(x_{a})\) 역시 가우시안 분포임을 확인하였다.</li>
+      <li>이때, 조건부 분포 \( p(x_{a} \mid x_{b}) \)의 평균이 \(x_{b}\)에 대해서 선형이다.</li>
+    </ul>
+  </li>
+  <li>이번에는 가우시안 주변 확률 분포인 p(x)와 가우시안 조건부 분포 \(p(y \mid x) \)에 대해 살펴보자
+    <ul>
+      <li>여기서, \(p(y \mid x)\)의 평균이 x에 대한 선형 함수이며, 공분산 x에 대해 독립적이다.</li>
+      <li>이는 바로 선형 가우시안 모델의 한 예이다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>이때 주변 분포와 조건부 분포를 다음과 같이 정의하자.
+\[ p(x) = N(x \mid \mu, \Lambda^{-1} ) \qquad 식(2.99)\]
+\[ p( y \mid x) = N(y \mid Ax + b, L^{-1}) \qquad 식(2.100)\]</p>
+  </li>
+  <li>식에 대해 설명하면,
+    <ul>
+      <li>\(\mu \), A, b : 평균을 조절하는 매개변수</li>
+      <li>\(\Lambda^{-1},L^{-1}\) : 정밀도 행렬</li>
+      <li>만약 x가 M차원, y가 D차원이면 행령 A의 크기는 D x M이 된다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>x와 y의 결한 분포에 대한 표현식을 살펴보자
+\[ z = \binom{x}{y} \qquad 식(2.101)\]</p>
+  </li>
+  <li>결론부터 말하자면, p(x)와 \(p(y \mid x)\)룰 이용하여 p(y),\(p(x \mid y)\)를 구하는 것이다.</li>
+  <li>
+    <p>즉, \(p(z) = p(x)p(y \mid x) \)인 식을 \(p(x \mid y)p(y)\)의 식으로 전개하는 것을 베이즈론을 활용하여 증명하고자 하는 것이다.</p>
+  </li>
+  <li>
+    <p>그리고 이어서, 결합 분포에 로그를 씌우면 다음과 같다.
+\[ ln(z) = lnp(x) + lnp(y \mid x) \]
+\[ = -\frac{1}{2}(x - \mu)^{T}\Lambda(x - \mu) - \frac{1}{2}(y -Ax - b)^{T}L(y-Ax-b) + const \qquad 식(2.102)\]</p>
+  </li>
+  <li>앞에서와 같이, 이차식 형태를 띠는 것을 확인할 수 있다. 따라서 p(z)는 가우시안 분포다.</li>
+  <li>또한, 앞에서와 같이 정밀도를 찾기 위해 이차항만 고려해보자.</li>
+</ul>
+
+\[-\frac{1}{2}x^{T}(\Lambda + A^{T}LA)x -\frac{1}{2}y^{T}Ly + \frac{1}{2}y^{T}LAx + \frac{1}{2}x^{T}A^{T}Ly\]
+
+\[= -\frac{1}{2}\binom{x}{y}^{T}\begin{pmatrix}
+\Lambda + A^{T}LA &amp; -A^{T}L \\
+-LA &amp; L \\
+\end{pmatrix}\binom{x}{y} = -\frac{1}{2}z^{T}Rz \qquad 식(2.103)\]
+
+<ul>
+  <li>따라서 z는 다음과 같은 형태의 정밀 행렬을 가지게 된다.</li>
+</ul>
+
+\[R = \begin{pmatrix}
+\Lambda + A^{T}LA &amp; -A^{T}L \\
+-LA &amp; L \\
+\end{pmatrix}  \qquad 식(2.104)\]
+
+<ul>
+  <li>정밀 행렬의 역행렬인 공분산은 다음과 같다.(앞에서 설명한 식(2.76) 참고)</li>
+</ul>
+
+\[cov[z] = R^{-1} = \begin{pmatrix}
+\Lambda^{-1} &amp; \Lambda^{-1}A^{T} \\
+A\Lambda^{-1} &amp; L^{-1}+ A\Lambda^{-1}A^{T} \\
+\end{pmatrix} \qquad 식(2.105)\]
+
+<ul>
+  <li>이제, 평균을 구하기 위해 식2.102의 일차항만 고려해 보자
+\[ x^{T}\Lambda\mu - x^{T}A^{T}Lb + y^{T}Lb = \binom{x}{y}^{T} \binom{\Lambda\mu - A^{T}Lb}{Lb} \qquad 식(2.106)\]</li>
+  <li>
+    <p>앞에서 설명한 식(2.71)을 이용하여 z의 평균을 구하면 다음과 같다.
+\[ E(z) = R^{-1}\binom{\Lambda\mu - A^{T}Lb}{Lb} \qquad 식(2.107)\]</p>
+  </li>
+  <li>여기에 식2.105를 적용하면 다음과 같다.
+\[ E(z) = \binom{\mu}{A\mu + b} \qquad 식(2.108)\]</li>
+</ul>
+
+:ET
