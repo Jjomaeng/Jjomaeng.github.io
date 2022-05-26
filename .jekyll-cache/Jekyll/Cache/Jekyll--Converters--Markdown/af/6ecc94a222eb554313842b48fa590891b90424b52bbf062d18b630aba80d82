@@ -1,4 +1,4 @@
-I"�<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+I"V<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
 
 <h3 id="가우시안-분포의-최대-가능도">가우시안 분포의 최대 가능도</h3>
@@ -88,4 +88,39 @@ X_{d}
   </li>
 </ul>
 
+<figure>
+    <a href="/PRML/45.jpeg" alt="image"><img src="/PRML/45.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>그러면 이제 행렬 A로 미분해보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/46.jpeg" alt="image"><img src="/PRML/46.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>정리하면 다음과 같다.
+\[ \Sigma_{ML} = \frac{1}{N}\sum_{n=1}^{N}(x_{n}-\mu_{ML})(x_{n}-\mu_{ML})^{T} \qquad 식(2.122)\]</li>
+</ul>
+
+<h3 id="순차-추정">순차 추정</h3>
+
+<ul>
+  <li>순차 추정 방식은 데이터 포인트들을 하나씩 처리하고 버리는 방식이다,</li>
+  <li>이는 다음과 같은 상황에서 유용하게 사용할 수 있다.
+    <ul>
+      <li>관찰 데이터 집합이 매우 커서 한번에 계산이 불가능할 때</li>
+      <li>실시간 처리를 해야하는 온라인 적용 사례</li>
+    </ul>
+  </li>
+  <li>MLE로 얻어진 \( \mu_{ML}\)식을 업데이트 되는 방식으로 바꿔보자.
+    <ul>
+      <li>\( \mu_{ML}\)에서 마지막 데이터 포인트 \(X_{N}\)따로 빼내어 보자
+  \[ \mu_{ML}^{(N)} = \frac{1}{N}\sum_{n=1}^{N}X_{n} = \frac{1}{N}X_{N} +\frac{1}{N}\sum_{n=1}^{ N-1}X_{n} = \frac{1}{N}X_{N} + \frac{N-1}{N}\mu_{ML}^{(N-1)} = \mu_{ML}^{(N-1)} + \frac{1}{N}(X_{N} - \mu_{ML}^(N-1)) \qquad  식(2.126)\]</li>
+      <li>N-1개의 데이터로부터 추정된 \( \mu_{ML}^{(N-1)}\)와 N번째 관측된 데이터를 이용하여</li>
+    </ul>
+  </li>
+</ul>
 :ET

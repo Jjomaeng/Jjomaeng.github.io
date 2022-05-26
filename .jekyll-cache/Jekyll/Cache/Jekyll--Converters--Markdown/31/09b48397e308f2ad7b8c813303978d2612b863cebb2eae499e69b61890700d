@@ -1,4 +1,4 @@
-I"#<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
+I"�<p class="notice">이 글은 <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>을 읽고 공부한 내용을 작성한 글입니다. 
 모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.</p>
 
 <h3 id="가우시안-분포의-최대-가능도">가우시안 분포의 최대 가능도</h3>
@@ -92,4 +92,41 @@ X_{d}
     <a href="/PRML/45.jpeg" alt="image"><img src="/PRML/45.jpeg" alt="image" /></a>
 </figure>
 
+<ul>
+  <li>그러면 이제 행렬 A로 미분해보자</li>
+</ul>
+
+<figure>
+    <a href="/PRML/46.jpeg" alt="image"><img src="/PRML/46.jpeg" alt="image" /></a>
+</figure>
+
+<ul>
+  <li>정리하면 다음과 같다.
+\[ \Sigma_{ML} = \frac{1}{N}\sum_{n=1}^{N}(x_{n}-\mu_{ML})(x_{n}-\mu_{ML})^{T} \qquad 식(2.122)\]</li>
+</ul>
+
+<h3 id="순차-추정">순차 추정</h3>
+
+<ul>
+  <li>순차 추정 방식은 데이터 포인트들을 하나씩 처리하고 버리는 방식이다,</li>
+  <li>이는 다음과 같은 상황에서 유용하게 사용할 수 있다.
+    <ul>
+      <li>관찰 데이터 집합이 매우 커서 한번에 계산이 불가능할 때</li>
+      <li>실시간 처리를 해야하는 온라인 적용 사례</li>
+    </ul>
+  </li>
+  <li>MLE로 얻어진 \( \mu_{ML}\)식을 업데이트 되는 방식으로 바꿔보자.
+    <ul>
+      <li>
+        <p>\( \mu_{ML}\)에서 마지막 데이터 포인트 \(X_{N}\)따로 빼내어 보자
+  \[ \mu_{ML}^{(N)} = \frac{1}{N}\sum_{n=1}^{N}X_{n} = \frac{1}{N}X_{N} +\frac{1}{N}\sum_{n=1}^{ N-1}X_{n} = \frac{1}{N}X_{N} + \frac{N-1}{N}\mu_{ML}^{(N-1)} = \mu_{ML}^{(N-1)} + \frac{1}{N}(X_{N} - \mu_{ML}^(N-1)) \qquad  식(2.126)\]</p>
+      </li>
+      <li>N-1개의 데이터로부터 추정된 \( \mu_{ML}^{(N-1)}\)와 N번째 관측된 데이터를 이용하여 \( \mu_{ML}^{(N)}\)을 구한다.</li>
+      <li>N의 값이 증가할수록 새로 관측되는 데이터의 기여도가 점점 작아지게 된다.</li>
+      <li>한번에 계산을 처리하는 배치 방식으로부터 식을 유도했기 때문에 실제 결과는 동일하게 된다.</li>
+      <li>이런 방식은 매우 유용하지만, 배치 방식의 식에서 업데이트 방식의 식을 항상 유도할 수 있는 것은 아니다.</li>
+      <li>따라서 순차적인 학습에 대한 더 일반적인 방식인 로빈스 몬로(Robbins &amp; Monro) 알고리즘을 알아보자</li>
+    </ul>
+  </li>
+</ul>
 :ET

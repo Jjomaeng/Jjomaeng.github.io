@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-05-24T18:58:44+09:00</updated>
+<updated>2022-05-26T15:09:35+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
@@ -225,6 +225,29 @@ X_{d}
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;순차-추정&quot;&gt;순차 추정&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;순차 추정 방식은 데이터 포인트들을 하나씩 처리하고 버리는 방식이다,&lt;/li&gt;
+  &lt;li&gt;이는 다음과 같은 상황에서 유용하게 사용할 수 있다.
+    &lt;ul&gt;
+      &lt;li&gt;관찰 데이터 집합이 매우 커서 한번에 계산이 불가능할 때&lt;/li&gt;
+      &lt;li&gt;실시간 처리를 해야하는 온라인 적용 사례&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MLE로 얻어진 \( \mu_{ML}\)식을 업데이트 되는 방식으로 바꿔보자.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;\( \mu_{ML}\)에서 마지막 데이터 포인트 \(X_{N}\)따로 빼내어 보자
+  \[ \mu_{ML}^{(N)} = \frac{1}{N}\sum_{n=1}^{N}X_{n} = \frac{1}{N}X_{N} +\frac{1}{N}\sum_{n=1}^{ N-1}X_{n} = \frac{1}{N}X_{N} + \frac{N-1}{N}\mu_{ML}^{(N-1)} = \mu_{ML}^{(N-1)} + \frac{1}{N}(X_{N} - \mu_{ML}^(N-1)) \qquad  식(2.126)\]&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;N-1개의 데이터로부터 추정된 \( \mu_{ML}^{(N-1)}\)와 N번째 관측된 데이터를 이용하여 \( \mu_{ML}^{(N)}\)을 구한다.&lt;/li&gt;
+      &lt;li&gt;N의 값이 증가할수록 새로 관측되는 데이터의 기여도가 점점 작아지게 된다.&lt;/li&gt;
+      &lt;li&gt;한번에 계산을 처리하는 배치 방식으로부터 식을 유도했기 때문에 실제 결과는 동일하게 된다.&lt;/li&gt;
+      &lt;li&gt;이런 방식은 매우 유용하지만, 배치 방식의 식에서 업데이트 방식의 식을 항상 유도할 수 있는 것은 아니다.&lt;/li&gt;
+      &lt;li&gt;따라서 순차적인 학습에 대한 더 일반적인 방식인 로빈스 몬로(Robbins &amp;amp; Monro) 알고리즘을 알아보자&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-2.3-The-Gaussian-Distribution(3)/&quot;&gt;2.3 The Gaussian Distribution(3)&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on March 06, 2022.&lt;/p&gt;
   </content>
