@@ -4,89 +4,13 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2022-08-18T10:01:14+09:00</updated>
+<updated>2022-08-18T10:19:10+09:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Cho Min Hee</name>
   <uri>http://localhost:4000/</uri>
   <email>aezjk56@gmail.com</email>
 </author>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 05]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231n-LECTURE-05/" />
-  <id>http://localhost:4000/articles/[CS231n]LECTURE 05</id>
-  <published>2022-08-18T09:44:00+09:00</published>
-  <updated>2022-08-18T09:44:00+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231n-LECTURE-05/&quot;&gt; LECTURE 05&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on August 18, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 04]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231n-LECTURE-04/" />
-  <id>http://localhost:4000/articles/[CS231n]LECTURE 04</id>
-  <published>2022-08-18T09:44:00+09:00</published>
-  <updated>2022-08-18T09:44:00+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231n-LECTURE-04/&quot;&gt; LECTURE 04&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on August 18, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 03]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231n-LECTURE-03/" />
-  <id>http://localhost:4000/articles/[CS231n]LECTURE 03</id>
-  <published>2022-08-18T09:44:00+09:00</published>
-  <updated>2022-08-18T09:44:00+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231n-LECTURE-03/&quot;&gt; LECTURE 03&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on August 18, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[ LECTURE 02]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS231n-LECTURE-02/" />
-  <id>http://localhost:4000/articles/[CS231n]LECTURE 02</id>
-  <published>2022-08-18T09:44:00+09:00</published>
-  <updated>2022-08-18T09:44:00+09:00</updated>
-  <author>
-    <name>Cho Min Hee</name>
-    <uri>http://localhost:4000</uri>
-    <email>aezjk56@gmail.com</email>
-  </author>
-  <content type="html">
-    
-
-    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS231n-LECTURE-02/&quot;&gt; LECTURE 02&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on August 18, 2022.&lt;/p&gt;
-  </content>
-</entry>
 
 
 <entry>
@@ -2314,6 +2238,253 @@ X에서 N개의 데이터 포인트를 임의로 복원 추출하여 데이터 �
 
 
     &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.2-Probability-theory/&quot;&gt;1.2 Probability theory&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 24, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[ LECTURE 01 Rinear Regression]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/CS229n-LECTURE-01/" />
+  <id>http://localhost:4000/articles/[CS229n]LECTURE 01</id>
+  <published>2022-02-23T07:50:50+09:00</published>
+  <updated>2022-02-23T07:50:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/CS229n-LECTURE-01/&quot;&gt; LECTURE 01 Rinear Regression&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 23, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[베타 분포]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/베타 분포</id>
+  <published>2022-02-22T07:08:50+09:00</published>
+  <updated>2022-02-22T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;이번엔 베타 분포(Beta Distribution)에 대해 알아보자&lt;/p&gt;
+
+&lt;h3 id=&quot;베타-분포&quot;&gt;베타 분포&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;베타 분포는 확률에 대한 확률 분포이다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;먼저, 베타 분포의 확률 밀도 함수를 살펴보자
+\[ X \sim Beta(\alpha,\beta )\]
+\[ f_{x}(x) = \frac{1}{\beta(\alpha,\beta)}d^{\alpha-1}(1-x)^{\beta-1} \qquad (0 &amp;lt; x &amp;lt;1,\alpha,\beta &amp;gt;0) \]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이전에 했던 감마 분포가 대기 시간에 대한 분포이기 때문에 x의 범위가 0보다 컸다.&lt;/li&gt;
+  &lt;li&gt;베타 분포는 확률에 대한 분포이기 때문에 x의 범위가 0에서 1사이 이다.&lt;/li&gt;
+  &lt;li&gt;여기서 α-1, β -1 는 각각 어떤 사건의 ‘성공 횟수’,’실패 횟수’로 볼 수 있다.&lt;/li&gt;
+  &lt;li&gt;β(α,β)는 확률 밀도 함수의 0부터 1사이의 integral sumdl 1이 되도록 하는 상수이다.
+\[ 1 = \int_{0}^{1}\frac{1}{\beta(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}dx \]
+\[ \beta(\alpha,\beta) = \int_{0}^{1}x^{\alpha-1}(1-x)^{\beta-1}dx \]&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이 상수는 감마함수로 표현된다(&lt;a href=&quot;https://jjomaeng.github.io/blog/감마-분포/&quot;&gt;감마 함수에 대한 자세한 내용은 여기에 작성하였습니다!&lt;/a&gt;)
+\[ \beta(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;왜 감마 함수의 분수로 증명되는지는 다음과 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/40.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/40.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;이항-분포의-켤레-사전-분포&quot;&gt;이항 분포의 켤레 사전 분포&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;베타 분포의 확률 밀도 함수에서 앞의 상수항만 떼고 보면 이항 분포의 확률 질량 함수와 닮아 있다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이항 분포에서는 확률 p가 고정된 것이고, 성공 횟수 및 실패 횟수가 확률 변수인 반면, 베타 분포에서는 성공 횟수(α -1)와 실패 횟수(β-1)가 고정된 것이고, 확률이 확률 변수이다.
+\[ beta = x^{\alpha -1}(1-x)^{\beta -1}\] 
+\[ binomial = p^{x}(1-p)^{n -x}\]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;따라서, 베타 분포는 베이지안 방법에서 이항 분포의 켤레 사전 분포로 활용된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;베타-분포의-기대값과-분산&quot;&gt;베타 분포의 기대값과 분산&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;마지막으로 베타 분포의 기대값과 분산을 구하고 마무리하자.&lt;/li&gt;
+  &lt;li&gt;먼저, 기대값을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/41.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/41.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다음은 분산을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/42.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/42.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%87%E1%85%A6%E1%84%90%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;베타 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[감마 분포]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/" />
+  <id>http://localhost:4000/blog/감마 분포</id>
+  <published>2022-02-22T07:08:50+09:00</published>
+  <updated>2022-02-22T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;연속형 분포의 일종인 감마 분포(Gamma Distribution)에 대해 알아보자&lt;/p&gt;
+
+&lt;p&gt;감마 분포를 살펴보기 전에 감마 함수에 대해 먼저 살펴보자&lt;/p&gt;
+
+&lt;h3 id=&quot;감마함수&quot;&gt;감마함수&lt;/h3&gt;
+
+&lt;p&gt;감마 함수는 factorial를 정수에서 실수로 확장하고자 고안되었다. 즉, 복소수 범위까지 일반화된 factorial이다.
+감마 함수의 정의는 다음과 같다.
+\[ \Gamma  (\alpha) = \int_{0}^{\infty } t^{\alpha - 1}e^{-t}dt \qquad (\alpha &amp;gt; 0) \]&lt;/p&gt;
+
+&lt;p&gt;여기서 factorial을 일반화하면 다음과 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\( \Gamma(x + 1) = x\Gamma(x) \)&lt;/li&gt;
+  &lt;li&gt;\( \Gamma(n + 1) = n! \)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이제 감마 분포에 대해 알아보자.&lt;/p&gt;
+
+&lt;h3 id=&quot;감마분포&quot;&gt;감마분포&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;먼저, 감마 분포의 확률 밀도는 다음과 같다.
+\[ X \sim Gamma(\alpha, \beta) \]
+\[ f_{x}(x) =  \frac{1}{\beta^{\alpha}\Gamma(\alpha)}x^{\alpha-1}e-\frac{x}{\beta}\qquad (x,\alpha,\beta &amp;gt; 0) \]&lt;/li&gt;
+  &lt;li&gt;여기서 감마 분포는 α개의 사건이 일어날 때까지 걸리는 대기 시간에 대한 분포이다.&lt;/li&gt;
+  &lt;li&gt;즉, 여기서 α는 사건 개수 β는 사건 사이 평균 소요 시간을 의미한다.&lt;/li&gt;
+  &lt;li&gt;이는 한번의 사건이 일어날 때를 고려하는 지수분포를 여러개의 사건으로 확장한 것이라고 할 수 있다. 다시 말해, α가 1인 것이다.&lt;/li&gt;
+  &lt;li&gt;여기서 지수 분포와 포아송 분포의 기본 개념에 대해 알아야 한다. 간단히 설명해서 어떤 사건의 발생 횟수가 포아송 분포를 따르면, 사건 사이의 대기 시간은 지수 분포를 따르게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;감마분포의-기대값과-분산&quot;&gt;감마분포의 기대값과 분산&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;그럼 이제 감마 분포의 기대값을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/38.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/38.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다음은 분산을 구해보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/39.jpeg&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/39.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;베타 분포에 대한 내용은 다음에 이어 설명하겠습니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/blog/%E1%84%80%E1%85%A1%E1%86%B7%E1%84%86%E1%85%A1-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%91%E1%85%A9/&quot;&gt;감마 분포&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[1.1 Polynomial Curve Fitting]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/" />
+  <id>http://localhost:4000/articles/[PRML]1.1 Polynomial Curve Fitting</id>
+  <published>2022-02-22T07:08:50+09:00</published>
+  <updated>2022-02-22T07:08:50+09:00</updated>
+  <author>
+    <name>Cho Min Hee</name>
+    <uri>http://localhost:4000</uri>
+    <email>aezjk56@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p class=&quot;notice&quot;&gt;이 글은 &lt;a href=&quot;https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf&quot;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;을 읽고 공부한 내용을 작성한 글입니다. 
+모든 내용은 책에 포함되어 있는 내용을 기반으로 작성하였습니다.&lt;/p&gt;
+
+&lt;p&gt;다항식 곡선 피팅을 통해 일반적인 패턴 인식 / 머신 러닝 문제에서 고려되어야 할 사항들에 대해 직관적으로 살펴보자.&lt;/p&gt;
+
+&lt;p&gt;다음과 같은 형태의 다항식이 있다.&lt;/p&gt;
+
+&lt;p&gt;\[ y(x,\textbf{w})= w_{0}+w_{1}x+w2x^{2}+….+w_{M}x^{M} = \sum_{j = 0}^{M}w_{j}x^{j} \]&lt;/p&gt;
+
+&lt;p&gt;이는 x에 대해서는 비선형지만, 계수 w에 대해서는 선형이다. 이를 기하학적으로 해석하면 다음과 같다&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/1.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;먼저, 다항식을 훈련 집합 데이터에 피팅해서 계수의 값들을 정할 수 있다. 이때 훈련 집합과 함숫값 y(x,w)와의 오차를 측정하는 대표적인 오차 함수를 다음과 같이 정의할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;\[E(\textbf{w}) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{w})-t_n)^2 \]&lt;/p&gt;
+
+&lt;p&gt;E(w)를 초쇠화하는 w값을 선택함으로써 이 곡선 피팅 문제를 해결할 수 있다. 오차 함수가 이차 다항식의 형태를 지니고 있기 때문에 이 함수를 계수에 대해 미분하면 w에 대해 선형인 식이 나올 것이다. 이 오차 함수를 최소화하는 w는 유일한 값인 w*를 찾아낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;다음으로 다항식의 차수 M을 결정하는 문제가 여전히 남아있다. 이를 Model Selection이라 불린다&lt;/p&gt;
+
+&lt;p&gt;훈련 집합과 시험 집합 각각에 대해서 E(w*)의 잔차를 계산해 보자
+평균 제곱근 오차(RMS) 를 통해 각각의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인할 것이다.&lt;/p&gt;
+
+&lt;p&gt;평균 제곱근 오차는 다음과 같이 정의된다.&lt;/p&gt;
+
+&lt;p&gt;\[E_{rms} = \sqrt{\frac{2E(w^*)}{N}} \]&lt;/p&gt;
+
+&lt;p&gt;RMS를 통해 각가의 차수 M에 대해서 잔차가 어떻게 변화하는지 확인하면 다음과 같다&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/2.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/2.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;M값이 작을 경우에는 시험 집합의 오차가 상대적으로 커 UnderFitting이 되었으며 큰 경우, Overfitting이 되었음을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;이를 수치적으로 확인했을 때, 차수 M에 따른 피팅 함수의 계수 w*의 값들이 M이 커짐에 따라 계수값의 단위 역시 커지는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/3.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/3.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;사용되는 데이터 집합의 크기가 달라지는 경우에는 어떤 일이 일어나는지 확인해 보자&lt;/p&gt;
+
+&lt;p&gt;모델의 복잡도를 일정하게 유지시킬 때는 사용하는 데이터 수가 늘어날수록 과적합 문제가 완화되는 것을 확인할 수 있다. 즉 데이터 집합의 수가 클수록 더 복잡한 모델을 활용하여 피팅 가능하다. 
+( 사실 베이지안 모델에서는 데이터 집합의 크기에 따라서 적합한 매개 변수의 수가 자동으로 정해지기 때문에 과적합 문제를 피해갈 수 있다)
+이를 시각화하면 다음과 같다.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/PRML/4.png&quot; alt=&quot;image&quot;&gt;&lt;img src=&quot;/PRML/4.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;그렇다면 비교적 복잡하고 유연한 모델을 제한적인 숫자의 데이터 집합을 활용하여 피팅하려면 어떻게 해야할까?
+그 방법 중 하나가 정규화다&lt;/p&gt;
+
+&lt;p&gt;오차 함수에 계수의 크기가 커지는 것을 막기 위한 패널티항을 추가하는 것이다. 식은 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;\[\widetilde{E}(w) = \frac{1}{2}\sum_{n=1}^{N}(y(x_{n},\textbf{W}) - t_{n})^2 + \frac{\lambda }{2}\left| w \right|^2 \]&lt;/p&gt;
+
+&lt;p&gt;여기서, 이차 형식 정규화는 리지 회귀라고 부르고 뉴럴 네트워크의 맥락에서는 이를 가중치 감쇠라 한다.&lt;/p&gt;
+
+&lt;p&gt;마지막으로 지금까지의 결과를 바탕으로 모델 복잡도를 잘 선택하는 단순한 방법이 있다.&lt;/p&gt;
+
+&lt;p&gt;그것은 바로 데이터 집합을 훈련 집합과 검증 집합으로 나누는 것이다.
+여기서 훈련 집합은 계수 w를 결정하는데 사용하고 검증집합은 모델 복잡도를 최적화하는데 활용한다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/PRML-1.1-Polynomial-Curve-Fitting/&quot;&gt;1.1 Polynomial Curve Fitting&lt;/a&gt; was originally published by Cho Min Hee at &lt;a href=&quot;http://localhost:4000&quot;&gt;MinPy&lt;/a&gt; on February 22, 2022.&lt;/p&gt;
   </content>
 </entry>
 
