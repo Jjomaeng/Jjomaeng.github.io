@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 05"
+title: " LECTURE 06 Training Neural Networks Part 1"
 modified:
 categories: articles
 excerpt:

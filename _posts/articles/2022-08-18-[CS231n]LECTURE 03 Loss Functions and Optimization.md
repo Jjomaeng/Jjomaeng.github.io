@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 03"
+title: " LECTURE 03 Loss Functions and Optimization"
 modified:
 categories: articles
 excerpt:

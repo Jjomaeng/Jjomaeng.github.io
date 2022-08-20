@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 04"
+title: " LECTURE 04 Backpropagation and Neural Networks"
 modified:
 categories: articles
 excerpt:

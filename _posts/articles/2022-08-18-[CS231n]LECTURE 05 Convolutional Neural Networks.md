@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 05"
+title: " LECTURE 05 Convolutional Neural Networks"
 modified:
 categories: articles
 excerpt:

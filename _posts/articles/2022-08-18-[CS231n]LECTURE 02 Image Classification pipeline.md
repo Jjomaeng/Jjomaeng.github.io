@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 02"
+title: " LECTURE 02 Image Classification pipeline"
 modified:
 categories: articles
 excerpt:
