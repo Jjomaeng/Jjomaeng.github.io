@@ -7,6 +7,6 @@ excerpt:
 tags: [CS231n]
 image:
   feature:
-date: 2022-08-18
+date: 2022-08-19
 ---
 
