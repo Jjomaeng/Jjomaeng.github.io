@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " LECTURE 02 assignment 01 SVM"
+title: " LECTURE 02 assignment 01 KNN"
 modified:
 categories: articles
 excerpt:
